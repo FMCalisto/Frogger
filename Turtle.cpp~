@@ -1,0 +1,6 @@
+class Turtle: public DynamicObject{
+	public:
+		draw();
+		Turtle();
+		~Turtle();
+};

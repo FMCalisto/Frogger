@@ -1,0 +1,6 @@
+class Timberlog: public DynamicObject{
+	public:
+		draw();
+		Timberlog();
+		~Timberlog();
+};
