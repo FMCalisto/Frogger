@@ -1,6 +1,7 @@
 #ifndef SHAPE_H
 #define SHAPE_H
-#include "Vector.h"
+
+#include "util\Vector.h"
 #include "gl\glut.h"
 
 class Shape
