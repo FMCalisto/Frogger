@@ -4,10 +4,10 @@
 #include <stdlib.h>
 #include <vector>
 #include"gl\glut.h"
-#include "Cube.h"
-#include "Plane.h"
-#include "Sphere.h"
-#include "glm.h"
+#include "util\Cube.h"
+#include "util\Plane.h"
+#include "util\Sphere.h"
+#include "util\glm.h"
 
 using namespace std;
 
