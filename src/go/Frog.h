@@ -3,8 +3,8 @@
 #include <Windows.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "Shape.h"
-#include "glm.h"
+#include "util/Shape.h"
+#include "util/glm.h"
 
 class Frog: public Shape
 {
