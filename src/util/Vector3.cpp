@@ -1,5 +1,7 @@
 #include<vector>
 
+#include "util/Vector.cpp"
+
 using namespace std;
  
 class Camera{
@@ -9,48 +11,73 @@ class Camera{
       double _z;
  
    public:
- 
-      void Vector3(){
+   
+   		/*
+   		 *
+   		 *	Add this new include function.
+   		 *
+   		 *	@author: Francisco Maria Calisto
+   		 *
+   		 *
+   		 */
+   
+   		void Vector()
+   		{
+   			
+   		}
+   
+      void Vector3()
+      {
       
       }
  
-      void Vector3(double in_x, double in_y, double in_z){
+      void Vector3(double in_x, double in_y, double in_z)
+      {
          
       }
 
-      ~void Vector3(){
+      ~void Vector3()
+      {
       
       }
       
-      double getX(){
+      double getX()
+      {
       
       }
       
-      double getY(){
+      double getY()
+      {
       
       }
       
-      double getZ(){
+      double getZ()
+      {
       
       }
       
-      void set(double in_x,double in_y,double in_z){
+      void set(double in_x,double in_y,double in_z)
+      {
       
       }
       //ESTA PARTE FOI AO CALHAS
-      Vector3 operator=(const Vector3 & in_vec){
+      Vector3 operator=(const Vector3 & in_vec)
+      {
       
       }
       
-      Vector3 operator*(double in_num){
+      Vector3 operator*(double in_num)
+      {
       
       }
       
-      Vector3 operator+(const Vector3 & in_vec){
+      Vector3 operator+(const Vector3 & in_vec)
+      {
       
       }
       
-      Vector3 operator-(const Vector3 & in_vec){
+      Vector3 operator-(const Vector3 & in_vec)
+      {
       
       }
 
