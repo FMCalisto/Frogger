@@ -1,6 +1,0 @@
-class Bus: public DynamicObject{
-	public:
-		Bus();
-		~Bus();
-		draw();	
-};
