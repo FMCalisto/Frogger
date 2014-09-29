@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "../glut/include/gl/glut.h"
+#include "../glut/include/GL/glut.h"
 #include "gm\GameManager.h"
 
 using namespace std;
