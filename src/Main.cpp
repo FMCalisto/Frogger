@@ -1,12 +1,12 @@
 #include <iostream>
 
-#include "gl\glut.h"
+#include "../glut/include/gl/glut.h"
 #include "gm\GameManager.h"
 
 using namespace std;
 
 #define screenW 512
-#define screenH 512
+#define screenH 512m
 
 void init();
 void display();
@@ -16,7 +16,7 @@ void animate();
 void controls(unsigned char key, int x, int y);
 void specialKeyboardHandler(int key, int x, int y);
 
-int main (int argc, char **argv)
+int Main (int argc, char **argv)
 {
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH );
