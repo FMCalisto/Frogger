@@ -1,4 +1,6 @@
-#include<vector>
+#include <vector>
+
+#include "gm\GameManager.h"
 
 using namespace std;
  
@@ -10,39 +12,39 @@ class GameManager{
  
    public:
  
-      void GameManager(){
+      GameManager(){
             
       }
       
-      ~void GameManager(){
+      ~GameManager(){
             //DESTROY
       }
  
-      void display(){
+      GameManager display(){
       
       }
       
-      void reshape()( GLsizei w, GLsizei h){
+      GameManager reshape()(GLsizei w, GLsizei h){
             
       }
       
-      void keyPressed(){
+      GameManager keyPressed(){
       
       }
       
-      void onTimer(){
+      GameManager onTimer(){
       
       }
       
-      void idle(){
+      GameManager idle(){
       
       }
       
-      void update(){
+      GameManager update(){
       
       }
       
-      void init(){
+      GameManager init(){
       
       }
       
