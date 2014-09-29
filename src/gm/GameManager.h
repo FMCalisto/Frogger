@@ -1,3 +1,3 @@
 #include <vector>
 
-GameManager GameManager();
+void GameManager();

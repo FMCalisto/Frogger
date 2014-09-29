@@ -1,10 +1,10 @@
 #include <vector>
 
-#include "gm\GameManager.h"
+#include "gm/GameManager.h"
 
 using namespace std;
  
-class GameManager{
+class GameManager::GameManager{
    private:
        vector<GameObject> _game_objects;
        vector<LightSource> _light_sources;
