@@ -28,3 +28,7 @@ class GameManager{
 };
 #endif 
 
+<<<<<<< HEAD
+=======
+void GameManager();
+>>>>>>> origin/master

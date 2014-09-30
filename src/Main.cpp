@@ -1,7 +1,15 @@
 #include <iostream>
 
-#include "../glut/include/GL/glut.h"
-#include "gm\GameManager.h"
+#include "gm/GameManager.h"
+
+
+
+#if defined(__APPLE__) || defined(MACOSX)
+	#include <OpenGL/gl.h>
+	#include <OpenGL/glu.h>
+#else
+	#include <GL/glut.h>
+#endif
 
 using namespace std;
 
@@ -18,6 +26,7 @@ void specialKeyboardHandler(int key, int x, int y);
 
 int Main (int argc, char **argv)
 {
+	/*
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH );
 	glutInitWindowPosition(100, 100);
@@ -34,5 +43,6 @@ int Main (int argc, char **argv)
 
 
 	glutMainLoop();
+	*/
 	return 0;
 }

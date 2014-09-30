@@ -1,4 +1,5 @@
 #include <vector>
+<<<<<<< HEAD
 #include <stdio.h>
 #include "GameManager.h"
 #include <GL/glut.h>
@@ -88,6 +89,54 @@ void GameManager::reshape(int w, int h)
     glViewport(0, 0, w, h);
 }
 
+=======
+
+#include "gm/GameManager.h"
+
+using namespace std;
+ 
+class GameManager::GameManager{
+   private:
+       vector<GameObject> _game_objects;
+       vector<LightSource> _light_sources;
+       vector<Camera> _cameras;
+ 
+   public:
+ 
+      GameManager(){
+            
+      }
+      
+      ~GameManager(){
+            //DESTROY
+      }
+ 
+      GameManager display(){
+      
+      }
+      
+      GameManager reshape()(GLsizei w, GLsizei h){
+            
+      }
+      
+      GameManager keyPressed(){
+      
+      }
+      
+      GameManager onTimer(){
+      
+      }
+      
+      GameManager idle(){
+      
+      }
+      
+      GameManager update(){
+      
+      }
+      
+      GameManager init(){
+>>>>>>> origin/master
       
     
       
