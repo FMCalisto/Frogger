@@ -6,7 +6,7 @@
 using namespace std;
 
 #define screenW 512
-#define screenH 512m
+#define screenH 512
 
 void init();
 void display();
