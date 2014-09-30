@@ -24,7 +24,7 @@ void animate();
 void controls(unsigned char key, int x, int y);
 void specialKeyboardHandler(int key, int x, int y);
 
-int Main (int argc, char **argv)
+int Main(int argc, char **argv)
 {
 	/*
 	glutInit(&argc, argv);
@@ -44,5 +44,26 @@ int Main (int argc, char **argv)
 
 	glutMainLoop();
 	*/
+	
+
+	/* ==================== Bruno Oliveira ==================== */
+
+	/*
+	 *
+	 *
+	 */
+
+	glutInit(&argc, argv);
+	gm = new GameManager();
+	
+    glutDisplayFunc((void) gm->display);
+    glutReshapeFunc( gm->reshape);
+    //glutTimerFunc(0, gm.onTimer, 0);
+    
+    gm->init();
+    
+    glutMainLoop();
+	
+	//gm::display();
 	return 0;
 }

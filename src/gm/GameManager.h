@@ -1,7 +1,14 @@
 #ifndef GameManager_H
 #define GameManager_H
-#include<vector>
-#include <GL/glut.h>
+
+#include <vector>
+
+#if defined(__APPLE__) || defined(MACOSX)
+  #include <OpenGL/gl.h>
+  #include <OpenGL/glu.h>
+#else
+  #include <GL/glut.h>
+#endif
 
 using namespace std;
  
@@ -26,9 +33,4 @@ class GameManager{
     void onTimer(int extra){}
      
 };
-#endif 
-
-<<<<<<< HEAD
-=======
-void GameManager();
->>>>>>> origin/master
+#endif

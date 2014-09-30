@@ -1,8 +1,13 @@
 #include <vector>
-<<<<<<< HEAD
 #include <stdio.h>
 #include "GameManager.h"
-#include <GL/glut.h>
+
+#if defined(__APPLE__) || defined(MACOSX)
+  #include <OpenGL/gl.h>
+  #include <OpenGL/glu.h>
+#else
+  #include <GL/glut.h>
+#endif
 
 using namespace std;
  
@@ -10,7 +15,7 @@ using namespace std;
     glutInitWindowSize(1024,720);
     glutInitDisplayMode(GLUT_RGBA | GLUT_DEPTH | GLUT_DOUBLE);
     glutCreateWindow("Frogger");
-            puts("LEL");
+    puts("LEL");
     }
     
     void GameManager::init()
@@ -42,18 +47,18 @@ using namespace std;
  //   static float angle = 0;
   //  angle += 1.0f;
 
-      //TOP MARGIN
-      glPushMatrix();
+  //TOP MARGIN
+  glPushMatrix();
         glTranslatef(0,10,0);
        // glRotatef(angle, 0.1, 0.2, 0.5);
         glColor3ub(139,69,19);
         glScalef(5.0f, 0.5f, 2.f); // glScalef(a,b,c)  Make the shape (a) times as wide, (b times) height and (c times) as deep
         glutSolidCube(5);
     glPopMatrix();
-      //TOP MARGIN ENDS
-      //---------------------------------------------------------------------------------------------------------------------------------------------
+  //TOP MARGIN ENDS
+  //---------------------------------------------------------------------------------------------------------------------------------------------
 
-      //RIVER BEGINS -------------------------------------------------------------------------------------------------------
+  //RIVER BEGINS -------------------------------------------------------------------------------------------------------
     glPushMatrix();
         glTranslatef(0,5,0);
        // glRotatef(angle, 0.1, 0.2, 0.5);
@@ -89,54 +94,6 @@ void GameManager::reshape(int w, int h)
     glViewport(0, 0, w, h);
 }
 
-=======
-
-#include "gm/GameManager.h"
-
-using namespace std;
- 
-class GameManager::GameManager{
-   private:
-       vector<GameObject> _game_objects;
-       vector<LightSource> _light_sources;
-       vector<Camera> _cameras;
- 
-   public:
- 
-      GameManager(){
-            
-      }
-      
-      ~GameManager(){
-            //DESTROY
-      }
- 
-      GameManager display(){
-      
-      }
-      
-      GameManager reshape()(GLsizei w, GLsizei h){
-            
-      }
-      
-      GameManager keyPressed(){
-      
-      }
-      
-      GameManager onTimer(){
-      
-      }
-      
-      GameManager idle(){
-      
-      }
-      
-      GameManager update(){
-      
-      }
-      
-      GameManager init(){
->>>>>>> origin/master
       
     
       

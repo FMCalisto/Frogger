@@ -23,7 +23,10 @@ class Frog: public DynamicObject
 		if (!pmodel)
 		{
 			pmodel = glmReadOBJ("ship.obj");
-			if (!pmodel) exit(0);
+			if (!pmodel)
+			{
+				exit(0);
+			}
 			glmUnitize(pmodel);
 			glmFacetNormals(pmodel);
 			glmVertexNormals(pmodel, 90.0);
