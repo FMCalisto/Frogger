@@ -51,7 +51,7 @@ sketch on paper to an object (not using this outline).
 
 3. The wheels of the car can be created using the torus. 
 
-4. Some of the functions the study:
+4. Some of the study functions:
 
 ```
 - GlViewport, glMatrixMode, glOrtho 
