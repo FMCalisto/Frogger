@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{BA4F9416-723B-4E26-A160-17BF46777D94}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Frogger</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>P:\Windows\Programs\Develop\GitHub\Frogger\glut\include\GL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalUsingDirectories>P:\Windows\Programs\Develop\GitHub\Frogger\glut\lib;%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>P:\Windows\Programs\Develop\GitHub\Frogger\glut\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\gm\GameManager.cpp" />
+    <ClCompile Include="..\..\src\go\Bus.cpp" />
+    <ClCompile Include="..\..\src\go\Car.cpp" />
+    <ClCompile Include="..\..\src\go\Cube.cpp" />
+    <ClCompile Include="..\..\src\go\DynamicObject.cpp" />
+    <ClCompile Include="..\..\src\go\Frog.cpp" />
+    <ClCompile Include="..\..\src\go\GameObject.cpp" />
+    <ClCompile Include="..\..\src\go\River.cpp" />
+    <ClCompile Include="..\..\src\go\Riverside.cpp" />
+    <ClCompile Include="..\..\src\go\Road.cpp" />
+    <ClCompile Include="..\..\src\go\Roadside.cpp" />
+    <ClCompile Include="..\..\src\go\Sphere.cpp" />
+    <ClCompile Include="..\..\src\go\StaticObject.cpp" />
+    <ClCompile Include="..\..\src\go\Timberlog.cpp" />
+    <ClCompile Include="..\..\src\go\Turtle.cpp" />
+    <ClCompile Include="..\..\src\ls\LightSource.cpp" />
+    <ClCompile Include="..\..\src\Main.cpp" />
+    <ClCompile Include="..\..\src\util\Display.cpp" />
+    <ClCompile Include="..\..\src\util\Entity.cpp" />
+    <ClCompile Include="..\..\src\util\Reshape.cpp" />
+    <ClCompile Include="..\..\src\util\Shape.cpp" />
+    <ClCompile Include="..\..\src\util\Vector.cpp" />
+    <ClCompile Include="..\..\src\util\Vector3.cpp" />
+    <ClCompile Include="..\..\src\util\Vector4.cpp" />
+    <ClCompile Include="..\..\src\vc\Camera.cpp" />
+    <ClCompile Include="..\..\src\vc\OrthogonalCamera.cpp" />
+    <ClCompile Include="..\..\src\vc\PerspectiveCamera.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\gm\GameManager.h" />
+    <ClInclude Include="..\..\src\go\Cube.h" />
+    <ClInclude Include="..\..\src\go\Frog.h" />
+    <ClInclude Include="..\..\src\go\Sphere.h" />
+    <ClInclude Include="..\..\src\util\Shape.h" />
+    <ClInclude Include="..\..\src\util\Vector.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\src\Makefile" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

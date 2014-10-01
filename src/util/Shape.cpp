@@ -1,4 +1,4 @@
-#include "util\Shape.h"
+#include "../util/Shape.h"
 
 const GLfloat Shape::white[4] = {1.0, 1.0, 1.0, 1.0 };
 const GLfloat Shape::red[4] = {1.0, 0.0, 0.0, 1.0 };

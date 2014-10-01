@@ -1,8 +1,8 @@
 #ifndef SHAPE_H
 #define SHAPE_H
 
-#include "util\Vector.h"
-#include "gl\glut.h"
+#include "../util/Vector.h"
+#include "../GL/glut.h"
 
 class Shape
 {
