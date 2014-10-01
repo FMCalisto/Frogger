@@ -42,7 +42,7 @@ class GameManager
 
     void display(){};
 
-    void reshape(){};
+    void reshape(GLsizei w, GLsizei h){};
 
     void onTimer(int extra){}
      

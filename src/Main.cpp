@@ -9,6 +9,8 @@
 #if defined(__APPLE__) || defined(MACOSX)
 	#include <OpenGL/gl.h>
 	#include <OpenGL/glu.h>
+	#include <QTOpenGL/qgl.h>
+	#include <OpenGL/gl3.h>
 
 	#define __gl_h_
 		#include <GLUT/glut.h>
@@ -33,7 +35,8 @@ int Main(int argc, char **argv)
 {
 	
 	glutInit(&argc, argv);
-	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH | GLUT_3_2_CORE_PROFILE); // <===== Add the last flagg
+	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH);
+	// Falgg GLUT_3_2_CORE_PROFILE
 	glutInitWindowPosition(100, 100);
 	glutInitWindowSize(screenW, screenH);
 	glutCreateWindow("Seth Frogger v 0.2");
