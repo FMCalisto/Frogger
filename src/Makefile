@@ -1,16 +1,13 @@
-all: frogger
 
-frogger: Main.o GameManager.o frogger.o
-	g++ Main.o GameManager.o frogger.o -o frogger -lGL -lGLU -lglut
+hello: main.o GameManager.o 
+	g++ main.o GameManager.o -o jogo -lglut -lGL -lGLU
 
-Main.o: Main.cpp
-	g++ -c Main.cpp -lGL -lGLU -lglut
+main.o: main.cpp
+	g++ -c main.cpp -lglut -lGL -lGLU
 
 GameManager.o: GameManager.cpp
-	g++ -c GameManager.cpp -lGL -lGLU -lglut
-
-frogger.o: frogger.cpp
-	g++ -c frogger.cpp -lGL -lGLU -lglut
+	g++ -c GameManager.cpp -lglut -lGL -lGLU
 
 clean:
-	rm -rf *o frogger -lGL -lGLU -lglut
+	rm -rf *o jogo
+ 

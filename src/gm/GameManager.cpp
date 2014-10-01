@@ -1,13 +1,22 @@
 #include <vector>
 #include <stdio.h>
-#include "GameManager.h"
 
+#include "gm/GameManager.h"
+
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+
+/*
 #if defined(__APPLE__) || defined(MACOSX)
   #include <OpenGL/gl.h>
   #include <OpenGL/glu.h>
+
+  #define __gl_h_
+    #include <GLUT/glut.h>
 #else
   #include <GL/glut.h>
 #endif
+
+*/
 
 using namespace std;
  
