@@ -2,11 +2,16 @@
 
 #include "gm/GameManager.h"
 
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+
 
 
 #if defined(__APPLE__) || defined(MACOSX)
 	#include <OpenGL/gl.h>
 	#include <OpenGL/glu.h>
+
+	#define __gl_h_
+		#include <GLUT/glut.h>
 #else
 	#include <GL/glut.h>
 #endif
@@ -26,9 +31,9 @@ void specialKeyboardHandler(int key, int x, int y);
 
 int Main(int argc, char **argv)
 {
-	/*
+	
 	glutInit(&argc, argv);
-	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH );
+	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH | GLUT_3_2_CORE_PROFILE); // <===== Add the last flagg
 	glutInitWindowPosition(100, 100);
 	glutInitWindowSize(screenW, screenH);
 	glutCreateWindow("Seth Frogger v 0.2");
@@ -43,7 +48,7 @@ int Main(int argc, char **argv)
 
 
 	glutMainLoop();
-	*/
+	
 	
 
 	/* ==================== Bruno Oliveira ==================== */
@@ -53,11 +58,13 @@ int Main(int argc, char **argv)
 	 *
 	 */
 
+	 /*
+
 	glutInit(&argc, argv);
-	gm = new GameManager();
+	GameManager* gm = new GameManager();
 	
-    glutDisplayFunc((void) gm->display);
-    glutReshapeFunc( gm->reshape);
+    glutDisplayFunc((void) gm->display());
+    glutReshapeFunc( gm->reshape());
     //glutTimerFunc(0, gm.onTimer, 0);
     
     gm->init();
@@ -65,5 +72,9 @@ int Main(int argc, char **argv)
     glutMainLoop();
 	
 	//gm::display();
+
+	*/
+
+
 	return 0;
 }
