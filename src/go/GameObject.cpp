@@ -1,13 +1,22 @@
+#include"GameObject.h"
+#include<stdio.h>
+
 using namespace std;
 
-#include <bits/stdc++>
 
-class GameObject: public Entity{
-	public:		
-		void GameObject();
-		void ~GameObject();
 
-		void draw();
 
-		void update(double delta_t);
-};
+		GameObject::GameObject(){
+		
+		}
+
+/*		~GameObject::GameObject(){
+		
+		}*/
+		
+	
+		
+		void GameObject::update(double delta_t){
+		
+		}
+

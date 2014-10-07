@@ -1,63 +1,74 @@
-#include <vector>
+#include "Vector3.h"
 
-using namespace std;
-
-/*
- 
-class Camera
+Vector3::Vector3()
 {
-   protected:
-      double _x;
-      double _y;
-      double _z;
- 
-   public:
- 
-      void Vector3(){
-      
-      }
- 
-      void Vector3(double in_x, double in_y, double in_z){
-         
-      }
 
-      ~void Vector3(){
-      
-      }
-      
-      double getX(){
-      
-      }
-      
-      double getY(){
-      
-      }
-      
-      double getZ(){
-      
-      }
-      
-      void set(double in_x,double in_y,double in_z){
-      
-      }
-      //ESTA PARTE FOI AO CALHAS
-      Vector3 operator=(const Vector3 & in_vec){
-      
-      }
-      
-      Vector3 operator*(double in_num){
-      
-      }
-      
-      Vector3 operator+(const Vector3 & in_vec){
-      
-      }
-      
-      Vector3 operator-(const Vector3 & in_vec){
-      
-      }
+}
 
+Vector3::Vector3(double x, double y, double z)
+{
+	_x = x;
+	_y = y;
+	_z = z;
+}
 
-};
+Vector3::~Vector3()
+{
+	_x = 0;
+	_y = 0;
+	_z = 0;
+}
 
-*/
+double Vector3::getX() const
+{
+	return _x;
+}
+
+double Vector3::getY() const
+{
+	return _y;
+}
+
+double Vector3::getZ() const
+{
+	return _z;
+}
+
+void Vector3::set(double x, double y, double z)
+{
+	_x = x;
+	_y = y;
+	_z = z;
+}
+
+Vector3 Vector3::operator=(const Vector3 & vec)
+{
+	Vector3 vector( vec.getX(), vec.getY(), vec.getZ());
+	
+	//vector.set(vec.getX,vec.getY,vec.getZ);
+	
+	return vector;
+}
+
+Vector3 Vector3::operator*(double num)
+{
+	//Vector3 vector(num*_x, num*_y, num*_z);
+	
+	//return vector;
+	
+	return Vector3(num*_x, num*_y, num*_z);
+}
+
+Vector3 Vector3::operator+(const Vector3 & vec)
+{
+	Vector3 vector(_x + vec.getX(), _y + vec.getY(), _z + vec.getZ());
+	
+	return vector;
+}
+
+Vector3 Vector3::operator-(const Vector3 & vec)
+{
+	Vector3 vector(_x - vec.getX(), _y - vec.getY(), _z - vec.getZ());
+	
+	return vector;
+}
