@@ -1,77 +1,63 @@
-#include <iostream>
+/*#include <windows.h>
+#include <gl\GL.h>
+#include <glut.h>*/
 
-#include "gm/GameManager.h"
+#include <GL/glut.h>
 
-#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+#include <vector>
+
+#include"GameManager.h"
 
 
+GameManager * gm;
+int _altura;
+int _largura;
 
-#if defined(__APPLE__) || defined(MACOSX)
-	#include <GLUT/glut.h>
-#else
-	#include <GL/glut.h>
-#endif
 
-using namespace std;
+void myDisplay(void){	
+	
+	gm->display();
 
-#define screenW 512
-#define screenH 512
+}
 
-void init();
-void display();
-void reshape(int w, int h);
-void idleFunc();
-void animate();
-void controls(unsigned char key, int x, int y);
-void specialKeyboardHandler(int key, int x, int y);
+void myReshape(GLsizei w, GLsizei h){
+	
+	gm->reshape(w,h);
 
-int Main(int argc, char **argv)
-{
+}
+
+
+/*void myonTimer(int extra){
+	
+	gm->onTimer();
+
+}*/
+
+void timer(int extra){
+    glutPostRedisplay();
+    glutTimerFunc(16, timer, 0);
+}
+
+int Main(int argc, char **argv){
+
+	gm = new GameManager(1024,720);
+	
 	
 	glutInit(&argc, argv);
-	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH);
-	// Falgg GLUT_3_2_CORE_PROFILE
-	glutInitWindowPosition(100, 100);
-	glutInitWindowSize(screenW, screenH);
-	glutCreateWindow("Seth Frogger v 0.2");
-	
-	init();
-	glutDisplayFunc(display);
-	glutReshapeFunc(reshape);
-	glutIdleFunc(animate);
-	glutKeyboardFunc(controls);
-	glutSpecialFunc(specialKeyboardHandler);
-	//glutMouseFunc();
-
-
-	glutMainLoop();
-	
-	
-
-	/* ==================== Bruno Oliveira ==================== */
-
-	/*
-	 *
-	 *
-	 */
-
-	 /*
-
-	glutInit(&argc, argv);
-	GameManager* gm = new GameManager();
-	
-    glutDisplayFunc((void) gm->display());
-    glutReshapeFunc( gm->reshape());
-    //glutTimerFunc(0, gm.onTimer, 0);
+    glutInitWindowSize(1024,720);
+    glutInitDisplayMode(GLUT_RGBA | GLUT_DEPTH | GLUT_DOUBLE);
+    glutCreateWindow("Frogger");
     
     gm->init();
+
+    glutDisplayFunc(myDisplay);
+    glutReshapeFunc(myReshape);
+    glutTimerFunc(0, timer, 0);
+    
+    
     
     glutMainLoop();
 	
-	//gm::display();
-
-	*/
-
 
 	return 0;
 }

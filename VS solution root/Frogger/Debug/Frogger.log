@@ -1,7 +1,11 @@
-﻿Build started 06/10/2014 20:24:38.
+﻿Build started 07/10/2014 01:25:43.
      1>Project "P:\Windows\Programs\Develop\GitHub\Frogger\VS solution root\Frogger\Frogger.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         P:\Windows\Programs\Develop\Microsoft\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IP:\Windows\Programs\Develop\GitHub\Frogger\glut\include\GL /AIP:\Windows\Programs\Develop\GitHub\Frogger\glut\lib /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\src\gm\GameManager.cpp ..\..\src\go\Bus.cpp ..\..\src\go\Car.cpp ..\..\src\go\Cube.cpp ..\..\src\go\DynamicObject.cpp ..\..\src\go\Frog.cpp ..\..\src\go\GameObject.cpp ..\..\src\go\River.cpp ..\..\src\go\Riverside.cpp ..\..\src\go\Road.cpp ..\..\src\go\Roadside.cpp ..\..\src\go\Sphere.cpp ..\..\src\go\StaticObject.cpp ..\..\src\go\Timberlog.cpp ..\..\src\go\Turtle.cpp ..\..\src\ls\LightSource.cpp ..\..\src\util\Display.cpp
+         P:\Windows\Programs\Develop\Microsoft\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IP:\Windows\Programs\Develop\GitHub\Frogger\glut\include\GL /AIP:\Windows\Programs\Develop\GitHub\Frogger\glut\lib /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\src\Main.cpp ..\..\src\gm\GameManager.cpp ..\..\src\go\Bus.cpp ..\..\src\go\Car.cpp ..\..\src\go\Cube.cpp ..\..\src\go\DynamicObject.cpp ..\..\src\go\Frog.cpp ..\..\src\go\GameObject.cpp ..\..\src\go\River.cpp ..\..\src\go\Riverside.cpp ..\..\src\go\Road.cpp ..\..\src\go\Roadside.cpp ..\..\src\go\Sphere.cpp ..\..\src\go\StaticObject.cpp ..\..\src\go\Timberlog.cpp ..\..\src\go\Turtle.cpp ..\..\src\ls\LightSource.cpp ..\..\src\util\Display.cpp ..\..\src\util\Vector4.cpp ..\..\src\vc\Camera.cpp ..\..\src\vc\OrthogonalCamera.cpp ..\..\src\vc\PerspectiveCamera.cpp
+         PerspectiveCamera.cpp
+         OrthogonalCamera.cpp
+         Camera.cpp
+         Vector4.cpp
          Display.cpp
      1>p:\windows\programs\develop\github\frogger\src\util\display.cpp(7): fatal error C1083: Cannot open include file: 'util\Cube.h': No such file or directory
          LightSource.cpp
@@ -11,387 +15,45 @@
          Timberlog.cpp
      1>p:\windows\programs\develop\github\frogger\src\go\timberlog.cpp(1): error C2504: 'DynamicObject' : base class undefined
          StaticObject.cpp
-     1>p:\windows\programs\develop\github\frogger\src\go\staticobject.cpp(3): fatal error C1083: Cannot open include file: 'bits/stdc++': No such file or directory
+     1>p:\windows\programs\develop\github\frogger\src\go\staticobject.h(4): fatal error C1083: Cannot open include file: 'Entity.h': No such file or directory
          Sphere.cpp
      1>p:\windows\programs\develop\github\frogger\src\go\sphere.cpp(1): fatal error C1083: Cannot open include file: 'go\Sphere.h': No such file or directory
          Roadside.cpp
-     1>p:\windows\programs\develop\github\frogger\src\go\roadside.cpp(1): error C2504: 'StaticObject' : base class undefined
+     1>p:\windows\programs\develop\github\frogger\src\go\roadside.h(9): fatal error C1083: Cannot open include file: 'Entity.h': No such file or directory
          Road.cpp
-     1>p:\windows\programs\develop\github\frogger\src\go\road.cpp(1): error C2504: 'StaticObject' : base class undefined
+     1>p:\windows\programs\develop\github\frogger\src\go\road.h(9): fatal error C1083: Cannot open include file: 'Entity.h': No such file or directory
          Riverside.cpp
-     1>p:\windows\programs\develop\github\frogger\src\go\riverside.cpp(3): fatal error C1083: Cannot open include file: 'bits/stdc++': No such file or directory
+     1>p:\windows\programs\develop\github\frogger\src\go\riverside.h(7): fatal error C1083: Cannot open include file: 'Entity.h': No such file or directory
          River.cpp
-     1>p:\windows\programs\develop\github\frogger\src\go\river.cpp(3): fatal error C1083: Cannot open include file: 'bits/stdc++': No such file or directory
+     1>p:\windows\programs\develop\github\frogger\src\go\river.h(9): fatal error C1083: Cannot open include file: 'Entity.h': No such file or directory
          GameObject.cpp
-     1>p:\windows\programs\develop\github\frogger\src\go\gameobject.cpp(3): fatal error C1083: Cannot open include file: 'bits/stdc++': No such file or directory
+     1>p:\windows\programs\develop\github\frogger\src\go\gameobject.h(4): fatal error C1083: Cannot open include file: 'Entity.h': No such file or directory
          Frog.cpp
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(109): warning C4005: 'GLUT_API_VERSION' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(183) : see previous definition of 'GLUT_API_VERSION'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(110): warning C4005: 'GLUT_XLIB_IMPLEMENTATION' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(223) : see previous definition of 'GLUT_XLIB_IMPLEMENTATION'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(129): warning C4005: 'GLUT_KEY_F1' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(255) : see previous definition of 'GLUT_KEY_F1'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(130): warning C4005: 'GLUT_KEY_F2' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(256) : see previous definition of 'GLUT_KEY_F2'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(131): warning C4005: 'GLUT_KEY_F3' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(257) : see previous definition of 'GLUT_KEY_F3'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(132): warning C4005: 'GLUT_KEY_F4' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(258) : see previous definition of 'GLUT_KEY_F4'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(133): warning C4005: 'GLUT_KEY_F5' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(259) : see previous definition of 'GLUT_KEY_F5'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(134): warning C4005: 'GLUT_KEY_F6' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(260) : see previous definition of 'GLUT_KEY_F6'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(135): warning C4005: 'GLUT_KEY_F7' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(261) : see previous definition of 'GLUT_KEY_F7'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(136): warning C4005: 'GLUT_KEY_F8' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(262) : see previous definition of 'GLUT_KEY_F8'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(137): warning C4005: 'GLUT_KEY_F9' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(263) : see previous definition of 'GLUT_KEY_F9'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(138): warning C4005: 'GLUT_KEY_F10' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(264) : see previous definition of 'GLUT_KEY_F10'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(139): warning C4005: 'GLUT_KEY_F11' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(265) : see previous definition of 'GLUT_KEY_F11'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(140): warning C4005: 'GLUT_KEY_F12' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(266) : see previous definition of 'GLUT_KEY_F12'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(141): warning C4005: 'GLUT_KEY_LEFT' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(268) : see previous definition of 'GLUT_KEY_LEFT'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(142): warning C4005: 'GLUT_KEY_UP' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(269) : see previous definition of 'GLUT_KEY_UP'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(143): warning C4005: 'GLUT_KEY_RIGHT' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(270) : see previous definition of 'GLUT_KEY_RIGHT'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(144): warning C4005: 'GLUT_KEY_DOWN' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(271) : see previous definition of 'GLUT_KEY_DOWN'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(145): warning C4005: 'GLUT_KEY_PAGE_UP' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(272) : see previous definition of 'GLUT_KEY_PAGE_UP'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(146): warning C4005: 'GLUT_KEY_PAGE_DOWN' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(273) : see previous definition of 'GLUT_KEY_PAGE_DOWN'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(147): warning C4005: 'GLUT_KEY_HOME' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(274) : see previous definition of 'GLUT_KEY_HOME'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(148): warning C4005: 'GLUT_KEY_END' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(275) : see previous definition of 'GLUT_KEY_END'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(149): warning C4005: 'GLUT_KEY_INSERT' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(276) : see previous definition of 'GLUT_KEY_INSERT'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(154): warning C4005: 'GLUT_LEFT_BUTTON' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(245) : see previous definition of 'GLUT_LEFT_BUTTON'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(155): warning C4005: 'GLUT_MIDDLE_BUTTON' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(246) : see previous definition of 'GLUT_MIDDLE_BUTTON'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(156): warning C4005: 'GLUT_RIGHT_BUTTON' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(247) : see previous definition of 'GLUT_RIGHT_BUTTON'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(157): warning C4005: 'GLUT_DOWN' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(250) : see previous definition of 'GLUT_DOWN'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(158): warning C4005: 'GLUT_UP' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(251) : see previous definition of 'GLUT_UP'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(159): warning C4005: 'GLUT_LEFT' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(280) : see previous definition of 'GLUT_LEFT'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(160): warning C4005: 'GLUT_ENTERED' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(281) : see previous definition of 'GLUT_ENTERED'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(165): warning C4005: 'GLUT_RGB' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(227) : see previous definition of 'GLUT_RGB'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(166): warning C4005: 'GLUT_RGBA' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(228) : see previous definition of 'GLUT_RGBA'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(167): warning C4005: 'GLUT_INDEX' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(229) : see previous definition of 'GLUT_INDEX'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(168): warning C4005: 'GLUT_SINGLE' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(230) : see previous definition of 'GLUT_SINGLE'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(169): warning C4005: 'GLUT_DOUBLE' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(231) : see previous definition of 'GLUT_DOUBLE'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(170): warning C4005: 'GLUT_ACCUM' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(232) : see previous definition of 'GLUT_ACCUM'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(171): warning C4005: 'GLUT_ALPHA' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(233) : see previous definition of 'GLUT_ALPHA'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(172): warning C4005: 'GLUT_DEPTH' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(234) : see previous definition of 'GLUT_DEPTH'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(173): warning C4005: 'GLUT_STENCIL' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(235) : see previous definition of 'GLUT_STENCIL'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(174): warning C4005: 'GLUT_MULTISAMPLE' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(237) : see previous definition of 'GLUT_MULTISAMPLE'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(175): warning C4005: 'GLUT_STEREO' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(238) : see previous definition of 'GLUT_STEREO'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(176): warning C4005: 'GLUT_LUMINANCE' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(241) : see previous definition of 'GLUT_LUMINANCE'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(181): warning C4005: 'GLUT_MENU_NOT_IN_USE' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(284) : see previous definition of 'GLUT_MENU_NOT_IN_USE'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(182): warning C4005: 'GLUT_MENU_IN_USE' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(285) : see previous definition of 'GLUT_MENU_IN_USE'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(183): warning C4005: 'GLUT_NOT_VISIBLE' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(288) : see previous definition of 'GLUT_NOT_VISIBLE'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(184): warning C4005: 'GLUT_VISIBLE' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(289) : see previous definition of 'GLUT_VISIBLE'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(185): warning C4005: 'GLUT_HIDDEN' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(292) : see previous definition of 'GLUT_HIDDEN'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(186): warning C4005: 'GLUT_FULLY_RETAINED' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(293) : see previous definition of 'GLUT_FULLY_RETAINED'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(187): warning C4005: 'GLUT_PARTIALLY_RETAINED' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(294) : see previous definition of 'GLUT_PARTIALLY_RETAINED'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(188): warning C4005: 'GLUT_FULLY_COVERED' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(295) : see previous definition of 'GLUT_FULLY_COVERED'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(196): warning C4005: 'GLUT_STROKE_ROMAN' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(304) : see previous definition of 'GLUT_STROKE_ROMAN'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(197): warning C4005: 'GLUT_STROKE_MONO_ROMAN' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(305) : see previous definition of 'GLUT_STROKE_MONO_ROMAN'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(198): warning C4005: 'GLUT_BITMAP_9_BY_15' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(308) : see previous definition of 'GLUT_BITMAP_9_BY_15'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(199): warning C4005: 'GLUT_BITMAP_8_BY_13' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(309) : see previous definition of 'GLUT_BITMAP_8_BY_13'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(200): warning C4005: 'GLUT_BITMAP_TIMES_ROMAN_10' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(310) : see previous definition of 'GLUT_BITMAP_TIMES_ROMAN_10'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(201): warning C4005: 'GLUT_BITMAP_TIMES_ROMAN_24' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(311) : see previous definition of 'GLUT_BITMAP_TIMES_ROMAN_24'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(202): warning C4005: 'GLUT_BITMAP_HELVETICA_10' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(313) : see previous definition of 'GLUT_BITMAP_HELVETICA_10'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(203): warning C4005: 'GLUT_BITMAP_HELVETICA_12' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(314) : see previous definition of 'GLUT_BITMAP_HELVETICA_12'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(204): warning C4005: 'GLUT_BITMAP_HELVETICA_18' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(315) : see previous definition of 'GLUT_BITMAP_HELVETICA_18'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(236): warning C4005: 'GLUT_WINDOW_X' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(348) : see previous definition of 'GLUT_WINDOW_X'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(237): warning C4005: 'GLUT_WINDOW_Y' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(349) : see previous definition of 'GLUT_WINDOW_Y'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(238): warning C4005: 'GLUT_WINDOW_WIDTH' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(350) : see previous definition of 'GLUT_WINDOW_WIDTH'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(239): warning C4005: 'GLUT_WINDOW_HEIGHT' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(351) : see previous definition of 'GLUT_WINDOW_HEIGHT'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(240): warning C4005: 'GLUT_WINDOW_BUFFER_SIZE' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(352) : see previous definition of 'GLUT_WINDOW_BUFFER_SIZE'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(241): warning C4005: 'GLUT_WINDOW_STENCIL_SIZE' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(353) : see previous definition of 'GLUT_WINDOW_STENCIL_SIZE'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(242): warning C4005: 'GLUT_WINDOW_DEPTH_SIZE' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(354) : see previous definition of 'GLUT_WINDOW_DEPTH_SIZE'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(243): warning C4005: 'GLUT_WINDOW_RED_SIZE' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(355) : see previous definition of 'GLUT_WINDOW_RED_SIZE'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(244): warning C4005: 'GLUT_WINDOW_GREEN_SIZE' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(356) : see previous definition of 'GLUT_WINDOW_GREEN_SIZE'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(245): warning C4005: 'GLUT_WINDOW_BLUE_SIZE' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(357) : see previous definition of 'GLUT_WINDOW_BLUE_SIZE'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(246): warning C4005: 'GLUT_WINDOW_ALPHA_SIZE' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(358) : see previous definition of 'GLUT_WINDOW_ALPHA_SIZE'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(247): warning C4005: 'GLUT_WINDOW_ACCUM_RED_SIZE' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(359) : see previous definition of 'GLUT_WINDOW_ACCUM_RED_SIZE'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(248): warning C4005: 'GLUT_WINDOW_ACCUM_GREEN_SIZE' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(360) : see previous definition of 'GLUT_WINDOW_ACCUM_GREEN_SIZE'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(249): warning C4005: 'GLUT_WINDOW_ACCUM_BLUE_SIZE' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(361) : see previous definition of 'GLUT_WINDOW_ACCUM_BLUE_SIZE'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(250): warning C4005: 'GLUT_WINDOW_ACCUM_ALPHA_SIZE' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(362) : see previous definition of 'GLUT_WINDOW_ACCUM_ALPHA_SIZE'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(251): warning C4005: 'GLUT_WINDOW_DOUBLEBUFFER' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(363) : see previous definition of 'GLUT_WINDOW_DOUBLEBUFFER'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(252): warning C4005: 'GLUT_WINDOW_RGBA' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(364) : see previous definition of 'GLUT_WINDOW_RGBA'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(253): warning C4005: 'GLUT_WINDOW_PARENT' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(365) : see previous definition of 'GLUT_WINDOW_PARENT'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(254): warning C4005: 'GLUT_WINDOW_NUM_CHILDREN' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(366) : see previous definition of 'GLUT_WINDOW_NUM_CHILDREN'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(255): warning C4005: 'GLUT_WINDOW_COLORMAP_SIZE' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(367) : see previous definition of 'GLUT_WINDOW_COLORMAP_SIZE'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(256): warning C4005: 'GLUT_WINDOW_NUM_SAMPLES' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(369) : see previous definition of 'GLUT_WINDOW_NUM_SAMPLES'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(257): warning C4005: 'GLUT_WINDOW_STEREO' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(370) : see previous definition of 'GLUT_WINDOW_STEREO'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(258): warning C4005: 'GLUT_WINDOW_CURSOR' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(373) : see previous definition of 'GLUT_WINDOW_CURSOR'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(260): warning C4005: 'GLUT_SCREEN_WIDTH' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(375) : see previous definition of 'GLUT_SCREEN_WIDTH'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(261): warning C4005: 'GLUT_SCREEN_HEIGHT' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(376) : see previous definition of 'GLUT_SCREEN_HEIGHT'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(262): warning C4005: 'GLUT_SCREEN_WIDTH_MM' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(377) : see previous definition of 'GLUT_SCREEN_WIDTH_MM'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(263): warning C4005: 'GLUT_SCREEN_HEIGHT_MM' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(378) : see previous definition of 'GLUT_SCREEN_HEIGHT_MM'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(264): warning C4005: 'GLUT_MENU_NUM_ITEMS' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(379) : see previous definition of 'GLUT_MENU_NUM_ITEMS'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(265): warning C4005: 'GLUT_DISPLAY_MODE_POSSIBLE' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(380) : see previous definition of 'GLUT_DISPLAY_MODE_POSSIBLE'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(266): warning C4005: 'GLUT_INIT_WINDOW_X' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(381) : see previous definition of 'GLUT_INIT_WINDOW_X'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(267): warning C4005: 'GLUT_INIT_WINDOW_Y' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(382) : see previous definition of 'GLUT_INIT_WINDOW_Y'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(268): warning C4005: 'GLUT_INIT_WINDOW_WIDTH' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(383) : see previous definition of 'GLUT_INIT_WINDOW_WIDTH'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(269): warning C4005: 'GLUT_INIT_WINDOW_HEIGHT' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(384) : see previous definition of 'GLUT_INIT_WINDOW_HEIGHT'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(270): warning C4005: 'GLUT_INIT_DISPLAY_MODE' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(385) : see previous definition of 'GLUT_INIT_DISPLAY_MODE'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(271): warning C4005: 'GLUT_ELAPSED_TIME' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(387) : see previous definition of 'GLUT_ELAPSED_TIME'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(272): warning C4005: 'GLUT_WINDOW_FORMAT_ID' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(390) : see previous definition of 'GLUT_WINDOW_FORMAT_ID'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(277): warning C4005: 'GLUT_HAS_KEYBOARD' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(395) : see previous definition of 'GLUT_HAS_KEYBOARD'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(278): warning C4005: 'GLUT_HAS_MOUSE' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(396) : see previous definition of 'GLUT_HAS_MOUSE'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(279): warning C4005: 'GLUT_HAS_SPACEBALL' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(397) : see previous definition of 'GLUT_HAS_SPACEBALL'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(280): warning C4005: 'GLUT_HAS_DIAL_AND_BUTTON_BOX' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(398) : see previous definition of 'GLUT_HAS_DIAL_AND_BUTTON_BOX'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(281): warning C4005: 'GLUT_HAS_TABLET' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(399) : see previous definition of 'GLUT_HAS_TABLET'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(282): warning C4005: 'GLUT_NUM_MOUSE_BUTTONS' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(400) : see previous definition of 'GLUT_NUM_MOUSE_BUTTONS'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(283): warning C4005: 'GLUT_NUM_SPACEBALL_BUTTONS' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(401) : see previous definition of 'GLUT_NUM_SPACEBALL_BUTTONS'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(284): warning C4005: 'GLUT_NUM_BUTTON_BOX_BUTTONS' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(402) : see previous definition of 'GLUT_NUM_BUTTON_BOX_BUTTONS'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(285): warning C4005: 'GLUT_NUM_DIALS' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(403) : see previous definition of 'GLUT_NUM_DIALS'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(286): warning C4005: 'GLUT_NUM_TABLET_BUTTONS' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(404) : see previous definition of 'GLUT_NUM_TABLET_BUTTONS'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(287): warning C4005: 'GLUT_DEVICE_IGNORE_KEY_REPEAT' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(407) : see previous definition of 'GLUT_DEVICE_IGNORE_KEY_REPEAT'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(288): warning C4005: 'GLUT_DEVICE_KEY_REPEAT' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(408) : see previous definition of 'GLUT_DEVICE_KEY_REPEAT'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(289): warning C4005: 'GLUT_HAS_JOYSTICK' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(409) : see previous definition of 'GLUT_HAS_JOYSTICK'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(290): warning C4005: 'GLUT_OWNS_JOYSTICK' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(410) : see previous definition of 'GLUT_OWNS_JOYSTICK'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(291): warning C4005: 'GLUT_JOYSTICK_BUTTONS' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(411) : see previous definition of 'GLUT_JOYSTICK_BUTTONS'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(292): warning C4005: 'GLUT_JOYSTICK_AXES' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(412) : see previous definition of 'GLUT_JOYSTICK_AXES'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(293): warning C4005: 'GLUT_JOYSTICK_POLL_RATE' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(413) : see previous definition of 'GLUT_JOYSTICK_POLL_RATE'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(298): warning C4005: 'GLUT_OVERLAY_POSSIBLE' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(418) : see previous definition of 'GLUT_OVERLAY_POSSIBLE'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(299): warning C4005: 'GLUT_LAYER_IN_USE' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(419) : see previous definition of 'GLUT_LAYER_IN_USE'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(300): warning C4005: 'GLUT_HAS_OVERLAY' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(420) : see previous definition of 'GLUT_HAS_OVERLAY'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(301): warning C4005: 'GLUT_TRANSPARENT_INDEX' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(421) : see previous definition of 'GLUT_TRANSPARENT_INDEX'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(302): warning C4005: 'GLUT_NORMAL_DAMAGED' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(422) : see previous definition of 'GLUT_NORMAL_DAMAGED'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(303): warning C4005: 'GLUT_OVERLAY_DAMAGED' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(423) : see previous definition of 'GLUT_OVERLAY_DAMAGED'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(308): warning C4005: 'GLUT_VIDEO_RESIZE_POSSIBLE' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(427) : see previous definition of 'GLUT_VIDEO_RESIZE_POSSIBLE'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(309): warning C4005: 'GLUT_VIDEO_RESIZE_IN_USE' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(428) : see previous definition of 'GLUT_VIDEO_RESIZE_IN_USE'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(310): warning C4005: 'GLUT_VIDEO_RESIZE_X_DELTA' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(429) : see previous definition of 'GLUT_VIDEO_RESIZE_X_DELTA'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(311): warning C4005: 'GLUT_VIDEO_RESIZE_Y_DELTA' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(430) : see previous definition of 'GLUT_VIDEO_RESIZE_Y_DELTA'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(312): warning C4005: 'GLUT_VIDEO_RESIZE_WIDTH_DELTA' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(431) : see previous definition of 'GLUT_VIDEO_RESIZE_WIDTH_DELTA'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(313): warning C4005: 'GLUT_VIDEO_RESIZE_HEIGHT_DELTA' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(432) : see previous definition of 'GLUT_VIDEO_RESIZE_HEIGHT_DELTA'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(314): warning C4005: 'GLUT_VIDEO_RESIZE_X' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(433) : see previous definition of 'GLUT_VIDEO_RESIZE_X'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(315): warning C4005: 'GLUT_VIDEO_RESIZE_Y' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(434) : see previous definition of 'GLUT_VIDEO_RESIZE_Y'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(316): warning C4005: 'GLUT_VIDEO_RESIZE_WIDTH' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(435) : see previous definition of 'GLUT_VIDEO_RESIZE_WIDTH'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(317): warning C4005: 'GLUT_VIDEO_RESIZE_HEIGHT' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(436) : see previous definition of 'GLUT_VIDEO_RESIZE_HEIGHT'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(322): warning C4005: 'GLUT_NORMAL' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(440) : see previous definition of 'GLUT_NORMAL'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(323): warning C4005: 'GLUT_OVERLAY' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(441) : see previous definition of 'GLUT_OVERLAY'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(328): warning C4005: 'GLUT_ACTIVE_SHIFT' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(444) : see previous definition of 'GLUT_ACTIVE_SHIFT'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(329): warning C4005: 'GLUT_ACTIVE_CTRL' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(445) : see previous definition of 'GLUT_ACTIVE_CTRL'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(330): warning C4005: 'GLUT_ACTIVE_ALT' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(446) : see previous definition of 'GLUT_ACTIVE_ALT'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(335): warning C4005: 'GLUT_CURSOR_RIGHT_ARROW' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(450) : see previous definition of 'GLUT_CURSOR_RIGHT_ARROW'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(336): warning C4005: 'GLUT_CURSOR_LEFT_ARROW' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(451) : see previous definition of 'GLUT_CURSOR_LEFT_ARROW'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(337): warning C4005: 'GLUT_CURSOR_INFO' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(453) : see previous definition of 'GLUT_CURSOR_INFO'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(338): warning C4005: 'GLUT_CURSOR_DESTROY' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(454) : see previous definition of 'GLUT_CURSOR_DESTROY'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(339): warning C4005: 'GLUT_CURSOR_HELP' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(455) : see previous definition of 'GLUT_CURSOR_HELP'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(340): warning C4005: 'GLUT_CURSOR_CYCLE' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(456) : see previous definition of 'GLUT_CURSOR_CYCLE'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(341): warning C4005: 'GLUT_CURSOR_SPRAY' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(457) : see previous definition of 'GLUT_CURSOR_SPRAY'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(342): warning C4005: 'GLUT_CURSOR_WAIT' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(458) : see previous definition of 'GLUT_CURSOR_WAIT'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(343): warning C4005: 'GLUT_CURSOR_TEXT' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(459) : see previous definition of 'GLUT_CURSOR_TEXT'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(344): warning C4005: 'GLUT_CURSOR_CROSSHAIR' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(460) : see previous definition of 'GLUT_CURSOR_CROSSHAIR'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(345): warning C4005: 'GLUT_CURSOR_UP_DOWN' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(462) : see previous definition of 'GLUT_CURSOR_UP_DOWN'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(346): warning C4005: 'GLUT_CURSOR_LEFT_RIGHT' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(463) : see previous definition of 'GLUT_CURSOR_LEFT_RIGHT'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(347): warning C4005: 'GLUT_CURSOR_TOP_SIDE' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(465) : see previous definition of 'GLUT_CURSOR_TOP_SIDE'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(348): warning C4005: 'GLUT_CURSOR_BOTTOM_SIDE' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(466) : see previous definition of 'GLUT_CURSOR_BOTTOM_SIDE'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(349): warning C4005: 'GLUT_CURSOR_LEFT_SIDE' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(467) : see previous definition of 'GLUT_CURSOR_LEFT_SIDE'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(350): warning C4005: 'GLUT_CURSOR_RIGHT_SIDE' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(468) : see previous definition of 'GLUT_CURSOR_RIGHT_SIDE'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(351): warning C4005: 'GLUT_CURSOR_TOP_LEFT_CORNER' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(469) : see previous definition of 'GLUT_CURSOR_TOP_LEFT_CORNER'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(352): warning C4005: 'GLUT_CURSOR_TOP_RIGHT_CORNER' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(470) : see previous definition of 'GLUT_CURSOR_TOP_RIGHT_CORNER'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(353): warning C4005: 'GLUT_CURSOR_BOTTOM_RIGHT_CORNER' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(471) : see previous definition of 'GLUT_CURSOR_BOTTOM_RIGHT_CORNER'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(354): warning C4005: 'GLUT_CURSOR_BOTTOM_LEFT_CORNER' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(472) : see previous definition of 'GLUT_CURSOR_BOTTOM_LEFT_CORNER'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(355): warning C4005: 'GLUT_CURSOR_INHERIT' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(474) : see previous definition of 'GLUT_CURSOR_INHERIT'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(356): warning C4005: 'GLUT_CURSOR_NONE' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(476) : see previous definition of 'GLUT_CURSOR_NONE'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(357): warning C4005: 'GLUT_CURSOR_FULL_CROSSHAIR' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(478) : see previous definition of 'GLUT_CURSOR_FULL_CROSSHAIR'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(362): warning C4005: 'GLUT_RED' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(298) : see previous definition of 'GLUT_RED'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(363): warning C4005: 'GLUT_GREEN' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(299) : see previous definition of 'GLUT_GREEN'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(364): warning C4005: 'GLUT_BLUE' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(300) : see previous definition of 'GLUT_BLUE'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(369): warning C4005: 'GLUT_KEY_REPEAT_OFF' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(661) : see previous definition of 'GLUT_KEY_REPEAT_OFF'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(370): warning C4005: 'GLUT_KEY_REPEAT_ON' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(662) : see previous definition of 'GLUT_KEY_REPEAT_ON'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(371): warning C4005: 'GLUT_KEY_REPEAT_DEFAULT' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(663) : see previous definition of 'GLUT_KEY_REPEAT_DEFAULT'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(373): warning C4005: 'GLUT_JOYSTICK_BUTTON_A' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(666) : see previous definition of 'GLUT_JOYSTICK_BUTTON_A'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(374): warning C4005: 'GLUT_JOYSTICK_BUTTON_B' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(667) : see previous definition of 'GLUT_JOYSTICK_BUTTON_B'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(375): warning C4005: 'GLUT_JOYSTICK_BUTTON_C' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(668) : see previous definition of 'GLUT_JOYSTICK_BUTTON_C'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(376): warning C4005: 'GLUT_JOYSTICK_BUTTON_D' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(669) : see previous definition of 'GLUT_JOYSTICK_BUTTON_D'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(381): warning C4005: 'GLUT_GAME_MODE_ACTIVE' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(677) : see previous definition of 'GLUT_GAME_MODE_ACTIVE'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(382): warning C4005: 'GLUT_GAME_MODE_POSSIBLE' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(678) : see previous definition of 'GLUT_GAME_MODE_POSSIBLE'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(383): warning C4005: 'GLUT_GAME_MODE_WIDTH' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(679) : see previous definition of 'GLUT_GAME_MODE_WIDTH'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(384): warning C4005: 'GLUT_GAME_MODE_HEIGHT' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(680) : see previous definition of 'GLUT_GAME_MODE_HEIGHT'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(385): warning C4005: 'GLUT_GAME_MODE_PIXEL_DEPTH' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(681) : see previous definition of 'GLUT_GAME_MODE_PIXEL_DEPTH'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(386): warning C4005: 'GLUT_GAME_MODE_REFRESH_RATE' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(682) : see previous definition of 'GLUT_GAME_MODE_REFRESH_RATE'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(387): warning C4005: 'GLUT_GAME_MODE_DISPLAY_CHANGED' : macro redefinition
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(683) : see previous definition of 'GLUT_GAME_MODE_DISPLAY_CHANGED'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(392): error C2375: 'glutInit_ATEXIT_HACK' : redefinition; different linkage
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(486) : see declaration of 'glutInit_ATEXIT_HACK'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(406): error C2375: 'glutCreateWindow_ATEXIT_HACK' : redefinition; different linkage
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(503) : see declaration of 'glutCreateWindow_ATEXIT_HACK'
-     1>p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(449): error C2375: 'glutCreateMenu_ATEXIT_HACK' : redefinition; different linkage
-                 p:\windows\programs\develop\github\frogger\glut\include\gl\glut.h(549) : see declaration of 'glutCreateMenu_ATEXIT_HACK'
-     1>p:\windows\programs\develop\github\frogger\src\go\frog.cpp(8): error C2011: 'Frog' : 'class' type redefinition
-                 p:\windows\programs\develop\github\frogger\src\go\frog.h(11) : see declaration of 'Frog'
          DynamicObject.cpp
-     1>p:\windows\programs\develop\github\frogger\src\go\dynamicobject.cpp(3): fatal error C1083: Cannot open include file: 'bits/stdc++': No such file or directory
+     1>p:\windows\programs\develop\github\frogger\src\go\gameobject.h(4): fatal error C1083: Cannot open include file: 'Entity.h': No such file or directory
          Cube.cpp
      1>p:\windows\programs\develop\github\frogger\src\go\cube.h(4): fatal error C1083: Cannot open include file: 'util\Shape.h': No such file or directory
          Car.cpp
-     1>p:\windows\programs\develop\github\frogger\src\go\car.cpp(1): error C2504: 'DynamicObject' : base class undefined
+     1>p:\windows\programs\develop\github\frogger\src\go\car.cpp(54): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>p:\windows\programs\develop\github\frogger\src\go\car.cpp(61): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>p:\windows\programs\develop\github\frogger\src\go\car.cpp(68): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>p:\windows\programs\develop\github\frogger\src\go\car.cpp(75): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>p:\windows\programs\develop\github\frogger\src\go\car.cpp(84): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>p:\windows\programs\develop\github\frogger\src\go\car.cpp(95): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>p:\windows\programs\develop\github\frogger\src\go\car.cpp(102): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>p:\windows\programs\develop\github\frogger\src\go\car.cpp(111): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>p:\windows\programs\develop\github\frogger\src\go\car.cpp(120): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
          Bus.cpp
      1>p:\windows\programs\develop\github\frogger\src\go\bus.cpp(1): error C2504: 'DynamicObject' : base class undefined
+         Generating Code...
+         Compiling...
          GameManager.cpp
-     1>p:\windows\programs\develop\github\frogger\src\gm\gamemanager.cpp(4): fatal error C1083: Cannot open include file: 'gm/GameManager.h': No such file or directory
+     1>p:\windows\programs\develop\github\frogger\src\gm\gamemanager.h(14): fatal error C1083: Cannot open include file: 'Entity.h': No such file or directory
+         Main.cpp
+     1>p:\windows\programs\develop\github\frogger\src\main.cpp(9): fatal error C1083: Cannot open include file: 'GameManager.h': No such file or directory
          Generating Code...
      1>Done Building Project "P:\Windows\Programs\Develop\GitHub\Frogger\VS solution root\Frogger\Frogger.vcxproj" (Build target(s)) -- FAILED.
 
 Build FAILED.
 
-Time Elapsed 00:00:01.37
+Time Elapsed 00:00:03.18
