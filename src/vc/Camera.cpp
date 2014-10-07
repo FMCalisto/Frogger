@@ -1,8 +1,11 @@
-#include<vector>
+#include <vector>
 
 using namespace std;
+
+/*
  
-class Camera: public Entity{
+class Camera: public Entity
+{
    protected:
       vector<Vector3> _up;
       vector<Vector3> _at;
@@ -11,11 +14,13 @@ class Camera: public Entity{
  
    public:
  
-      void Camera( double near, double far){
+      double Camera( double near, double far)
+	  {
          
       }
  
-      ~void Camera(){
+      ~double Camera()
+	  {
          //DESTROY
       }
       
@@ -31,3 +36,5 @@ class Camera: public Entity{
       
       }
 }; 
+
+*/

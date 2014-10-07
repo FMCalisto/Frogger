@@ -1,6 +1,8 @@
 #include<vector>
 
 using namespace std;
+
+/*
  
 class PerspectiveCamera: public Camera{
    private:
@@ -28,4 +30,6 @@ class PerspectiveCamera: public Camera{
       ~void PerspectiveCamera(){
             //DESTROY
       }
-}; 
+};
+
+*/

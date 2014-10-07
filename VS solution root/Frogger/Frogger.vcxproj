@@ -112,6 +112,7 @@
     <ClInclude Include="..\..\src\go\Cube.h" />
     <ClInclude Include="..\..\src\go\Frog.h" />
     <ClInclude Include="..\..\src\go\Sphere.h" />
+    <ClInclude Include="..\..\src\util\Entity.h" />
     <ClInclude Include="..\..\src\util\Shape.h" />
     <ClInclude Include="..\..\src\util\Vector.h" />
   </ItemGroup>

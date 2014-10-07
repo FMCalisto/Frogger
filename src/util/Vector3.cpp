@@ -1,8 +1,11 @@
-#include<vector>
+#include <vector>
 
 using namespace std;
+
+/*
  
-class Camera{
+class Camera
+{
    protected:
       double _x;
       double _y;
@@ -55,4 +58,6 @@ class Camera{
       }
 
 
-}; 
+};
+
+*/

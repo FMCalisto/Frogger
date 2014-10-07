@@ -1,68 +1,9 @@
-﻿Build started 01/10/2014 22:46:28.
-     1>Project "P:\Windows\Programs\Develop\GitHub\Frogger\VS solution root\Frogger\Frogger.vcxproj" on node 2 (Rebuild target(s)).
+﻿Build started 06/10/2014 20:24:38.
+     1>Project "P:\Windows\Programs\Develop\GitHub\Frogger\VS solution root\Frogger\Frogger.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         P:\Windows\Programs\Develop\Microsoft\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IP:\Windows\Programs\Develop\GitHub\Frogger\glut\include\GL /AIP:\Windows\Programs\Develop\GitHub\Frogger\glut\lib /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\src\gm\GameManager.cpp ..\..\src\go\Bus.cpp ..\..\src\go\Car.cpp ..\..\src\go\Cube.cpp ..\..\src\go\DynamicObject.cpp ..\..\src\go\Frog.cpp ..\..\src\go\GameObject.cpp ..\..\src\go\River.cpp ..\..\src\go\Riverside.cpp ..\..\src\go\Road.cpp ..\..\src\go\Roadside.cpp ..\..\src\go\Sphere.cpp ..\..\src\go\StaticObject.cpp ..\..\src\go\Timberlog.cpp ..\..\src\go\Turtle.cpp ..\..\src\ls\LightSource.cpp ..\..\src\Main.cpp ..\..\src\util\Display.cpp ..\..\src\util\Entity.cpp ..\..\src\util\Reshape.cpp ..\..\src\util\Shape.cpp ..\..\src\util\Vector.cpp ..\..\src\util\Vector3.cpp ..\..\src\util\Vector4.cpp ..\..\src\vc\Camera.cpp ..\..\src\vc\OrthogonalCamera.cpp ..\..\src\vc\PerspectiveCamera.cpp
-         PerspectiveCamera.cpp
-     1>p:\windows\programs\develop\github\frogger\src\vc\perspectivecamera.cpp(5): error C2504: 'Camera' : base class undefined
-     1>p:\windows\programs\develop\github\frogger\src\vc\perspectivecamera.cpp(24): error C2380: type(s) preceding 'PerspectiveCamera' (constructor with return type, or illegal redefinition of current class-name?)
-     1>p:\windows\programs\develop\github\frogger\src\vc\perspectivecamera.cpp(28): error C2380: type(s) preceding 'PerspectiveCamera' (constructor with return type, or illegal redefinition of current class-name?)
-     1>p:\windows\programs\develop\github\frogger\src\vc\perspectivecamera.cpp(28): error C2059: syntax error : 'type'
-     1>p:\windows\programs\develop\github\frogger\src\vc\perspectivecamera.cpp(28): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
-         OrthogonalCamera.cpp
-     1>p:\windows\programs\develop\github\frogger\src\vc\orthogonalcamera.cpp(5): error C2504: 'Camera' : base class undefined
-     1>p:\windows\programs\develop\github\frogger\src\vc\orthogonalcamera.cpp(26): error C2380: type(s) preceding 'OrthogonalCamera' (constructor with return type, or illegal redefinition of current class-name?)
-     1>p:\windows\programs\develop\github\frogger\src\vc\orthogonalcamera.cpp(30): error C2380: type(s) preceding 'OrthogonalCamera' (constructor with return type, or illegal redefinition of current class-name?)
-     1>p:\windows\programs\develop\github\frogger\src\vc\orthogonalcamera.cpp(30): error C2059: syntax error : 'type'
-     1>p:\windows\programs\develop\github\frogger\src\vc\orthogonalcamera.cpp(30): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
-         Camera.cpp
-     1>p:\windows\programs\develop\github\frogger\src\vc\camera.cpp(5): error C2504: 'Entity' : base class undefined
-     1>p:\windows\programs\develop\github\frogger\src\vc\camera.cpp(7): error C2065: 'Vector3' : undeclared identifier
-     1>p:\windows\programs\develop\github\frogger\src\vc\camera.cpp(7): error C2923: 'std::vector' : 'Vector3' is not a valid template type argument for parameter '_Ty'
-     1>p:\windows\programs\develop\github\frogger\src\vc\camera.cpp(8): error C2065: 'Vector3' : undeclared identifier
-     1>p:\windows\programs\develop\github\frogger\src\vc\camera.cpp(8): error C2923: 'std::vector' : 'Vector3' is not a valid template type argument for parameter '_Ty'
-     1>p:\windows\programs\develop\github\frogger\src\vc\camera.cpp(14): error C2380: type(s) preceding 'Camera' (constructor with return type, or illegal redefinition of current class-name?)
-     1>p:\windows\programs\develop\github\frogger\src\vc\camera.cpp(18): error C2380: type(s) preceding 'Camera' (constructor with return type, or illegal redefinition of current class-name?)
-     1>p:\windows\programs\develop\github\frogger\src\vc\camera.cpp(18): error C2059: syntax error : 'type'
-     1>p:\windows\programs\develop\github\frogger\src\vc\camera.cpp(18): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
-     1>p:\windows\programs\develop\github\frogger\src\vc\camera.cpp(14): error C2512: 'std::vector' : no appropriate default constructor available
-         Vector4.cpp
-     1>p:\windows\programs\develop\github\frogger\src\util\vector4.cpp(1): fatal error C1083: Cannot open include file: 'bits/stdc++': No such file or directory
-         Vector3.cpp
-     1>p:\windows\programs\develop\github\frogger\src\util\vector3.cpp(21): error C2062: type 'void' unexpected
-     1>p:\windows\programs\develop\github\frogger\src\util\vector3.cpp(21): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
-     1>p:\windows\programs\develop\github\frogger\src\util\vector3.cpp(41): error C2143: syntax error : missing ';' before '='
-     1>p:\windows\programs\develop\github\frogger\src\util\vector3.cpp(41): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>p:\windows\programs\develop\github\frogger\src\util\vector3.cpp(41): error C2143: syntax error : missing ',' before '&'
-     1>p:\windows\programs\develop\github\frogger\src\util\vector3.cpp(45): error C2143: syntax error : missing ';' before '*'
-     1>p:\windows\programs\develop\github\frogger\src\util\vector3.cpp(45): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>p:\windows\programs\develop\github\frogger\src\util\vector3.cpp(49): error C2143: syntax error : missing ';' before '+'
-     1>p:\windows\programs\develop\github\frogger\src\util\vector3.cpp(49): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>p:\windows\programs\develop\github\frogger\src\util\vector3.cpp(49): error C2143: syntax error : missing ',' before '&'
-     1>p:\windows\programs\develop\github\frogger\src\util\vector3.cpp(53): error C2143: syntax error : missing ';' before '-'
-     1>p:\windows\programs\develop\github\frogger\src\util\vector3.cpp(53): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>p:\windows\programs\develop\github\frogger\src\util\vector3.cpp(53): error C2143: syntax error : missing ',' before '&'
-         Vector.cpp
-         Shape.cpp
-         Reshape.cpp
-         Entity.cpp
-     1>p:\windows\programs\develop\github\frogger\src\util\entity.cpp(7): error C2065: 'Vector3' : undeclared identifier
-     1>p:\windows\programs\develop\github\frogger\src\util\entity.cpp(7): error C2923: 'std::vector' : 'Vector3' is not a valid template type argument for parameter '_Ty'
-     1>p:\windows\programs\develop\github\frogger\src\util\entity.cpp(15): error C2062: type 'void' unexpected
-     1>p:\windows\programs\develop\github\frogger\src\util\entity.cpp(15): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
-     1>p:\windows\programs\develop\github\frogger\src\util\entity.cpp(19): error C2143: syntax error : missing ';' before '*'
-     1>p:\windows\programs\develop\github\frogger\src\util\entity.cpp(19): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>p:\windows\programs\develop\github\frogger\src\util\entity.cpp(21): warning C4183: 'getPosition': missing return type; assumed to be a member function returning 'int'
-     1>p:\windows\programs\develop\github\frogger\src\util\entity.cpp(23): error C2143: syntax error : missing ';' before '*'
-     1>p:\windows\programs\develop\github\frogger\src\util\entity.cpp(23): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>p:\windows\programs\develop\github\frogger\src\util\entity.cpp(25): warning C4183: 'setPosition': missing return type; assumed to be a member function returning 'int'
-     1>p:\windows\programs\develop\github\frogger\src\util\entity.cpp(27): error C2143: syntax error : missing ';' before '*'
-     1>p:\windows\programs\develop\github\frogger\src\util\entity.cpp(27): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>p:\windows\programs\develop\github\frogger\src\util\entity.cpp(27): error C2143: syntax error : missing ',' before '&'
-     1>p:\windows\programs\develop\github\frogger\src\util\entity.cpp(29): warning C4183: 'getPosition': missing return type; assumed to be a member function returning 'int'
+         P:\Windows\Programs\Develop\Microsoft\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IP:\Windows\Programs\Develop\GitHub\Frogger\glut\include\GL /AIP:\Windows\Programs\Develop\GitHub\Frogger\glut\lib /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\src\gm\GameManager.cpp ..\..\src\go\Bus.cpp ..\..\src\go\Car.cpp ..\..\src\go\Cube.cpp ..\..\src\go\DynamicObject.cpp ..\..\src\go\Frog.cpp ..\..\src\go\GameObject.cpp ..\..\src\go\River.cpp ..\..\src\go\Riverside.cpp ..\..\src\go\Road.cpp ..\..\src\go\Roadside.cpp ..\..\src\go\Sphere.cpp ..\..\src\go\StaticObject.cpp ..\..\src\go\Timberlog.cpp ..\..\src\go\Turtle.cpp ..\..\src\ls\LightSource.cpp ..\..\src\util\Display.cpp
          Display.cpp
      1>p:\windows\programs\develop\github\frogger\src\util\display.cpp(7): fatal error C1083: Cannot open include file: 'util\Cube.h': No such file or directory
-         Main.cpp
-     1>p:\windows\programs\develop\github\frogger\src\main.cpp(5): warning C4068: unknown pragma
          LightSource.cpp
      1>p:\windows\programs\develop\github\frogger\src\ls\lightsource.cpp(1): fatal error C1083: Cannot open include file: 'bits/stdc++': No such file or directory
          Turtle.cpp
@@ -81,8 +22,6 @@
      1>p:\windows\programs\develop\github\frogger\src\go\riverside.cpp(3): fatal error C1083: Cannot open include file: 'bits/stdc++': No such file or directory
          River.cpp
      1>p:\windows\programs\develop\github\frogger\src\go\river.cpp(3): fatal error C1083: Cannot open include file: 'bits/stdc++': No such file or directory
-         Generating Code...
-         Compiling...
          GameObject.cpp
      1>p:\windows\programs\develop\github\frogger\src\go\gameobject.cpp(3): fatal error C1083: Cannot open include file: 'bits/stdc++': No such file or directory
          Frog.cpp
@@ -451,8 +390,8 @@
          GameManager.cpp
      1>p:\windows\programs\develop\github\frogger\src\gm\gamemanager.cpp(4): fatal error C1083: Cannot open include file: 'gm/GameManager.h': No such file or directory
          Generating Code...
-     1>Done Building Project "P:\Windows\Programs\Develop\GitHub\Frogger\VS solution root\Frogger\Frogger.vcxproj" (Rebuild target(s)) -- FAILED.
+     1>Done Building Project "P:\Windows\Programs\Develop\GitHub\Frogger\VS solution root\Frogger\Frogger.vcxproj" (Build target(s)) -- FAILED.
 
 Build FAILED.
 
-Time Elapsed 00:00:02.98
+Time Elapsed 00:00:01.37

@@ -1,5 +1,7 @@
-#include <bits/stdc++>
+
 using namespace std;
+
+/*
 
 class Vector4: public Vector3{
 
@@ -42,5 +44,5 @@ class Vector4: public Vector3{
 			//
 		}
 };
-		
-		
+
+*/
