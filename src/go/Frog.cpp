@@ -1,6 +1,7 @@
 #include <GL/glut.h>
 #include <cmath>
 #define PI acos(-1.0)
+static double x, y;
 
 /* ================================================================= */
 /* =========================== Francisco =========================== */
@@ -37,6 +38,37 @@ Frog::~Frog()
 
 
 
+void processSpecialKeys(int key, int xx, int yy) {
+
+        //float fraction = 0.1f;
+
+        switch (key) {
+                case GLUT_KEY_LEFT:
+                        x-=0.1;
+                        break;
+                case  GLUT_KEY_RIGHT:
+                        x+=0.1;
+                        break;
+                case GLUT_KEY_UP :
+                        y += 0.1;
+                        break;
+                case GLUT_KEY_DOWN :
+                        y -= 0.1;
+
+                        break;
+        default:
+        break;
+        }
+
+        glutPostRedisplay();
+}
+
+void timer(int extra){
+    glutPostRedisplay();
+    glutTimerFunc(250, timer, 0);
+}
+
+
 void init()
 {
     glEnable(GL_DEPTH_TEST);
@@ -65,7 +97,8 @@ void display()
 
  //   static float angle = 0;
   //  angle += 1.0f;
-
+glPushMatrix();
+	glTranslatef(x,y,0);
 	//Frog
 	glPushMatrix();
         glTranslatef(0,10,0);
@@ -124,7 +157,7 @@ void display()
         glScalef(1.0f, 0.5f, 1.0f); // glScalef(a,b,c)  Make the shape (a) times as wide, (b times) height and (c times) as deep
         glutSolidSphere(1.0f, 20,20);
     	glPopMatrix();
-
+glPopMatrix();
     glutSwapBuffers();
 }
 
@@ -141,11 +174,13 @@ int main(int argc, char **argv)
     glutCreateWindow("Frog");
 
     glutDisplayFunc(display);
+    glutSpecialFunc(processSpecialKeys);
     glutReshapeFunc(reshape);
-   // glutTimerFunc(0, timer, 0);
+    glutTimerFunc(100, timer, 0);
 
     init();
 
     glutMainLoop();
     return 0;
 }
+
