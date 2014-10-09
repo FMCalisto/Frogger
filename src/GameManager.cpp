@@ -41,9 +41,11 @@ using namespace std;
         _entidades[5] = (GameObject*) new Car();
        
     }
-    double rotate_z = 0; 
-double rotate_x = 0;
-    void GameManager::display(void){
+    
+	double rotate_z = 0; 
+	double rotate_x = 0;
+    
+	void GameManager::display(void){
        /* glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         glMatrixMode(GL_PROJECTION);
