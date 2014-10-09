@@ -52,10 +52,13 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>P:\Windows\Programs\Develop\GitHub\Frogger\glut\include\GL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalUsingDirectories>P:\Windows\Programs\Develop\GitHub\Frogger\glut;%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>P:\Windows\Programs\Develop\GitHub\Frogger\glut\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -76,6 +79,36 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\src\Car.cpp" />
+    <ClCompile Include="..\..\src\DynamicObject.cpp" />
+    <ClCompile Include="..\..\src\Entity.cpp" />
+    <ClCompile Include="..\..\src\Frog.cpp" />
+    <ClCompile Include="..\..\src\GameManager.cpp" />
+    <ClCompile Include="..\..\src\GameObject.cpp" />
+    <ClCompile Include="..\..\src\main.cpp" />
+    <ClCompile Include="..\..\src\River.cpp" />
+    <ClCompile Include="..\..\src\Riverside.cpp" />
+    <ClCompile Include="..\..\src\Road.cpp" />
+    <ClCompile Include="..\..\src\Roadside.cpp" />
+    <ClCompile Include="..\..\src\StaticObject.cpp" />
+    <ClCompile Include="..\..\src\Vector3.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\src\Makefile" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\Car.h" />
+    <ClInclude Include="..\..\src\DynamicObject.h" />
+    <ClInclude Include="..\..\src\Entity.h" />
+    <ClInclude Include="..\..\src\Frog.h" />
+    <ClInclude Include="..\..\src\GameManager.h" />
+    <ClInclude Include="..\..\src\GameObject.h" />
+    <ClInclude Include="..\..\src\River.h" />
+    <ClInclude Include="..\..\src\Riverside.h" />
+    <ClInclude Include="..\..\src\Road.h" />
+    <ClInclude Include="..\..\src\Roadside.h" />
+    <ClInclude Include="..\..\src\StaticObject.h" />
+    <ClInclude Include="..\..\src\Vector3.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
