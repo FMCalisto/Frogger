@@ -13,140 +13,89 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Source Files\go">
-      <UniqueIdentifier>{d9380f04-a968-4e9f-bae2-d9df3d1b8e36}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\gm">
-      <UniqueIdentifier>{8685aaf9-b417-4d21-812e-c9785e954cef}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\ls">
-      <UniqueIdentifier>{80e7059c-9c8a-4f3d-ae52-5281f51482c8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\util">
-      <UniqueIdentifier>{462734a2-3823-46b2-a1d8-91d12b89a90a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\vc">
-      <UniqueIdentifier>{7af5af3d-e0e1-43e6-9720-6b6d24c5b577}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\util">
-      <UniqueIdentifier>{66ae02d4-748f-45f0-9229-9ec0dcc18e3d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\go">
-      <UniqueIdentifier>{efdc96fc-44ec-4200-ac52-17b5e5d3712b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\gm">
-      <UniqueIdentifier>{e27a8961-0218-4136-9ec3-ed499d2c4a22}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\src\Main.cpp">
+    <ClCompile Include="..\..\src\Car.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\go\Bus.cpp">
-      <Filter>Source Files\go</Filter>
+    <ClCompile Include="..\..\src\DynamicObject.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\go\Car.cpp">
-      <Filter>Source Files\go</Filter>
+    <ClCompile Include="..\..\src\Entity.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\go\Cube.cpp">
-      <Filter>Source Files\go</Filter>
+    <ClCompile Include="..\..\src\Frog.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\go\DynamicObject.cpp">
-      <Filter>Source Files\go</Filter>
+    <ClCompile Include="..\..\src\GameManager.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\go\Frog.cpp">
-      <Filter>Source Files\go</Filter>
+    <ClCompile Include="..\..\src\GameObject.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\go\GameObject.cpp">
-      <Filter>Source Files\go</Filter>
+    <ClCompile Include="..\..\src\main.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\go\River.cpp">
-      <Filter>Source Files\go</Filter>
+    <ClCompile Include="..\..\src\River.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\go\Riverside.cpp">
-      <Filter>Source Files\go</Filter>
+    <ClCompile Include="..\..\src\Riverside.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\go\Road.cpp">
-      <Filter>Source Files\go</Filter>
+    <ClCompile Include="..\..\src\Road.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\go\Roadside.cpp">
-      <Filter>Source Files\go</Filter>
+    <ClCompile Include="..\..\src\Roadside.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\go\Sphere.cpp">
-      <Filter>Source Files\go</Filter>
+    <ClCompile Include="..\..\src\StaticObject.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\go\StaticObject.cpp">
-      <Filter>Source Files\go</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\go\Timberlog.cpp">
-      <Filter>Source Files\go</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\go\Turtle.cpp">
-      <Filter>Source Files\go</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\gm\GameManager.cpp">
-      <Filter>Source Files\gm</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\ls\LightSource.cpp">
-      <Filter>Source Files\ls</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\vc\Camera.cpp">
-      <Filter>Source Files\vc</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\vc\OrthogonalCamera.cpp">
-      <Filter>Source Files\vc</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\vc\PerspectiveCamera.cpp">
-      <Filter>Source Files\vc</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\util\Display.cpp">
-      <Filter>Source Files\util</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\util\Entity.cpp">
-      <Filter>Source Files\util</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\util\Reshape.cpp">
-      <Filter>Source Files\util</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\util\Shape.cpp">
-      <Filter>Source Files\util</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\util\Vector.cpp">
-      <Filter>Source Files\util</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\util\Vector3.cpp">
-      <Filter>Source Files\util</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\util\Vector4.cpp">
-      <Filter>Source Files\util</Filter>
+    <ClCompile Include="..\..\src\Vector3.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\src\util\Shape.h">
-      <Filter>Header Files\util</Filter>
+    <ClInclude Include="..\..\src\Car.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\util\Vector.h">
-      <Filter>Header Files\util</Filter>
+    <ClInclude Include="..\..\src\DynamicObject.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\go\Cube.h">
-      <Filter>Header Files\go</Filter>
+    <ClInclude Include="..\..\src\Entity.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\go\Frog.h">
-      <Filter>Header Files\go</Filter>
+    <ClInclude Include="..\..\src\Frog.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\go\Sphere.h">
-      <Filter>Header Files\go</Filter>
+    <ClInclude Include="..\..\src\GameManager.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\gm\GameManager.h">
-      <Filter>Header Files\gm</Filter>
+    <ClInclude Include="..\..\src\GameObject.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\util\Entity.h">
-      <Filter>Header Files\util</Filter>
+    <ClInclude Include="..\..\src\River.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Riverside.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Road.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Roadside.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StaticObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Vector3.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\src\Makefile">
-      <Filter>Source Files</Filter>
+      <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>
 </Project>

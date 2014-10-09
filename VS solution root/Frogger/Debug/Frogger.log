@@ -1,59 +1,46 @@
-﻿Build started 07/10/2014 01:25:43.
-     1>Project "P:\Windows\Programs\Develop\GitHub\Frogger\VS solution root\Frogger\Frogger.vcxproj" on node 2 (Build target(s)).
+﻿Build started 09/10/2014 12:30:20.
+     1>Project "P:\Windows\Programs\Develop\GitHub\Frogger\VS solution root\Frogger\Frogger.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
-         P:\Windows\Programs\Develop\Microsoft\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IP:\Windows\Programs\Develop\GitHub\Frogger\glut\include\GL /AIP:\Windows\Programs\Develop\GitHub\Frogger\glut\lib /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\src\Main.cpp ..\..\src\gm\GameManager.cpp ..\..\src\go\Bus.cpp ..\..\src\go\Car.cpp ..\..\src\go\Cube.cpp ..\..\src\go\DynamicObject.cpp ..\..\src\go\Frog.cpp ..\..\src\go\GameObject.cpp ..\..\src\go\River.cpp ..\..\src\go\Riverside.cpp ..\..\src\go\Road.cpp ..\..\src\go\Roadside.cpp ..\..\src\go\Sphere.cpp ..\..\src\go\StaticObject.cpp ..\..\src\go\Timberlog.cpp ..\..\src\go\Turtle.cpp ..\..\src\ls\LightSource.cpp ..\..\src\util\Display.cpp ..\..\src\util\Vector4.cpp ..\..\src\vc\Camera.cpp ..\..\src\vc\OrthogonalCamera.cpp ..\..\src\vc\PerspectiveCamera.cpp
-         PerspectiveCamera.cpp
-         OrthogonalCamera.cpp
-         Camera.cpp
-         Vector4.cpp
-         Display.cpp
-     1>p:\windows\programs\develop\github\frogger\src\util\display.cpp(7): fatal error C1083: Cannot open include file: 'util\Cube.h': No such file or directory
-         LightSource.cpp
-     1>p:\windows\programs\develop\github\frogger\src\ls\lightsource.cpp(1): fatal error C1083: Cannot open include file: 'bits/stdc++': No such file or directory
-         Turtle.cpp
-     1>p:\windows\programs\develop\github\frogger\src\go\turtle.cpp(1): error C2504: 'DynamicObject' : base class undefined
-         Timberlog.cpp
-     1>p:\windows\programs\develop\github\frogger\src\go\timberlog.cpp(1): error C2504: 'DynamicObject' : base class undefined
+         P:\Windows\Programs\Develop\Microsoft\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IP:\Windows\Programs\Develop\GitHub\Frogger\glut\include\GL /AIP:\Windows\Programs\Develop\GitHub\Frogger\glut\lib /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\src\Car.cpp ..\..\src\DynamicObject.cpp ..\..\src\Entity.cpp ..\..\src\Frog.cpp ..\..\src\GameManager.cpp ..\..\src\GameObject.cpp ..\..\src\main.cpp ..\..\src\River.cpp ..\..\src\Riverside.cpp ..\..\src\Road.cpp ..\..\src\Roadside.cpp ..\..\src\StaticObject.cpp ..\..\src\Vector3.cpp
+         Vector3.cpp
          StaticObject.cpp
-     1>p:\windows\programs\develop\github\frogger\src\go\staticobject.h(4): fatal error C1083: Cannot open include file: 'Entity.h': No such file or directory
-         Sphere.cpp
-     1>p:\windows\programs\develop\github\frogger\src\go\sphere.cpp(1): fatal error C1083: Cannot open include file: 'go\Sphere.h': No such file or directory
          Roadside.cpp
-     1>p:\windows\programs\develop\github\frogger\src\go\roadside.h(9): fatal error C1083: Cannot open include file: 'Entity.h': No such file or directory
          Road.cpp
-     1>p:\windows\programs\develop\github\frogger\src\go\road.h(9): fatal error C1083: Cannot open include file: 'Entity.h': No such file or directory
          Riverside.cpp
-     1>p:\windows\programs\develop\github\frogger\src\go\riverside.h(7): fatal error C1083: Cannot open include file: 'Entity.h': No such file or directory
          River.cpp
-     1>p:\windows\programs\develop\github\frogger\src\go\river.h(9): fatal error C1083: Cannot open include file: 'Entity.h': No such file or directory
+         main.cpp
          GameObject.cpp
-     1>p:\windows\programs\develop\github\frogger\src\go\gameobject.h(4): fatal error C1083: Cannot open include file: 'Entity.h': No such file or directory
-         Frog.cpp
-         DynamicObject.cpp
-     1>p:\windows\programs\develop\github\frogger\src\go\gameobject.h(4): fatal error C1083: Cannot open include file: 'Entity.h': No such file or directory
-         Cube.cpp
-     1>p:\windows\programs\develop\github\frogger\src\go\cube.h(4): fatal error C1083: Cannot open include file: 'util\Shape.h': No such file or directory
-         Car.cpp
-     1>p:\windows\programs\develop\github\frogger\src\go\car.cpp(54): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>p:\windows\programs\develop\github\frogger\src\go\car.cpp(61): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>p:\windows\programs\develop\github\frogger\src\go\car.cpp(68): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>p:\windows\programs\develop\github\frogger\src\go\car.cpp(75): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>p:\windows\programs\develop\github\frogger\src\go\car.cpp(84): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>p:\windows\programs\develop\github\frogger\src\go\car.cpp(95): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>p:\windows\programs\develop\github\frogger\src\go\car.cpp(102): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>p:\windows\programs\develop\github\frogger\src\go\car.cpp(111): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>p:\windows\programs\develop\github\frogger\src\go\car.cpp(120): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-         Bus.cpp
-     1>p:\windows\programs\develop\github\frogger\src\go\bus.cpp(1): error C2504: 'DynamicObject' : base class undefined
-         Generating Code...
-         Compiling...
          GameManager.cpp
-     1>p:\windows\programs\develop\github\frogger\src\gm\gamemanager.h(14): fatal error C1083: Cannot open include file: 'Entity.h': No such file or directory
-         Main.cpp
-     1>p:\windows\programs\develop\github\frogger\src\main.cpp(9): fatal error C1083: Cannot open include file: 'GameManager.h': No such file or directory
+     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(26): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(27): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(83): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(84): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+         Frog.cpp
+     1>p:\windows\programs\develop\github\frogger\src\frog.cpp(43): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>p:\windows\programs\develop\github\frogger\src\frog.cpp(46): warning C4244: 'argument' : conversion from 'double' to 'GLint', possible loss of data
+     1>p:\windows\programs\develop\github\frogger\src\frog.cpp(55): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>p:\windows\programs\develop\github\frogger\src\frog.cpp(58): warning C4244: 'argument' : conversion from 'double' to 'GLint', possible loss of data
+     1>p:\windows\programs\develop\github\frogger\src\frog.cpp(68): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>p:\windows\programs\develop\github\frogger\src\frog.cpp(71): warning C4244: 'argument' : conversion from 'float' to 'GLint', possible loss of data
+     1>p:\windows\programs\develop\github\frogger\src\frog.cpp(80): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>p:\windows\programs\develop\github\frogger\src\frog.cpp(83): warning C4244: 'argument' : conversion from 'float' to 'GLint', possible loss of data
+     1>p:\windows\programs\develop\github\frogger\src\frog.cpp(89): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>p:\windows\programs\develop\github\frogger\src\frog.cpp(98): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+         Entity.cpp
+         DynamicObject.cpp
+         Car.cpp
+     1>p:\windows\programs\develop\github\frogger\src\car.cpp(25): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>p:\windows\programs\develop\github\frogger\src\car.cpp(40): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>p:\windows\programs\develop\github\frogger\src\car.cpp(50): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>p:\windows\programs\develop\github\frogger\src\car.cpp(61): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>p:\windows\programs\develop\github\frogger\src\car.cpp(71): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
          Generating Code...
-     1>Done Building Project "P:\Windows\Programs\Develop\GitHub\Frogger\VS solution root\Frogger\Frogger.vcxproj" (Build target(s)) -- FAILED.
+     1>p:\windows\programs\develop\github\frogger\src\vector3.cpp(36): error C4716: 'Vector3::operator=' : must return a value
+     1>p:\windows\programs\develop\github\frogger\src\vector3.cpp(50): error C4716: 'Vector3::operator+' : must return a value
+     1>p:\windows\programs\develop\github\frogger\src\vector3.cpp(43): error C4716: 'Vector3::operator*' : must return a value
+     1>p:\windows\programs\develop\github\frogger\src\vector3.cpp(57): error C4716: 'Vector3::operator-' : must return a value
+     1>Done Building Project "P:\Windows\Programs\Develop\GitHub\Frogger\VS solution root\Frogger\Frogger.vcxproj" (Rebuild target(s)) -- FAILED.
 
 Build FAILED.
 
-Time Elapsed 00:00:03.18
+Time Elapsed 00:00:03.17
