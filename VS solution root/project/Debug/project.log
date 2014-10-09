@@ -1,4 +1,4 @@
-﻿Build started 09/10/2014 14:18:05.
+﻿Build started 09/10/2014 14:21:21.
      1>Project "P:\Windows\Programs\Develop\GitHub\Frogger\VS solution root\project\project.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          P:\Windows\Programs\Develop\Microsoft\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IP:\Windows\Programs\Develop\GitHub\Frogger\glut\include\GL /AIP:\Windows\Programs\Develop\GitHub\Frogger\glut /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\src\Vector3.cpp
@@ -22,4 +22,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.54
+Time Elapsed 00:00:00.60

@@ -15,7 +15,11 @@ Vector3::Vector3(double x, double y, double z)
 	_y=y;
 	_z=z;
 }
-Vector3::~Vector3(){};
+
+Vector3::~Vector3()
+{
+
+};
 
 double Vector3::getX(){return _x;};
 double Vector3::getY(){return _y;};
