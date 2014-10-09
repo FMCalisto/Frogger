@@ -1,25 +1,128 @@
-﻿Build started 09/10/2014 14:21:21.
+﻿Build started 09/10/2014 18:08:55.
      1>Project "P:\Windows\Programs\Develop\GitHub\Frogger\VS solution root\project\project.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         P:\Windows\Programs\Develop\Microsoft\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IP:\Windows\Programs\Develop\GitHub\Frogger\glut\include\GL /AIP:\Windows\Programs\Develop\GitHub\Frogger\glut /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\src\Vector3.cpp
+         P:\Windows\Programs\Develop\Microsoft\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IP:\Windows\Programs\Develop\GitHub\Frogger\glut\include\GL /AIP:\Windows\Programs\Develop\GitHub\Frogger\glut /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\src\Car.cpp ..\..\src\DynamicObject.cpp ..\..\src\Entity.cpp ..\..\src\Frog.cpp ..\..\src\GameManager.cpp ..\..\src\GameObject.cpp ..\..\src\River.cpp ..\..\src\Riverside.cpp ..\..\src\Road.cpp ..\..\src\Roadside.cpp ..\..\src\StaticObject.cpp ..\..\src\Vector3.cpp ..\..\src\main.cpp
+         main.cpp
          Vector3.cpp
-       Link:
-         P:\Windows\Programs\Develop\Microsoft\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"P:\Windows\Programs\Develop\GitHub\Frogger\VS solution root\project\Debug\project.exe" /INCREMENTAL /NOLOGO /LIBPATH:P:\Windows\Programs\Develop\GitHub\Frogger\glut\lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"P:\Windows\Programs\Develop\GitHub\Frogger\VS solution root\project\Debug\project.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"P:\Windows\Programs\Develop\GitHub\Frogger\VS solution root\project\Debug\project.lib" /MACHINE:X86 Debug\Car.obj
-         Debug\DynamicObject.obj
-         Debug\Entity.obj
-         Debug\Frog.obj
-         Debug\GameManager.obj
-         Debug\GameObject.obj
-         Debug\main.obj
-         Debug\River.obj
-         Debug\Riverside.obj
-         Debug\Road.obj
-         Debug\Roadside.obj
-         Debug\StaticObject.obj
-         Debug\Vector3.obj
-         project.vcxproj -> P:\Windows\Programs\Develop\GitHub\Frogger\VS solution root\project\Debug\project.exe
-     1>Done Building Project "P:\Windows\Programs\Develop\GitHub\Frogger\VS solution root\project\project.vcxproj" (Build target(s)).
+         StaticObject.cpp
+         Roadside.cpp
+         Road.cpp
+         Riverside.cpp
+         River.cpp
+         GameObject.cpp
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(22): error C2601: 'init' : local function definitions are illegal
+                 p:\windows\programs\develop\github\frogger\src\gameobject.cpp(20): this line contains a '{' which has not yet been matched
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(30): error C2601: 'display' : local function definitions are illegal
+                 p:\windows\programs\develop\github\frogger\src\gameobject.cpp(20): this line contains a '{' which has not yet been matched
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(113): error C2601: 'reshape' : local function definitions are illegal
+                 p:\windows\programs\develop\github\frogger\src\gameobject.cpp(20): this line contains a '{' which has not yet been matched
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(118): error C2601: 'main' : local function definitions are illegal
+                 p:\windows\programs\develop\github\frogger\src\gameobject.cpp(20): this line contains a '{' which has not yet been matched
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(23): error C2065: 'GL_DEPTH_TEST' : undeclared identifier
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(23): error C3861: 'glEnable': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(24): error C2065: 'GL_LIGHTING' : undeclared identifier
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(24): error C3861: 'glEnable': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(25): error C2065: 'GL_LIGHT0' : undeclared identifier
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(25): error C3861: 'glEnable': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(26): error C2065: 'GL_COLOR_MATERIAL' : undeclared identifier
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(26): error C3861: 'glEnable': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(31): error C2065: 'GL_COLOR_BUFFER_BIT' : undeclared identifier
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(31): error C2065: 'GL_DEPTH_BUFFER_BIT' : undeclared identifier
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(31): error C3861: 'glClear': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(33): error C2065: 'GL_PROJECTION' : undeclared identifier
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(33): error C3861: 'glMatrixMode': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(34): error C3861: 'glOrtho': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(35): error C3861: 'glLoadIdentity': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(36): error C2065: 'GLint' : undeclared identifier
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(36): error C2146: syntax error : missing ';' before identifier 'viewport'
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(36): error C2065: 'viewport' : undeclared identifier
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(37): error C2065: 'GL_VIEWPORT' : undeclared identifier
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(37): error C2065: 'viewport' : undeclared identifier
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(37): error C3861: 'glGetIntegerv': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(38): error C2065: 'viewport' : undeclared identifier
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(39): error C3861: 'gluPerspective': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(41): error C2065: 'GL_MODELVIEW' : undeclared identifier
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(41): error C3861: 'glMatrixMode': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(42): error C3861: 'glLoadIdentity': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(45): error C3861: 'glTranslatef': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(51): error C3861: 'glPushMatrix': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(52): error C3861: 'glTranslatef': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(54): error C3861: 'glColor3ub': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(55): error C3861: 'glScalef': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(56): error C3861: 'glutSolidSphere': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(57): error C3861: 'glPopMatrix': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(61): error C3861: 'glPushMatrix': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(62): error C3861: 'glTranslatef': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(64): error C3861: 'glColor3ub': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(65): error C3861: 'glScalef': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(66): error C3861: 'glutSolidSphere': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(67): error C3861: 'glPopMatrix': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(71): error C3861: 'glPushMatrix': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(72): error C3861: 'glTranslatef': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(74): error C3861: 'glColor3ub': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(75): error C3861: 'glScalef': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(76): error C3861: 'glutSolidSphere': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(77): error C3861: 'glPopMatrix': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(81): error C3861: 'glPushMatrix': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(82): error C3861: 'glTranslatef': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(84): error C3861: 'glColor3ub': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(85): error C3861: 'glScalef': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(86): error C3861: 'glutSolidSphere': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(87): error C3861: 'glPopMatrix': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(91): error C3861: 'glPushMatrix': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(92): error C3861: 'glTranslatef': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(94): error C3861: 'glColor3ub': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(95): error C3861: 'glScalef': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(96): error C3861: 'glutSolidSphere': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(97): error C3861: 'glPopMatrix': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(101): error C3861: 'glPushMatrix': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(102): error C3861: 'glTranslatef': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(104): error C3861: 'glColor3ub': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(105): error C3861: 'glScalef': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(106): error C3861: 'glutSolidSphere': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(107): error C3861: 'glPopMatrix': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(109): error C3861: 'glutSwapBuffers': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(114): error C3861: 'glViewport': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(119): error C3861: 'glutInit': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(120): error C3861: 'glutInitWindowSize': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(121): error C2065: 'GLUT_RGBA' : undeclared identifier
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(121): error C2065: 'GLUT_DEPTH' : undeclared identifier
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(121): error C2065: 'GLUT_DOUBLE' : undeclared identifier
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(121): error C3861: 'glutInitDisplayMode': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(122): error C3861: 'glutCreateWindow': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(124): error C2065: 'display' : undeclared identifier
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(124): error C3861: 'glutDisplayFunc': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(125): error C2065: 'reshape' : undeclared identifier
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(125): error C3861: 'glutReshapeFunc': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(128): error C3861: 'init': identifier not found
+     1>p:\windows\programs\develop\github\frogger\src\gameobject.cpp(130): error C3861: 'glutMainLoop': identifier not found
+         GameManager.cpp
+     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(26): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(27): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(85): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(86): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+         Frog.cpp
+     1>p:\windows\programs\develop\github\frogger\src\frog.cpp(43): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>p:\windows\programs\develop\github\frogger\src\frog.cpp(46): warning C4244: 'argument' : conversion from 'double' to 'GLint', possible loss of data
+     1>p:\windows\programs\develop\github\frogger\src\frog.cpp(55): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>p:\windows\programs\develop\github\frogger\src\frog.cpp(58): warning C4244: 'argument' : conversion from 'double' to 'GLint', possible loss of data
+     1>p:\windows\programs\develop\github\frogger\src\frog.cpp(68): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>p:\windows\programs\develop\github\frogger\src\frog.cpp(71): warning C4244: 'argument' : conversion from 'float' to 'GLint', possible loss of data
+     1>p:\windows\programs\develop\github\frogger\src\frog.cpp(80): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>p:\windows\programs\develop\github\frogger\src\frog.cpp(83): warning C4244: 'argument' : conversion from 'float' to 'GLint', possible loss of data
+     1>p:\windows\programs\develop\github\frogger\src\frog.cpp(89): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>p:\windows\programs\develop\github\frogger\src\frog.cpp(98): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+         Entity.cpp
+         DynamicObject.cpp
+         Car.cpp
+     1>p:\windows\programs\develop\github\frogger\src\car.cpp(25): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>p:\windows\programs\develop\github\frogger\src\car.cpp(40): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>p:\windows\programs\develop\github\frogger\src\car.cpp(50): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>p:\windows\programs\develop\github\frogger\src\car.cpp(61): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>p:\windows\programs\develop\github\frogger\src\car.cpp(71): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+         Generating Code...
+     1>Done Building Project "P:\Windows\Programs\Develop\GitHub\Frogger\VS solution root\project\project.vcxproj" (Build target(s)) -- FAILED.
 
-Build succeeded.
+Build FAILED.
 
-Time Elapsed 00:00:00.60
+Time Elapsed 00:00:03.59
