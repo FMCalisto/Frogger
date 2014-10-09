@@ -33,6 +33,8 @@ Vector3* Vector3::operator=(const Vector3 & vec)
 	_x = vec._x;
 	_y = vec._y;
 	_z = vec._z;
+
+	return 0;
 }
 
 Vector3* Vector3::operator*(double num)
@@ -40,6 +42,8 @@ Vector3* Vector3::operator*(double num)
 	_x *= num;
 	_y *= num;
 	_z *= num;
+
+	return 0;
 }
 
 Vector3* Vector3::operator+(const Vector3 & vec)
@@ -47,6 +51,8 @@ Vector3* Vector3::operator+(const Vector3 & vec)
 	_x += vec._x;
 	_y += vec._y;
 	_z += vec._z;
+
+	return 0;
 }
 
 Vector3* Vector3::operator-(const Vector3 & vec)
@@ -54,5 +60,7 @@ Vector3* Vector3::operator-(const Vector3 & vec)
 	_x -= vec._x;
 	_y -= vec._y;
 	_z -= vec._z;
+
+	return 0;
 }
 	
