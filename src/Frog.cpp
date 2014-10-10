@@ -10,7 +10,10 @@ Frog::Frog(){
 
 }*/
 
-float raio = 2;
+Frog::Frog(float raio){
+	_raio=raio;
+}
+//float _raio = 2;
 
 
 /*
@@ -27,10 +30,10 @@ void Frog::draw()
 	
 	glPushMatrix();
 	
-		glTranslatef(0,0,raio);
+		glTranslatef(0+_speedX,0+_speedY,_raio);
 		glColor3ub(0,255,0);
 		glScalef(1.0f, 0.5f, 0.7f);
-		glutSolidSphere(raio, 20, 20);
+		glutSolidSphere(_raio, 20, 20);
 	
 	
 
@@ -40,10 +43,10 @@ void Frog::draw()
 
 	glPushMatrix();
 		
-		glTranslatef(-((raio / 5.0) * 2.0), ((raio / 5.0) * 2.0), raio);
+		glTranslatef(-((_raio / 5.0) * 2.0), ((_raio / 5.0) * 2.0), _raio);
 		glColor3ub(255,255,255);
 		glScalef(1.0f, 0.5f, 1.0f);
-		glutSolidSphere(((raio / 5.0) * 2.0), (raio * 10.0), (raio * 10.0));
+		glutSolidSphere(((_raio / 5.0) * 2.0), (_raio * 10.0), (_raio * 10.0));
 	
 	glPopMatrix();
 
@@ -52,10 +55,10 @@ void Frog::draw()
 	
 	glPushMatrix();
 		
-		glTranslatef(((raio / 5.0) * 2.0), ((raio / 5.0) * 2.0), raio);
+		glTranslatef(((_raio / 5.0) * 2.0), ((_raio / 5.0) * 2.0), _raio);
 		glColor3ub(255,255,255);
 		glScalef(1.0f, 0.5f, 1.0f);
-		glutSolidSphere(((raio / 5.0) * 2.0), (raio * 10.0), (raio * 10.0));
+		glutSolidSphere(((_raio / 5.0) * 2.0), (_raio * 10.0), (_raio * 10.0));
 	
 	glPopMatrix();
 
@@ -65,10 +68,10 @@ void Frog::draw()
 
 	glPushMatrix();
 	
-		glTranslatef(-(raio / (raio * 1.25)), ((raio * (23.0 / 20.0)) / raio), raio);
+		glTranslatef(-(_raio / (_raio * 1.25)), ((_raio * (23.0 / 20.0)) / _raio), _raio);
 		glColor3ub(0,0,0);
 		glScalef(1.0f, 0.5f, 1.0f);
-		glutSolidSphere((raio / 5), (raio * 10), (raio * 10));
+		glutSolidSphere((_raio / 5), (_raio * 10), (_raio * 10));
 	
 	glPopMatrix();
 
@@ -77,16 +80,16 @@ void Frog::draw()
 	
 	glPushMatrix();
 		
-		glTranslatef((raio / (raio * 1.25)), ((raio * (23.0 / 20.0)) / raio), raio);
+		glTranslatef((_raio / (_raio * 1.25)), ((_raio * (23.0 / 20.0)) / _raio), _raio);
 		glColor3ub(0,0,0);
 		glScalef(1.0f, 0.5f, 1.0f);
-		glutSolidSphere((raio / 5), (raio * 10), (raio * 10));
+		glutSolidSphere((_raio / 5), (_raio * 10), (_raio * 10));
 	
 	glPopMatrix();
 	
 	/*boca*/
 	glPushMatrix();
-                    glTranslatef(0, ((raio * (17.0 / 20.0))), ((raio * (3/10))));
+                    glTranslatef(0, ((_raio * (17.0 / 20.0))), ((_raio * (3/10))));
                     glColor3ub(0,0,0);
                     glScalef(1.f, 0.6f, 0.7f); 
                     glRotatef(-45.0, 0.0, 1.0, 0.0);
@@ -95,7 +98,7 @@ void Frog::draw()
                 glPopMatrix();
                 
     glPushMatrix();
-                    glTranslatef(0, ((raio * (20.0 / 20.0))), ((raio * (3/10))));
+                    glTranslatef(0, ((_raio * (20.0 / 20.0))), ((_raio * (3/10))));
                     glColor3ub(204,0,0);
                     glScalef(1.f, 0.1f, 0.4f); 
                     glRotatef(-45.0, 0.0, 1.0, 0.0);

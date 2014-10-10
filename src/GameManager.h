@@ -16,6 +16,7 @@
 #include"StaticObject.h"
 #include"Riverside.h"
 #include"Roadside.h"
+#include "Frog.h"
 
 
 using namespace std;
@@ -28,6 +29,7 @@ class GameManager{
        vector<Camera> _cameras;*/
 	   //vector <Entidade* _entidades[39];> * _game_objects;
        GameObject* _entidades[6];
+       Frog* froggy;// = new Frog();
        
     private:
 	    float _largura;
@@ -49,6 +51,8 @@ class GameManager{
     void onTimer();
     
     void specialKeys( int key, int x, int y );
+    
+    void normalKeys(unsigned char key, int x, int y);
      
 };
 #endif 

@@ -4,6 +4,7 @@
 
 #include<vector>
 #include<stdio.h>
+#include <iostream>
 
 #include "GameManager.h"
 #include "Entity.h"
@@ -33,19 +34,18 @@ using namespace std;
         glEnable(GL_LIGHTING);
         glEnable(GL_LIGHT0);
         glEnable(GL_COLOR_MATERIAL);
+        froggy = new Frog(2.0);
         _entidades[0] = (GameObject*) new Riverside();
         _entidades[1] = (GameObject*) new Roadside();
         _entidades[2] = (GameObject*) new Road();
         _entidades[3] = (GameObject*) new River();
-        _entidades[4] = (GameObject*) new Frog();
+        _entidades[4] = (DynamicObject*) new Frog(0);
         _entidades[5] = (GameObject*) new Car();
        
     }
-    
-	double rotate_z = 0; 
-	double rotate_x = 0;
-    
-	void GameManager::display(void){
+    double rotate_z = 0; 
+double rotate_x = 0;
+    void GameManager::display(void){
        /* glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         glMatrixMode(GL_PROJECTION);
@@ -84,9 +84,11 @@ using namespace std;
 
         glRotatef( rotate_z, 1.0, 0.0, 0.0 );
         glRotatef( rotate_x, 0.0, 0.0, 1.0); 
-
-        for(int k = 0; k < 6; k++)
+		
+		froggy->draw();
+        for(int k = 0; k < 6; k++){
 		            _entidades[k]->draw();
+		            } 
 
                 glutSwapBuffers();
         }
@@ -106,6 +108,24 @@ using namespace std;
             rotate_z += 5;
         glutPostRedisplay();
     }
+    
+    void GameManager::normalKeys(unsigned char key, int x, int y)
+    {
+		//escape key
+	switch(key)
+	{
+		case 'q':
+		 _entidades[4]->update(-0.76);
+		 froggy->update(-0.56);
+		 //cout << _entidades[4]->_speedX << endl;
+		break;
+		case 'w':
+		 _entidades[4]->update(+0.76);
+		 froggy->update(+0.56);
+		 //cout << _entidades[4]->_speedX << endl;
+		break;
+	}
+}
 
   
       

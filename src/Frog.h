@@ -13,8 +13,10 @@ using namespace std;
 
 
 class Frog : public DynamicObject{
+	float _raio;
 	public:
 		Frog();
+		Frog(float _raio) ;//{___raio=__raio;}
 		~Frog();
 		void draw();
 };

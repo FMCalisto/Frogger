@@ -9,6 +9,7 @@
 
 class GameObject : public Entity {
 	protected:
+	double speedX;
 	Vector3 pos;
 	public:		
 		GameObject();

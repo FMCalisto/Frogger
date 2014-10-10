@@ -30,6 +30,10 @@ void myspecialKeys( int key, int x, int y ){
     gm->specialKeys(key,x,y);
 }
 
+void mynormalKeys( unsigned char key, int x, int y ){
+    gm->normalKeys(key,x,y);
+}
+
 
 /*void myonTimer(int extra){
 	
@@ -57,7 +61,8 @@ int main(int argc, char **argv){
     glutDisplayFunc(myDisplay);
     glutReshapeFunc(myReshape);
     glutSpecialFunc(myspecialKeys );
-    glutTimerFunc(0, timer, 0);
+    glutKeyboardFunc(mynormalKeys );
+    glutTimerFunc(100, timer, 0);
     
     
     

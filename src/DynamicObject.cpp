@@ -17,7 +17,14 @@ using namespace std;
 		
 		}
 		
+		double DynamicObject::getSpeed(){return _speedX;}
+		void DynamicObject::SetSpeed(double speed){_speedX=speed;}
+		
 /*		~DynamicObject::DynamicObject(){
 		
 		}*/
+		
+		void DynamicObject::update(double delta_t){
+			SetSpeed(_speedX+delta_t);
+		}
 
