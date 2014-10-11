@@ -108,5 +108,3 @@ void Frog::draw()
 	
 	glPopMatrix();
 }
-
-

@@ -5,6 +5,7 @@
 #include<vector>
 #include<stdio.h>
 #include <iostream>
+#include <cstdlib>
 
 #include "GameManager.h"
 #include "Entity.h"
@@ -22,8 +23,13 @@
 #include <GL/glut.h>
 
 using namespace std;
+#define eps 1e-12
+static vector<int> v(3);
  
     GameManager::GameManager(int largura, int altura){
+		v[0]=-3;
+		v[1]=-5;
+		v[2]=-7;
     	_largura = largura;
 	    _altura = altura;
 		
@@ -35,12 +41,13 @@ using namespace std;
         glEnable(GL_LIGHT0);
         glEnable(GL_COLOR_MATERIAL);
         froggy = new Frog(2.0);
+        carro1 = new Car(12,-3,1.5);
         _entidades[0] = (GameObject*) new Riverside();
         _entidades[1] = (GameObject*) new Roadside();
         _entidades[2] = (GameObject*) new Road();
         _entidades[3] = (GameObject*) new River();
         _entidades[4] = (DynamicObject*) new Frog(0);
-        _entidades[5] = (GameObject*) new Car();
+        _entidades[5] =(DynamicObject*) new Frog(0);
        
     }
     double rotate_z = 0; 
@@ -86,10 +93,16 @@ double rotate_x = 0;
         glRotatef( rotate_x, 0.0, 0.0, 1.0); 
 		
 		froggy->draw();
+		carro1->draw();
         for(int k = 0; k < 6; k++){
 		            _entidades[k]->draw();
 		            } 
-
+	carro1->updateX(+0.10);
+		if(carro1->getX() <=-12+eps and carro1->getX() >= -12-eps){
+		//puts("LOLOLOLLOLOLO");
+		 carro1->SetPosX(12.);//,-3,1.5);
+		 carro1->SetPosY(v[rand()%3]);
+	}
                 glutSwapBuffers();
         }
     void GameManager::reshape( GLsizei w, GLsizei h){
@@ -114,14 +127,24 @@ double rotate_x = 0;
 		//escape key
 	switch(key)
 	{
+		case 'o':
+		 _entidades[4]->updateX(-0.76);
+		 froggy->updateX(-0.56);
+		 //cout << _entidades[4]->_speedX << endl;
+		break;
+		case 'p':
+		 _entidades[4]->updateX(+0.76);
+		 froggy->updateX(+0.56);
+		 //cout << _entidades[4]->_speedX << endl;
+		break;
 		case 'q':
-		 _entidades[4]->update(-0.76);
-		 froggy->update(-0.56);
+		 _entidades[4]->updateY(+0.76);
+		 froggy->updateY(+0.56);
 		 //cout << _entidades[4]->_speedX << endl;
 		break;
 		case 'w':
-		 _entidades[4]->update(+0.76);
-		 froggy->update(+0.56);
+		 _entidades[4]->updateY(-0.76);
+		 froggy->updateY(-0.56);
 		 //cout << _entidades[4]->_speedX << endl;
 		break;
 	}

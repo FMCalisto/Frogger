@@ -9,7 +9,7 @@
 
 class GameObject : public Entity {
 	protected:
-	double speedX;
+	double speedX,speedY;
 	Vector3 pos;
 	public:		
 		GameObject();
@@ -17,6 +17,7 @@ class GameObject : public Entity {
 
 	    virtual void draw() = 0;
 
-		void update(double delta_t);
+		void updateX(double delta_t);
+		void updateY(double delta_t);
 };
 #endif 

@@ -15,7 +15,9 @@ using namespace std;
 class Car : public DynamicObject{
 	public:
 		Car();
+		Car(double x, double y, double z); //the position is passed as parameter
 		~Car();
+		double getX();
 		void draw();
 };
 #endif  

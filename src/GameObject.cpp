@@ -10,13 +10,17 @@ using namespace std;
 		
 		}
 
-/*		~GameObject::GameObject(){
-		
-		}*/
+		GameObject::~GameObject(){
+		//hide=true;
+		}
 		
 	
 		
-		void GameObject::update(double delta_t){
+		void GameObject::updateX(double delta_t){
 				speedX+=delta_t;
+		}
+
+		void GameObject::updateY(double delta_t){
+				speedY+=delta_t;
 		}
 

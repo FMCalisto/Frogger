@@ -11,13 +11,20 @@
 class DynamicObject : public GameObject {
 	protected:
 	double _speedX; double _speedY;
+	double _x,_y,_z;
 	//Vector3 _speed;
 	public:
-		double getSpeed();
-		void SetSpeed(double speed);
+		double getSpeedX();
+		void SetSpeedX(double speed);
+		void SetPosX(double speed);
+		void SetPosY(double speed);
+		void SetPosZ(double speed);
+		double getSpeedY();
+		void SetSpeedY(double speed);
 		DynamicObject();
 		~DynamicObject();
-		void update(double delta_t);
+		void updateX(double delta_t);
+		void updateY(double delta_t);
 
 };
 #endif 

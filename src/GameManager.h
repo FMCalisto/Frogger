@@ -17,6 +17,7 @@
 #include"Riverside.h"
 #include"Roadside.h"
 #include "Frog.h"
+#include "Car.h"
 
 
 using namespace std;
@@ -30,6 +31,7 @@ class GameManager{
 	   //vector <Entidade* _entidades[39];> * _game_objects;
        GameObject* _entidades[6];
        Frog* froggy;// = new Frog();
+       Car* carro1;
        
     private:
 	    float _largura;
