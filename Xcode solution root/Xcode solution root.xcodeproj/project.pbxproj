@@ -7,7 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0BBE3CF419E9AA5A000E512E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0BBE3CF319E9AA5A000E512E /* main.cpp */; };
+		0B38A6E319E9AC4A00A824A3 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B38A6E219E9AC4A00A824A3 /* OpenGL.framework */; };
+		0B38A6E519E9AC5200A824A3 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B38A6E419E9AC5200A824A3 /* GLUT.framework */; };
+		0B38A6FF19E9AD2A00A824A3 /* Car.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B38A6E719E9AD2A00A824A3 /* Car.cpp */; };
+		0B38A70019E9AD2A00A824A3 /* DynamicObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B38A6E919E9AD2A00A824A3 /* DynamicObject.cpp */; };
+		0B38A70119E9AD2A00A824A3 /* GameManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B38A6EB19E9AD2A00A824A3 /* GameManager.cpp */; };
+		0B38A70219E9AD2A00A824A3 /* GameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B38A6ED19E9AD2A00A824A3 /* GameObject.cpp */; };
+		0B38A70319E9AD2A00A824A3 /* Frog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B38A6EE19E9AD2A00A824A3 /* Frog.cpp */; };
+		0B38A70419E9AD2A00A824A3 /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B38A6F119E9AD2A00A824A3 /* Entity.cpp */; };
+		0B38A70519E9AD2A00A824A3 /* River.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B38A6F319E9AD2A00A824A3 /* River.cpp */; };
+		0B38A70619E9AD2A00A824A3 /* Riverside.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B38A6F519E9AD2A00A824A3 /* Riverside.cpp */; };
+		0B38A70719E9AD2A00A824A3 /* Road.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B38A6F719E9AD2A00A824A3 /* Road.cpp */; };
+		0B38A70819E9AD2A00A824A3 /* Roadside.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B38A6F919E9AD2A00A824A3 /* Roadside.cpp */; };
+		0B38A70919E9AD2A00A824A3 /* StaticObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B38A6FB19E9AD2A00A824A3 /* StaticObject.cpp */; };
+		0B38A70A19E9AD2A00A824A3 /* Vector3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B38A6FD19E9AD2A00A824A3 /* Vector3.cpp */; };
+		0B38A70E19E9AD3900A824A3 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 0B38A70C19E9AD3900A824A3 /* Makefile */; };
+		0B38A70F19E9AE2200A824A3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B38A6E019E9AC2E00A824A3 /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +38,35 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0B38A6E019E9AC2E00A824A3 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../../src/main.cpp; sourceTree = "<group>"; };
+		0B38A6E219E9AC4A00A824A3 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		0B38A6E419E9AC5200A824A3 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		0B38A6E719E9AD2A00A824A3 /* Car.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Car.cpp; sourceTree = "<group>"; };
+		0B38A6E819E9AD2A00A824A3 /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
+		0B38A6E919E9AD2A00A824A3 /* DynamicObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DynamicObject.cpp; sourceTree = "<group>"; };
+		0B38A6EA19E9AD2A00A824A3 /* DynamicObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicObject.h; sourceTree = "<group>"; };
+		0B38A6EB19E9AD2A00A824A3 /* GameManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameManager.cpp; sourceTree = "<group>"; };
+		0B38A6EC19E9AD2A00A824A3 /* GameManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameManager.h; sourceTree = "<group>"; };
+		0B38A6ED19E9AD2A00A824A3 /* GameObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameObject.cpp; sourceTree = "<group>"; };
+		0B38A6EE19E9AD2A00A824A3 /* Frog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Frog.cpp; sourceTree = "<group>"; };
+		0B38A6EF19E9AD2A00A824A3 /* Frog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Frog.h; sourceTree = "<group>"; };
+		0B38A6F019E9AD2A00A824A3 /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
+		0B38A6F119E9AD2A00A824A3 /* Entity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Entity.cpp; sourceTree = "<group>"; };
+		0B38A6F219E9AD2A00A824A3 /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entity.h; sourceTree = "<group>"; };
+		0B38A6F319E9AD2A00A824A3 /* River.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = River.cpp; sourceTree = "<group>"; };
+		0B38A6F419E9AD2A00A824A3 /* River.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = River.h; sourceTree = "<group>"; };
+		0B38A6F519E9AD2A00A824A3 /* Riverside.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Riverside.cpp; sourceTree = "<group>"; };
+		0B38A6F619E9AD2A00A824A3 /* Riverside.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Riverside.h; sourceTree = "<group>"; };
+		0B38A6F719E9AD2A00A824A3 /* Road.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Road.cpp; sourceTree = "<group>"; };
+		0B38A6F819E9AD2A00A824A3 /* Road.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Road.h; sourceTree = "<group>"; };
+		0B38A6F919E9AD2A00A824A3 /* Roadside.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Roadside.cpp; sourceTree = "<group>"; };
+		0B38A6FA19E9AD2A00A824A3 /* Roadside.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Roadside.h; sourceTree = "<group>"; };
+		0B38A6FB19E9AD2A00A824A3 /* StaticObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StaticObject.cpp; sourceTree = "<group>"; };
+		0B38A6FC19E9AD2A00A824A3 /* StaticObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticObject.h; sourceTree = "<group>"; };
+		0B38A6FD19E9AD2A00A824A3 /* Vector3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vector3.cpp; sourceTree = "<group>"; };
+		0B38A6FE19E9AD2A00A824A3 /* Vector3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vector3.h; sourceTree = "<group>"; };
+		0B38A70C19E9AD3900A824A3 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; name = Makefile; path = ../../src/Makefile; sourceTree = "<group>"; };
 		0BBE3CF019E9AA5A000E512E /* Xcode solution root */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Xcode solution root"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0BBE3CF319E9AA5A000E512E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,17 +74,53 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B38A6E519E9AC5200A824A3 /* GLUT.framework in Frameworks */,
+				0B38A6E319E9AC4A00A824A3 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B38A6E619E9AC8F00A824A3 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				0B38A6E719E9AD2A00A824A3 /* Car.cpp */,
+				0B38A6E819E9AD2A00A824A3 /* Car.h */,
+				0B38A6E919E9AD2A00A824A3 /* DynamicObject.cpp */,
+				0B38A6EA19E9AD2A00A824A3 /* DynamicObject.h */,
+				0B38A6EB19E9AD2A00A824A3 /* GameManager.cpp */,
+				0B38A6EC19E9AD2A00A824A3 /* GameManager.h */,
+				0B38A6ED19E9AD2A00A824A3 /* GameObject.cpp */,
+				0B38A6EE19E9AD2A00A824A3 /* Frog.cpp */,
+				0B38A6EF19E9AD2A00A824A3 /* Frog.h */,
+				0B38A6F019E9AD2A00A824A3 /* GameObject.h */,
+				0B38A6F119E9AD2A00A824A3 /* Entity.cpp */,
+				0B38A6F219E9AD2A00A824A3 /* Entity.h */,
+				0B38A6F319E9AD2A00A824A3 /* River.cpp */,
+				0B38A6F419E9AD2A00A824A3 /* River.h */,
+				0B38A6F519E9AD2A00A824A3 /* Riverside.cpp */,
+				0B38A6F619E9AD2A00A824A3 /* Riverside.h */,
+				0B38A6F719E9AD2A00A824A3 /* Road.cpp */,
+				0B38A6F819E9AD2A00A824A3 /* Road.h */,
+				0B38A6F919E9AD2A00A824A3 /* Roadside.cpp */,
+				0B38A6FA19E9AD2A00A824A3 /* Roadside.h */,
+				0B38A6FB19E9AD2A00A824A3 /* StaticObject.cpp */,
+				0B38A6FC19E9AD2A00A824A3 /* StaticObject.h */,
+				0B38A6FD19E9AD2A00A824A3 /* Vector3.cpp */,
+				0B38A6FE19E9AD2A00A824A3 /* Vector3.h */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
 		0BBE3CE719E9AA5A000E512E = {
 			isa = PBXGroup;
 			children = (
+				0B38A6E419E9AC5200A824A3 /* GLUT.framework */,
+				0B38A6E219E9AC4A00A824A3 /* OpenGL.framework */,
 				0BBE3CF219E9AA5A000E512E /* Xcode solution root */,
 				0BBE3CF119E9AA5A000E512E /* Products */,
+				0B38A6E619E9AC8F00A824A3 /* Source */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,7 +135,8 @@
 		0BBE3CF219E9AA5A000E512E /* Xcode solution root */ = {
 			isa = PBXGroup;
 			children = (
-				0BBE3CF319E9AA5A000E512E /* main.cpp */,
+				0B38A70C19E9AD3900A824A3 /* Makefile */,
+				0B38A6E019E9AC2E00A824A3 /* main.cpp */,
 			);
 			path = "Xcode solution root";
 			sourceTree = "<group>";
@@ -118,7 +197,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BBE3CF419E9AA5A000E512E /* main.cpp in Sources */,
+				0B38A70E19E9AD3900A824A3 /* Makefile in Sources */,
+				0B38A70919E9AD2A00A824A3 /* StaticObject.cpp in Sources */,
+				0B38A6FF19E9AD2A00A824A3 /* Car.cpp in Sources */,
+				0B38A70119E9AD2A00A824A3 /* GameManager.cpp in Sources */,
+				0B38A70F19E9AE2200A824A3 /* main.cpp in Sources */,
+				0B38A70A19E9AD2A00A824A3 /* Vector3.cpp in Sources */,
+				0B38A70519E9AD2A00A824A3 /* River.cpp in Sources */,
+				0B38A70819E9AD2A00A824A3 /* Roadside.cpp in Sources */,
+				0B38A70419E9AD2A00A824A3 /* Entity.cpp in Sources */,
+				0B38A70019E9AD2A00A824A3 /* DynamicObject.cpp in Sources */,
+				0B38A70619E9AD2A00A824A3 /* Riverside.cpp in Sources */,
+				0B38A70319E9AD2A00A824A3 /* Frog.cpp in Sources */,
+				0B38A70219E9AD2A00A824A3 /* GameObject.cpp in Sources */,
+				0B38A70719E9AD2A00A824A3 /* Road.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +324,7 @@
 				0BBE3CF919E9AA5A000E512E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

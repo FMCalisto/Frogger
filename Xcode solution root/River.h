@@ -1,8 +1,8 @@
-#ifndef Roadside_H
-#define Roadside_H
-/*#include <windows.h>
-#include <gl\GL.h>
-#include <glut.h>*/
+#ifndef River_H
+#define River_H
+
+
+using namespace std;
 
 #if defined(__APPLE__) || defined(MACOSX)
     #include <GLUT/glut.h>
@@ -14,10 +14,11 @@
 #include"GameObject.h"
 #include"StaticObject.h"
 
-class Roadside: public StaticObject{
-	public:	
-		Roadside();
-		~Roadside();
+
+class River : public StaticObject{
+	public:
+		River();
+		~River();
 		void draw();
 };
 #endif 

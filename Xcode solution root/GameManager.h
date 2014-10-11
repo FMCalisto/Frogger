@@ -1,7 +1,7 @@
 #ifndef GameManager_H
 #define GameManager_H
 
-#include<vector>
+#include <vector>
 
 #if defined(__APPLE__) || defined(MACOSX)
     #include <GLUT/glut.h>
@@ -23,7 +23,6 @@ using namespace std;
 class GameManager{
     private:
        GameObject* _entidades[6];
-       Frog* froggy;
        Car* carro1;
        
     private:

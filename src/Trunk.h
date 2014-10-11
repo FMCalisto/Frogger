@@ -1,5 +1,5 @@
-#ifndef Car_H
-#define Car_H
+#ifndef Trunk_H
+#define Trunk_H
 
 
 using namespace std;
@@ -16,11 +16,11 @@ using namespace std;
 
 
 
-class Car : public DynamicObject{
+class Trunk : public DynamicObject{
 	public:
-		Car();
-		Car(double x, double y, double z); //the position is passed as parameter
-		~Car();
+		Trunk();
+		Trunk(double x, double y, double z); //the position is passed as parameter
+		~Trunk();
 		double getX();
 		void draw();
 };

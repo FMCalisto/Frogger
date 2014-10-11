@@ -1,8 +1,5 @@
 #ifndef Roadside_H
 #define Roadside_H
-/*#include <windows.h>
-#include <gl\GL.h>
-#include <glut.h>*/
 
 #if defined(__APPLE__) || defined(MACOSX)
     #include <GLUT/glut.h>
