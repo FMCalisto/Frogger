@@ -112,7 +112,7 @@ double rotate_x = 0;
 cout << tronco->getX() << endl;
 	puts("CRASHES??");
 	
-		if((carro1->getX() <=-12+eps)and(carro1->getX() >= -12-eps)){
+		if(carro1->getX() <=-12+eps and carro1->getX() >= -12-eps){
 		if(DEBUG)
 		puts("erased");
 		carro1->ResetPosition(12.,v[rand()%3],1.5);
@@ -159,21 +159,25 @@ cout << tronco->getX() << endl;
 		//escape key
 	switch(key)
 	{
+	    case 'O':
 		case 'o':
 		 //_entidades[4]->updateX(-0.76);
 		 froggy->updateX(-0.56);
 		 //cout << _entidades[4]->_speedX << endl;
 		break;
+		case 'P':
 		case 'p':
 		 //_entidades[4]->updateX(+0.76);
 		 froggy->updateX(+0.56);
 		 //cout << _entidades[4]->_speedX << endl;
 		break;
+		case 'Q':
 		case 'q':
 		 //_entidades[4]->updateY(+0.76);
 		 froggy->updateY(+0.56);
 		 //cout << _entidades[4]->_speedX << endl;
 		break;
+		case 'A':
 		case 'a':
 		 //_entidades[4]->updateY(-0.76);
 		 froggy->updateY(-0.56);
