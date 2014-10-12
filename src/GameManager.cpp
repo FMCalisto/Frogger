@@ -138,7 +138,12 @@ cout << tronco->getX() << endl;
                 glutSwapBuffers();
         }
     void GameManager::reshape( GLsizei w, GLsizei h){
-        glViewport(0, 0, w, h);
+        //glViewport(0, 0, w, h);
+    glViewport(0, 0, w, h);
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+    glOrtho( -w/2.0, w/2.0, -h/2.0, h/2.0, -1, 1);
+
     }
     
     void GameManager::specialKeys( int key, int x, int y ) 
