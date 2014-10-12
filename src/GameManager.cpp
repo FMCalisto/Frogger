@@ -112,7 +112,7 @@ double rotate_x = 0;
 cout << tronco->getX() << endl;
 	puts("CRASHES??");
 	
-		if(carro1->getX() <=-12+eps and carro1->getX() >= -12-eps){
+		if((carro1->getX() <=-12+eps)and(carro1->getX() >= -12-eps)){
 		if(DEBUG)
 		puts("erased");
 		carro1->ResetPosition(12.,v[rand()%3],1.5);
