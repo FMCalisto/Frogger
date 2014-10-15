@@ -16,6 +16,10 @@ using namespace std;
 		}
 		
 	
+	/*	int tempoAtual = glutGet(GLUT_ELAPSED_TIME);
+int tempo = tempoAtual - lastUpdate;
+
+lastUpdate = tempoAtual; */
 		
 		void GameObject::updateX(double delta_t){
 			double xcoord = vel->getX();

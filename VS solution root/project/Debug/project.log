@@ -1,4 +1,4 @@
-﻿Build started 12/10/2014 22:24:30.
+﻿Build started 15/10/2014 22:29:37.
      1>Project "P:\Windows\Programs\Develop\GitHub\Frogger\VS solution root\project\project.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
          P:\Windows\Programs\Develop\Microsoft\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IP:\Windows\Programs\Develop\GitHub\Frogger\glut\include\GL /AIP:\Windows\Programs\Develop\GitHub\Frogger\glut /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\src\Car.cpp ..\..\src\DynamicObject.cpp ..\..\src\Entity.cpp ..\..\src\Frog.cpp ..\..\src\GameManager.cpp ..\..\src\GameObject.cpp ..\..\src\main.cpp ..\..\src\River.cpp ..\..\src\Riverside.cpp ..\..\src\Road.cpp ..\..\src\Roadside.cpp ..\..\src\StaticObject.cpp ..\..\src\Vector3.cpp
@@ -18,10 +18,12 @@
      1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(96): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
      1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(97): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
      1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(115): error C2146: syntax error : missing ')' before identifier 'and'
+     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(115): error C2065: 'and' : undeclared identifier
+     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(115): error C2146: syntax error : missing ';' before identifier 'carro1'
      1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(115): error C2059: syntax error : ')'
      1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(116): error C2143: syntax error : missing '}' before 'if'
+     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(116): error C2064: term does not evaluate to a function taking 1 arguments
      1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(116): error C2143: syntax error : missing ';' before 'if'
-     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(115): error C3861: 'and': identifier not found
      1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(124): error C2059: syntax error : 'if'
      1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(124): error C2143: syntax error : missing ';' before '{'
      1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(124): error C2447: '{' : missing function header (old-style formal list?)
@@ -63,4 +65,4 @@
 
 Build FAILED.
 
-Time Elapsed 00:00:05.20
+Time Elapsed 00:00:05.46

@@ -23,7 +23,7 @@
             glPushMatrix();
             glTranslatef(_pos.getX()/*-_speedX*/,_pos.getY(),_pos.getZ());
             glColor3ub(139,69,19);
-            glScalef(4.0f, 2.f, 0.5f);
+            glScalef(4.0f, 0.5f, 0.5f);
             glutSolidCube(1);
             glPopMatrix();
           
