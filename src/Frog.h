@@ -4,7 +4,13 @@
 
 using namespace std;
 
-#include <GL/glut.h>
+#ifdef __APPLE__
+	#include<GLUT/glut.h>
+	#include<openGL/openGL.h>
+
+#else
+	#include<GL/glut.h>
+#endif
 
 #include"Entity.h"
 #include"GameObject.h"

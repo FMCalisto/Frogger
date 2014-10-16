@@ -2,8 +2,8 @@
 #include <gl\GL.h>
 #include <glut.h>*/
 
-#include<vector>
-#include<stdio.h>
+#include <vector>
+#include <stdio.h>
 #include <iostream>
 #include <cstdlib>
 
@@ -19,14 +19,27 @@
 #include "Frog.h"
 #include "TimberLog.h"
 #include "Vector3.h"
-#include"Car.h"
+#include "Car.h"
 
-#include <GL/glut.h>
+#ifdef __APPLE__
+	#include<GLUT/glut.h>
+	#include<openGL/openGL.h>
+
+#else
+	#include<GL/glut.h>
+#endif
+
 #define DEBUG 1
 
 using namespace std;
+
 #define eps 1e-12
+
 static vector<int> v(3);
+
+
+
+
  
     GameManager::GameManager(int largura, int altura){
 		v[0]=-3;
@@ -54,8 +67,10 @@ static vector<int> v(3);
         _entidades[5] =(DynamicObject*) new Frog(0);
        
     }
+    
     double rotate_z = 0; 
-double rotate_x = 0;
+	double rotate_x = 0;
+	
     void GameManager::display(void){
        /* glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
@@ -78,10 +93,12 @@ double rotate_x = 0;
         glClearColor( 0, 0, 0, 1 );
         glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
 
-        glMatrixMode( GL_PROJECTION );
+        glMatrixMode(GL_PROJECTION);
         glLoadIdentity();
+        
         int w = glutGet( GLUT_WINDOW_WIDTH );
         int h = glutGet( GLUT_WINDOW_HEIGHT );
+        
         gluPerspective( 100, w / h, 0.1, 100 );
 
         glMatrixMode( GL_MODELVIEW );
@@ -105,10 +122,15 @@ double rotate_x = 0;
 		            }
 
 	puts("DRAWED ALL");
+	
 	cout << tronco->getX() << " AND AFTER: " << endl;
+    
     tronco->updateX(+0.05); 
     tronco2->updateX(+0.05);
 	carro1->updateX(+0.10);
+	
+	glutSwapBuffers();
+	
 cout << tronco->getX() << endl;
 	puts("CRASHES??");
 	
