@@ -17,7 +17,9 @@ class Car : public DynamicObject{
 		Car();
 		Car(double x, double y, double z); //the position is passed as parameter
 		~Car();
+		void ResetPosition(double x, double y, double z);
 		double getX();
+		double getY();
 		void draw();
 };
 #endif  

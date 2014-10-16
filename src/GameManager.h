@@ -18,6 +18,7 @@
 #include"Roadside.h"
 #include "Frog.h"
 #include "Car.h"
+#include "TimberLog.h"
 
 
 using namespace std;
@@ -32,6 +33,8 @@ class GameManager{
        GameObject* _entidades[6];
        Frog* froggy;// = new Frog();
        Car* carro1;
+       TimberLog* tronco;
+       TimberLog* tronco2;
        
     private:
 	    float _largura;

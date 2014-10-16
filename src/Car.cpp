@@ -8,28 +8,37 @@
 		}
 		
 		Car::Car(double x, double y,double z){
-		_x=x;
-		_y=y;
-		_z=z;
+		_pos.set(x,y,z);
 		}
 		
 		Car::~Car(){
 		//hide=true;
-		  _x=12;
+		_pos.set(12,-3,1.5);
+		  /*_x=12;
 		 _y = -3;
-		 _z = 1.5;
+		 _z = 1.5; */
 		}
 	
 		double Car::getX()
 		{
-			return _x;
+			return _pos.getX();
+		}
+
+		double Car::getY()
+		{
+			return _pos.getY();
+		}
+		
+		void Car::ResetPosition(double x, double y, double z)
+		{
+			_pos.set(x,y,z);
 		}
 		
 		void Car::draw(){
 		    
         	glPushMatrix();
 
-                glTranslatef(_x/*-_speedX*/,_y,_z);  // -7, -5 e -3. Largura da estrada = 28. Assim que translatef.x = 12, destroy :) 
+                glTranslatef(_pos.getX()/*-_speedX*/,_pos.getY(),_pos.getZ());  // -7, -5 e -3. Largura da estrada = 28. Assim que translatef.x = 12, destroy :) 
                 glPushMatrix();
                 glColor3ub(2,2,2);
                 glScalef(3.0f, 2.f, 0.5f); 
