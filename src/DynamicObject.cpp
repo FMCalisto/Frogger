@@ -21,6 +21,11 @@ using namespace std;
 		void DynamicObject::SetPosY(double y){_pos.set(_pos.getX(),y,_pos.getZ())/*_y=y*/;}
 		void DynamicObject::SetPosZ(double z){_pos.set(_pos.getX(),_pos.getY(),z)/*_z=z*/;}
 		
+		double DynamicObject::getPosX(){return _pos.getX()/*_speedX*/;}
+		double DynamicObject::getPosY(){return _pos.getY()/*_speedX*/;}
+		double DynamicObject::getPosZ(){return _pos.getZ()/*_speedX*/;}
+		
+		
 		double DynamicObject::getSpeedX(){return _speed.getX()/*_speedX*/;}
 		void DynamicObject::SetSpeedX(double speed){_speed.set(speed,_speed.getY(),_speed.getZ())/*_speedX=speed*/;}
 	

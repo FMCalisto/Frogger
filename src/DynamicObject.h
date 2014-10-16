@@ -21,6 +21,9 @@ class DynamicObject : public GameObject {
 		void SetPosY(double speed);
 		void SetPosZ(double speed);
 		double getSpeedY();
+		double getPosX();
+		double getPosY();
+		double getPosZ();
 		void SetSpeedY(double speed);
 		DynamicObject();
 		~DynamicObject();

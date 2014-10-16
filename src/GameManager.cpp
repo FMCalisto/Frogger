@@ -5,7 +5,6 @@
 #include<vector>
 #include<stdio.h>
 #include <iostream>
-#include <cmath>
 #include <cstdlib>
 
 #include "GameManager.h"
@@ -45,13 +44,8 @@ static vector<int> v(3);
         glEnable(GL_COLOR_MATERIAL);
         froggy = new Frog(2.0);
         carro1 = new Car(12,-3,1.5);
-<<<<<<< HEAD
-        tronco = new TimberLog(12,2,1);
-        tronco2 = new TimberLog(8,6,1);
-=======
         tronco = new TimberLog(12,2.5,1);
         tronco2 = new TimberLog(8,7.5,1);
->>>>>>> origin/master
         _entidades[0] = (GameObject*) new Riverside();
         _entidades[1] = (GameObject*) new Roadside();
         _entidades[2] = (GameObject*) new Road();
@@ -110,7 +104,6 @@ double rotate_x = 0;
 		            _entidades[k]->draw();
 		            }
 
-<<<<<<< HEAD
 	puts("DRAWED ALL");
 	cout << tronco->getX() << " AND AFTER: " << endl;
     tronco->updateX(+0.05); 
@@ -118,17 +111,6 @@ double rotate_x = 0;
 	carro1->updateX(+0.10);
 cout << tronco->getX() << endl;
 	puts("CRASHES??");
-=======
-	if(DEBUG){
-	puts("DRAWING COMPLETED");
-	cout << tronco->getX() << " AND AFTER: " << endl;}
-    tronco->updateX(+lastUpdate-0.35); 
-    tronco2->updateX(+lastUpdate-0.35);
-	carro1->updateX(+lastUpdate-0.3);
-if(DEBUG){
-cout << tronco->getX() << endl;
-	puts("CRASHES??");}
->>>>>>> origin/master
 	
 		if(carro1->getX() <=-12+eps and carro1->getX() >= -12-eps){
 		if(DEBUG)
@@ -139,22 +121,6 @@ cout << tronco->getX() << endl;
 	}
 	
 	
-<<<<<<< HEAD
-		if(tronco->getX() <=-15+eps and tronco->getX() >= -15-eps){
-		if(DEBUG)
-		puts("erased");
-		 tronco->SetPosX(12.);//,-3,1.5);
-		 tronco->SetPosY(2.);
-	}
-	
-	if(tronco2->getX() <=-15+eps and tronco2->getX() >= -15-eps){
-		if(DEBUG)
-		puts("erased");
-		 tronco2->SetPosX(12.);//,-3,1.5);
-		 tronco2->SetPosY(4.);
-	}
-	
-=======
 		if(tronco->getX() <=-16+eps and tronco->getX() >= -16-eps){
 		if(DEBUG)
 		puts("erased");
@@ -168,15 +134,16 @@ cout << tronco->getX() << endl;
 		 tronco2->SetPosX(12.);//,-3,1.5);
 		 tronco2->SetPosY(7.5);
 	}
-	/*	TODO: fix me */
-	if((fabs(carro1->getX()) - fabs(froggy->getSpeedX())) <= 1 and fabs(carro1->getY()) - fabs(froggy->getSpeedY()) <= 1)
-	puts("COLLISIONSIFUDSFHDSUIFHDIUFDHSFUIDSHFDSIUFHDSIUFHDIFUHDFIUDH");
 	
->>>>>>> origin/master
                 glutSwapBuffers();
         }
     void GameManager::reshape( GLsizei w, GLsizei h){
-        glViewport(0, 0, w, h);
+        //glViewport(0, 0, w, h);
+    glViewport(0, 0, w, h);
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+    glOrtho( -w/2.0, w/2.0, -h/2.0, h/2.0, -1, 1);
+
     }
     
     void GameManager::specialKeys( int key, int x, int y ) 
@@ -197,41 +164,28 @@ cout << tronco->getX() << endl;
 		//escape key
 	switch(key)
 	{
+	    case 'O':
 		case 'o':
 		 //_entidades[4]->updateX(-0.76);
-<<<<<<< HEAD
 		 froggy->updateX(-0.56);
 		 //cout << _entidades[4]->_speedX << endl;
 		break;
+		case 'P':
 		case 'p':
 		 //_entidades[4]->updateX(+0.76);
 		 froggy->updateX(+0.56);
-=======
-		 froggy->updateX(-1*lastUpdate);
-		 //cout << froggy->getSpeedX() << endl;
-		break;
-		case 'p':
-		 //_entidades[4]->updateX(+0.76);
-		 froggy->updateX(+1*lastUpdate);
->>>>>>> origin/master
 		 //cout << _entidades[4]->_speedX << endl;
 		break;
+		case 'Q':
 		case 'q':
 		 //_entidades[4]->updateY(+0.76);
-<<<<<<< HEAD
 		 froggy->updateY(+0.56);
-=======
-		 froggy->updateY(+1*lastUpdate);
->>>>>>> origin/master
 		 //cout << _entidades[4]->_speedX << endl;
 		break;
+		case 'A':
 		case 'a':
 		 //_entidades[4]->updateY(-0.76);
-<<<<<<< HEAD
 		 froggy->updateY(-0.56);
-=======
-		 froggy->updateY(-1*lastUpdate);
->>>>>>> origin/master
 		 //cout << _entidades[4]->_speedX << endl;
 		break;
 	}

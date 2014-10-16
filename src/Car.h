@@ -19,7 +19,6 @@ class Car : public DynamicObject{
 		~Car();
 		void ResetPosition(double x, double y, double z);
 		double getX();
-		double getY();
 		void draw();
 };
 #endif  
