@@ -1,4 +1,4 @@
-﻿Build started 15/10/2014 22:29:37.
+﻿Build started 16/10/2014 23:57:32.
      1>Project "P:\Windows\Programs\Develop\GitHub\Frogger\VS solution root\project\project.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
          P:\Windows\Programs\Develop\Microsoft\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IP:\Windows\Programs\Develop\GitHub\Frogger\glut\include\GL /AIP:\Windows\Programs\Develop\GitHub\Frogger\glut /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\src\Car.cpp ..\..\src\DynamicObject.cpp ..\..\src\Entity.cpp ..\..\src\Frog.cpp ..\..\src\GameManager.cpp ..\..\src\GameObject.cpp ..\..\src\main.cpp ..\..\src\River.cpp ..\..\src\Riverside.cpp ..\..\src\Road.cpp ..\..\src\Roadside.cpp ..\..\src\StaticObject.cpp ..\..\src\Vector3.cpp
@@ -13,32 +13,32 @@
          main.cpp
          GameObject.cpp
          GameManager.cpp
-     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(35): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(36): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(96): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
-     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(97): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
-     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(115): error C2146: syntax error : missing ')' before identifier 'and'
-     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(115): error C2065: 'and' : undeclared identifier
-     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(115): error C2146: syntax error : missing ';' before identifier 'carro1'
-     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(115): error C2059: syntax error : ')'
-     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(116): error C2143: syntax error : missing '}' before 'if'
-     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(116): error C2064: term does not evaluate to a function taking 1 arguments
-     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(116): error C2143: syntax error : missing ';' before 'if'
-     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(124): error C2059: syntax error : 'if'
-     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(124): error C2143: syntax error : missing ';' before '{'
-     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(124): error C2447: '{' : missing function header (old-style formal list?)
-     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(131): error C2059: syntax error : 'if'
-     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(131): error C2143: syntax error : missing ';' before '{'
-     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(131): error C2447: '{' : missing function header (old-style formal list?)
-     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(138): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(138): error C2556: 'int glutSwapBuffers(void)' : overloaded function differs only by return type from 'void glutSwapBuffers(void)'
+     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(48): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(49): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(113): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(114): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(137): error C2146: syntax error : missing ')' before identifier 'and'
+     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(137): error C2065: 'and' : undeclared identifier
+     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(137): error C2146: syntax error : missing ';' before identifier 'carro1'
+     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(137): error C2059: syntax error : ')'
+     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(138): error C2143: syntax error : missing '}' before 'if'
+     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(138): error C2064: term does not evaluate to a function taking 1 arguments
+     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(138): error C2143: syntax error : missing ';' before 'if'
+     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(146): error C2059: syntax error : 'if'
+     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(146): error C2143: syntax error : missing ';' before '{'
+     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(146): error C2447: '{' : missing function header (old-style formal list?)
+     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(153): error C2059: syntax error : 'if'
+     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(153): error C2143: syntax error : missing ';' before '{'
+     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(153): error C2447: '{' : missing function header (old-style formal list?)
+     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(160): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(160): error C2556: 'int glutSwapBuffers(void)' : overloaded function differs only by return type from 'void glutSwapBuffers(void)'
                  p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(427) : see declaration of 'glutSwapBuffers'
-     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(138): error C2373: 'glutSwapBuffers' : redefinition; different type modifiers
+     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(160): error C2373: 'glutSwapBuffers' : redefinition; different type modifiers
                  p:\windows\programs\develop\microsoft\microsoft visual studio 12.0\vc\include\gl\freeglut_std.h(427) : see declaration of 'glutSwapBuffers'
-     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(139): error C2059: syntax error : '}'
-     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(139): error C2143: syntax error : missing ';' before '}'
-     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(140): error C2143: syntax error : missing ';' before '{'
-     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(140): error C2447: '{' : missing function header (old-style formal list?)
+     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(161): error C2059: syntax error : '}'
+     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(161): error C2143: syntax error : missing ';' before '}'
+     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(162): error C2143: syntax error : missing ';' before '{'
+     1>p:\windows\programs\develop\github\frogger\src\gamemanager.cpp(162): error C2447: '{' : missing function header (old-style formal list?)
          Frog.cpp
      1>p:\windows\programs\develop\github\frogger\src\frog.cpp(33): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
      1>p:\windows\programs\develop\github\frogger\src\frog.cpp(46): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
@@ -65,4 +65,4 @@
 
 Build FAILED.
 
-Time Elapsed 00:00:05.46
+Time Elapsed 00:00:04.08
