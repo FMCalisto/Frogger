@@ -23,6 +23,14 @@
 		{
 			return _pos.getX();
 		}
+<<<<<<< HEAD
+=======
+
+		double Car::getY()
+		{
+			return _pos.getY();
+		}
+>>>>>>> origin/master
 		
 		void Car::ResetPosition(double x, double y, double z)
 		{

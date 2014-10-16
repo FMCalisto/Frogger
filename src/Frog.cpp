@@ -32,7 +32,7 @@ void Frog::draw()
 	
 		glTranslatef(0+/*_speedX*/_speed.getX(),0+/*_speedY*/_speed.getY(),_raio);
 		glColor3ub(0,255,0);
-		glScalef(1.0f, 0.5f, 0.7f);
+		glScalef(0.7f, 0.35f, 0.49f); /*reduzi em 30%*/ 
 		glutSolidSphere(_raio, 20, 20);
 	
 	
