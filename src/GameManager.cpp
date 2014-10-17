@@ -128,25 +128,30 @@ double rotate_x = 0;
     tronco->updateX(+0.05); 
     tronco2->updateX(+0.05);
 	carro1->updateX(+0.10);
-if(DEBUG){
-cout << tronco->getX() << endl;
+	if(DEBUG)
+	{
+	cout << tronco->getX() << endl;
 	puts("CRASHES??");}
-	
-		if(carro1->getX() <=-12+eps and carro1->getX() >= -12-eps){
-		if(DEBUG)
+
+
+if(carro1->getX() <= -12 + eps and carro1->getX() >= -12 - eps)
+{
+	if (DEBUG)
+	{
 		puts("erased");
-		carro1->ResetPosition(12.,v[rand()%3],1.5);
-		 //carro1->_pos.set(12.,v[rand()%3],0);//,-3,1.5);
-		 //carro1->SetPosY(v[rand()%3]);
+		carro1->ResetPosition(12., v[rand() % 3], 1.5);
+		//carro1->_pos.set(12.,v[rand()%3],0);//,-3,1.5);
+		//carro1->SetPosY(v[rand()%3]);
 	}
+}
 	
 	
-		if(tronco->getX() <=-16+eps and tronco->getX() >= -16-eps){
-		if(DEBUG)
-		puts("erased");
-		 tronco->SetPosX(12.);//,-3,1.5);
-		 tronco->SetPosY(2.5);
-	}
+if(tronco->getX() <=-16+eps and tronco->getX() >= -16-eps){
+	if(DEBUG)
+	puts("erased");
+	tronco->SetPosX(12.);//,-3,1.5);
+	tronco->SetPosY(2.5);
+}
 	
 	if(tronco2->getX() <=-16+eps and tronco2->getX() >= -16-eps){
 		if(DEBUG)
