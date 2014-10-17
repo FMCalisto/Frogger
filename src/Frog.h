@@ -4,13 +4,7 @@
 
 using namespace std;
 
-#ifdef __APPLE__
-	#include<GLUT/glut.h>
-	#include<openGL/openGL.h>
-
-#else
-	#include<GL/glut.h>
-#endif
+#include <GL/glut.h>
 
 #include"Entity.h"
 #include"GameObject.h"
@@ -25,5 +19,9 @@ class Frog : public DynamicObject{
 		Frog(float _raio) ;//{___raio=__raio;}
 		~Frog();
 		void draw();
+		void ResetPosition(double x, double y);
+		/*double getPosX();
+		double getPosY();
+		double getPosZ(); */
 };
 #endif 

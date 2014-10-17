@@ -13,6 +13,10 @@ Frog::Frog(){
 Frog::Frog(float raio){
 	_raio=raio;
 }
+
+//double Frog::getPosX(){return _pos.getX()/*_speedX*/;}
+//double Frog::getPosY(){return _pos.getY()/*_speedX*/;}
+//double Frog::getPosZ(){return _pos.getZ()/*_speedX*/;} 
 //float _raio = 2;
 
 
@@ -21,7 +25,11 @@ Frog::Frog(float raio){
  * 
  */
  
- 
+
+void Frog::ResetPosition(double x, double y)
+{
+	_pos.set(x,y,_raio);
+}
 
 void Frog::draw()
 {
