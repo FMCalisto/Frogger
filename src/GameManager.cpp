@@ -32,6 +32,11 @@ static const int WALL_RIGHT = 13;
 static const int WALL_TOP = 11;
 static const int WALL_BOTTOM = -11;
 
+
+/*
+ * 	Car Collision
+ */
+
 bool CarCollided(Car* carro, Frog* ra)
 {
     //NOTE: USES HARD-CODED FROG RADIUS AND SCALE3F PARAMETERS. NOT REUSABLE IF ANY
@@ -58,6 +63,11 @@ bool CarCollided(Car* carro, Frog* ra)
 		return false;
 	}
 }
+
+
+/*
+ * 	TimberLog Collision
+ */
 
 bool TimberLogCollided(TimberLog* t, Frog* f)
 {
@@ -86,9 +96,13 @@ bool TimberLogCollided(TimberLog* t, Frog* f)
  
 GameManager::GameManager(int largura, int altura)
 {
-	v[0]=-3;
-	v[1]=-5;
-	v[2]=-7;
+	/*
+	 * 	Horizontal Car Positions
+	 */
+	
+	v[0] = -3;
+	v[1] = -5;
+	v[2] = -7;
 	
 	_largura = largura;
 	_altura = altura;
@@ -118,52 +132,25 @@ void GameManager::init()
 
 double rotate_z = 0; 
 double rotate_x = 0;
+
+
+/*
+ * 	Game Display
+ * 
+ * 	Where the Collision are conditioned.
+ * 
+ */
+
 void GameManager::display(void)
-{
-	/* glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
-	glMatrixMode(GL_PROJECTION);
-	glOrtho(-100.0, 100.0, -100.0, 100.0, 1.0, -1.0);
-	glLoadIdentity();
-	GLint viewport[4];
-	glGetIntegerv(GL_VIEWPORT, viewport);
-	double aspect = (double)viewport[2] / (double)viewport[3];
-	gluPerspective(60, aspect, 1, 100);
-
-	glMatrixMode(GL_MODELVIEW);
-	glLoadIdentity();
-
-	// move back a bit
-	glTranslatef( 0, 0, -35 );
-
-	for(int k = 0; k < 5; k++)
-	_entidades[k]->draw();*/
-	
+{	
 	glClearColor( 0, 0, 0, 1 );
 	glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
-
-	//glMatrixMode( GL_PROJECTION );
-	// glLoadIdentity();
 	
 	int w = glutGet( GLUT_WINDOW_WIDTH );
 	int h = glutGet( GLUT_WINDOW_HEIGHT );
-
-	// gluPerspective( 45,( w / h), 0.1f, 100.0f );
-	// glMatrixMode( GL_MODELVIEW );
-	//glLoadIdentity();
 	
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-
-	/* gluLookAt
-		( 
-		0,0, 20, 
-		0, 0, 0,
-		0, 1, 1
-		);
-
-	glRotatef( rotate_z, 1.0, 0.0, 0.0 );
-	glRotatef( rotate_x, 0.0, 0.0, 1.0); */
 	
 	glScalef(20.0f, 20.f, 1.f);
 	glPushMatrix();
@@ -200,27 +187,39 @@ void GameManager::display(void)
 		{
 			puts("erased");
 		}
+		
 		carro1->ResetPosition(12.,v[rand()%3],1.5);
 	}
 	
 	
-		if(tronco->getX() <=-16+eps and tronco->getX() >= -16-eps){
+	if(tronco->getX() <=-16+eps and tronco->getX() >= -16-eps)
+	{
 		if(DEBUG)
-		puts("erased");
-		 tronco->SetPosX(12.);//,-3,1.5);
-		 tronco->SetPosY(2.5);
+		{
+			puts("erased");
+		}
+		
+		tronco->SetPosX(12.);//,-3,1.5);
+		tronco->SetPosY(2.5);
 	}
 	
-	if(tronco2->getX() <=-16+eps and tronco2->getX() >= -16-eps){
+	if(tronco2->getX() <=-16+eps and tronco2->getX() >= -16-eps)
+	{
 		if(DEBUG)
-		puts("erased");
-		 tronco2->SetPosX(12.);//,-3,1.5);
-		 tronco2->SetPosY(7.5);
+		{
+			puts("erased");
+		}
+		
+		tronco2->SetPosX(12.);//,-3,1.5);
+		tronco2->SetPosY(7.5);
 	}
-	//3.5 em x . 3 em y lololol
-	if(DEBUG){
-	cout <<"Frog: ( " << froggy->getPosX() << " , " << froggy->getPosY() << ") " << endl;
-	cout <<"Car: ( " << carro1->getPosX() << " , " << carro1->getPosY() << ") " << endl;}
+	
+		
+	if(DEBUG)
+	{	
+		cout <<"Frog: ( " << froggy->getPosX() << " , " << froggy->getPosY() << ") " << endl;
+		cout <<"Car: ( " << carro1->getPosX() << " , " << carro1->getPosY() << ") " << endl;
+	}
 
 	if(CarCollided(carro1,froggy))
 	{
@@ -234,7 +233,7 @@ void GameManager::display(void)
 	
 	if(!TimberLogCollided(tronco, froggy) && ((froggy->getPosY() >= 1.68 - 10 * eps) && (froggy->getPosY() <= 8.96 - 10 * eps)))
 	{
-		//froggy->ResetPosition(0.0, 0.0);
+		froggy->ResetPosition(0.0, 0.0);
 		puts("WATER");
 	}
  
@@ -243,35 +242,54 @@ void GameManager::display(void)
         
         
         
-    void GameManager::reshape( GLsizei w, GLsizei h){
-      //  glViewport(0, 0, w, h);
-    glViewport(0, 0, w, h);
-    glMatrixMode(GL_PROJECTION);
-    glLoadIdentity();
-    glOrtho( -w/2.0, w/2.0, -h/2.0, h/2.0, -10, 10);
+void GameManager::reshape( GLsizei w, GLsizei h)
+{
+	glViewport(0, 0, w, h);
+	glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();
+	
+	glOrtho( -w/2.0, w/2.0, -h/2.0, h/2.0, -10, 10);
+}
 
-    }
+
+/*
+ * 	Controller Camera
+ */
     
-    void GameManager::specialKeys( int key, int x, int y ) 
-    {
-        if (key == GLUT_KEY_RIGHT)
-            rotate_x -= 5;
-        else if (key == GLUT_KEY_LEFT)
-            rotate_x += 5;
-        else if (key == GLUT_KEY_UP)
-            rotate_z -= 5;
-        else if (key == GLUT_KEY_DOWN)
-            rotate_z += 5;
-             glPopMatrix();
-        glutPostRedisplay();
-    }
+void GameManager::specialKeys( int key, int x, int y ) 
+{
+	if (key == GLUT_KEY_RIGHT)
+	{
+		rotate_x -= 5;
+	}
+	else if (key == GLUT_KEY_LEFT)
+	{
+		rotate_x += 5;
+	}
+	else if (key == GLUT_KEY_UP)
+	{
+		rotate_z -= 5;
+	}
+	else if (key == GLUT_KEY_DOWN)
+	{
+		rotate_z += 5;
+	}
+	
+	glPopMatrix();
+	glutPostRedisplay();
+}
+
+
+/*
+ * 	Controller Frog
+ */
     
-    void GameManager::normalKeys(unsigned char key, int x, int y)
-    {
-		//escape key
+void GameManager::normalKeys(unsigned char key, int x, int y)
+{
+	//escape key
 	switch(key)
 	{
-	    case 'O':
+		case 'O':
 		case 'o':
 			if(froggy->getPosX() >= WALL_LEFT)
 			{
