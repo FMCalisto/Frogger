@@ -20,7 +20,7 @@
 #include "Car.h"
 
 
-#define DEBUG 0
+#define DEBUG 1
 #define eps 1e-12
 
 using namespace std;
@@ -29,6 +29,8 @@ static vector<int> v(3);
 
 static const int WALL_LEFT = -13;
 static const int WALL_RIGHT = 13;
+static const int WALL_TOP = 11;
+static const int WALL_BOTTOM = -11;
 
 bool CarCollided(Car* carro, Frog* ra)
 {
@@ -230,9 +232,10 @@ void GameManager::display(void)
 		froggy->updateX(+0.05);
 	}
 	
-	if(!TimberLogCollided(tronco, froggy) && (froggy->getPosY() >= 1.68 - 10 * eps))
+	if(!TimberLogCollided(tronco, froggy) && ((froggy->getPosY() >= 1.68 - 10 * eps) && (froggy->getPosY() <= 8.96 - 10 * eps)))
 	{
-		froggy->ResetPosition(0.0, 0.0);
+		//froggy->ResetPosition(0.0, 0.0);
+		puts("WATER");
 	}
  
 	glutSwapBuffers();
@@ -270,27 +273,35 @@ void GameManager::display(void)
 	{
 	    case 'O':
 		case 'o':
-		 //_entidades[4]->updateX(-0.76);
-		 froggy->updateX(+0.56);
-		 //cout << _entidades[4]->_speedX << endl;
+			if(froggy->getPosX() >= WALL_LEFT)
+			{
+				froggy->updateX(+0.56);
+			}		 
 		break;
+		
 		case 'P':
 		case 'p':
-		 //_entidades[4]->updateX(+0.76);
-		 froggy->updateX(-0.56);
-		 //cout << _entidades[4]->_speedX << endl;
+			if(froggy->getPosX() <= WALL_RIGHT)
+			{
+				froggy->updateX(-0.56);
+			}		 
 		break;
+		
 		case 'Q':
 		case 'q':
-		 //_entidades[4]->updateY(+0.76);
-		 froggy->updateY(-0.56);
-		 //cout << _entidades[4]->_speedX << endl;
+		if(froggy->getPosY() <= WALL_TOP)
+		{		 
+			froggy->updateY(-0.56);
+		}
+		 
 		break;
 		case 'A':
 		case 'a':
-		 //_entidades[4]->updateY(-0.76);
-		 froggy->updateY(+0.56);
-		 //cout << _entidades[4]->_speedX << endl;
+		if(froggy->getPosY() >= WALL_BOTTOM)
+		{
+			froggy->updateY(+0.56);
+		}
+		
 		break;
 	}
 }
