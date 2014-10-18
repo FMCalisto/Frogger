@@ -186,7 +186,7 @@ void GameManager::display(void)
 		puts("CRASHES??");
 	}
 	
-	if(carro1->getX() <= -12.6 + eps and carro1->getX() >= -12.6 - eps)
+	if((carro1->getX() <= -12.6 + eps) and (carro1->getX() >= -12.6 - eps))
 	{
 		if(DEBUG)
 		{
