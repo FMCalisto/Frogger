@@ -23,8 +23,9 @@ class GameManager
        GameObject* _entidades[6];
        Frog* froggy;
        Car* carro1;
-       TimberLog* tronco;
-       TimberLog* tronco2;
+       TimberLog* timberlog1;
+       TimberLog* timberlog2;
+       TimberLog* timberlog3;
        
     private:
 	    float _largura;

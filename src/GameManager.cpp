@@ -117,9 +117,11 @@ void GameManager::init()
 	glEnable(GL_COLOR_MATERIAL);
 	
 	froggy = new Frog(2.0);
-	carro1 = new Car(12,-3,1.5);
-	tronco = new TimberLog(12,2.5,1);
-	tronco2 = new TimberLog(8,7.5,1);
+	carro1 = new Car(12, -3, 1.5);
+	
+	timberlog1 = new TimberLog(12, 2.5, 1);
+	timberlog2 = new TimberLog(10, 5.5, 1);
+	timberlog3 = new TimberLog(8, 7.5, 1);
 	
 	_entidades[0] = (GameObject*) new Riverside();
 	_entidades[1] = (GameObject*) new Roadside();
@@ -157,8 +159,9 @@ void GameManager::display(void)
 	
 	froggy->draw();
 	carro1->draw();
-	tronco->draw();
-	tronco2->draw();
+	timberlog1->draw();
+	timberlog2->draw();
+	timberlog3->draw();
 	
 	for(int k = 0; k < 5; k++)
 	{
@@ -168,20 +171,22 @@ void GameManager::display(void)
 	if(DEBUG)
 	{
 		puts("DRAWED ALL");
-		cout << tronco->getX() << " AND AFTER: " << endl;
+		cout << timberlog1->getX() << " AND AFTER: " << endl;
 	}
 	
-	tronco->updateX(+0.05); 
-	tronco2->updateX(+0.05);
+	timberlog1->updateX(+0.05);
+	timberlog2->updateX(+0.05);
+	timberlog2->updateX(+0.05);
+	
 	carro1->updateX(+0.10);
 	
 	if(DEBUG)
 	{
-		cout << tronco->getX() << endl;
+		cout << timberlog1->getX() << endl;
 		puts("CRASHES??");
 	}
 	
-	if(carro1->getX() <=-12.6+eps and carro1->getX() >= -12.6-eps)
+	if(carro1->getX() <= -12.6 + eps and carro1->getX() >= -12.6 - eps)
 	{
 		if(DEBUG)
 		{
@@ -192,26 +197,37 @@ void GameManager::display(void)
 	}
 	
 	
-	if(tronco->getX() <=-16+eps and tronco->getX() >= -16-eps)
+	if(timberlog1->getX() <= -16 + eps and timberlog1->getX() >= -16 - eps)
 	{
 		if(DEBUG)
 		{
 			puts("erased");
 		}
 		
-		tronco->SetPosX(12.);//,-3,1.5);
-		tronco->SetPosY(2.5);
+		timberlog1->SetPosX(12.);//,-3,1.5);
+		timberlog1->SetPosY(2.5);
 	}
 	
-	if(tronco2->getX() <=-16+eps and tronco2->getX() >= -16-eps)
+	if(timberlog2->getX() <= -16 + eps and timberlog2->getX() >= -16 - eps)
 	{
 		if(DEBUG)
 		{
 			puts("erased");
 		}
 		
-		tronco2->SetPosX(12.);//,-3,1.5);
-		tronco2->SetPosY(7.5);
+		timberlog2->SetPosX(10.);//,-3,1.5);
+		timberlog2->SetPosY(5.5);
+	}
+	
+	if(timberlog3->getX() <= -16 + eps and timberlog3->getX() >= -16 - eps)
+	{
+		if(DEBUG)
+		{
+			puts("erased");
+		}
+		
+		timberlog3->SetPosX(12.);//,-3,1.5);
+		timberlog3->SetPosY(7.5);
 	}
 	
 		
@@ -221,19 +237,41 @@ void GameManager::display(void)
 		cout <<"Car: ( " << carro1->getPosX() << " , " << carro1->getPosY() << ") " << endl;
 	}
 
-	if(CarCollided(carro1,froggy))
+	if(CarCollided(carro1, froggy))
 	{
 		froggy->ResetPosition(0.0,0.0);
 	}
 	
-	if(TimberLogCollided(tronco, froggy))
+	if(TimberLogCollided(timberlog1, froggy))
 	{
 		froggy->updateX(+0.05);
 	}
 	
-	if(!TimberLogCollided(tronco, froggy) && ((froggy->getPosY() >= 1.68 - 10 * eps) && (froggy->getPosY() <= 8.96 - 10 * eps)))
+	if(!TimberLogCollided(timberlog1, froggy) && ((froggy->getPosY() >= 1.68 - 10 * eps) && (froggy->getPosY() <= 8.96 - 10 * eps)))
 	{
-		froggy->ResetPosition(0.0, 0.0);
+		//froggy->ResetPosition(0.0, 0.0);
+		puts("WATER");
+	}
+	
+	if(TimberLogCollided(timberlog2, froggy))
+	{
+		froggy->updateX(+0.05);
+	}
+	
+	if(!TimberLogCollided(timberlog2, froggy) && ((froggy->getPosY() >= 5.6 - 10 * eps) && (froggy->getPosY() <= 8.96 - 10 * eps)))
+	{
+		//froggy->ResetPosition(0.0, 0.0);
+		puts("WATER");
+	}
+	
+	if(TimberLogCollided(timberlog3, froggy))
+	{
+		froggy->updateX(+0.05);
+	}
+	
+	if(!TimberLogCollided(timberlog3, froggy) && ((froggy->getPosY() >= 7.28 - 10 * eps) && (froggy->getPosY() <= 8.96 - 10 * eps)))
+	{
+		//froggy->ResetPosition(0.0, 0.0);
 		puts("WATER");
 	}
  
@@ -256,7 +294,7 @@ void GameManager::reshape( GLsizei w, GLsizei h)
  * 	Controller Camera
  */
     
-void GameManager::specialKeys( int key, int x, int y ) 
+void GameManager::specialKeys(int key, int x, int y)
 {
 	if (key == GLUT_KEY_RIGHT)
 	{
