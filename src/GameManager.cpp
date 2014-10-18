@@ -22,7 +22,7 @@
 #include"Car.h"
 
 #include <GL/glut.h>
-#define DEBUG 1
+#define DEBUG 0
 
 using namespace std;
 #define eps 1e-12
@@ -96,16 +96,19 @@ double rotate_x = 0;
 		    _entidades[k]->draw();*/
         glClearColor( 0, 0, 0, 1 );
         glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
-
-        glMatrixMode( GL_PROJECTION );
-        glLoadIdentity();
+        
+        //glMatrixMode( GL_PROJECTION );
+       // glLoadIdentity();
         int w = glutGet( GLUT_WINDOW_WIDTH );
         int h = glutGet( GLUT_WINDOW_HEIGHT );
-        gluPerspective( 100, w / h, 0.1, 100 );
-
-        glMatrixMode( GL_MODELVIEW );
-        glLoadIdentity();
-        gluLookAt
+       
+       // gluPerspective( 45,( w / h), 0.1f, 100.0f );
+       // glMatrixMode( GL_MODELVIEW );
+        //glLoadIdentity();
+         glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
+     
+       /* gluLookAt
             ( 
             0,0, 20, 
             0, 0, 0,
@@ -113,13 +116,14 @@ double rotate_x = 0;
             );
 
         glRotatef( rotate_z, 1.0, 0.0, 0.0 );
-        glRotatef( rotate_x, 0.0, 0.0, 1.0); 
-		
+        glRotatef( rotate_x, 0.0, 0.0, 1.0); */
+		glScalef(20.0f, 20.f, 1.f);
+		 glPushMatrix();
 		froggy->draw();
 		carro1->draw();
 		tronco->draw();
 		tronco2->draw();
-        for(int k = 0; k < 6; k++){
+        for(int k = 0; k < 5; k++){
 		            _entidades[k]->draw();
 		            }
 	if(DEBUG){
@@ -128,30 +132,25 @@ double rotate_x = 0;
     tronco->updateX(+0.05); 
     tronco2->updateX(+0.05);
 	carro1->updateX(+0.10);
-	if(DEBUG)
-	{
-	cout << tronco->getX() << endl;
+if(DEBUG){
+cout << tronco->getX() << endl;
 	puts("CRASHES??");}
-
-
-if(carro1->getX() <= -12 + eps and carro1->getX() >= -12 - eps)
-{
-	if (DEBUG)
-	{
+	
+		if(carro1->getX() <=-12.6+eps and carro1->getX() >= -12.6-eps){
+		if(DEBUG)
 		puts("erased");
-		carro1->ResetPosition(12., v[rand() % 3], 1.5);
-		//carro1->_pos.set(12.,v[rand()%3],0);//,-3,1.5);
-		//carro1->SetPosY(v[rand()%3]);
+		carro1->ResetPosition(12.,v[rand()%3],1.5);
+		 //carro1->_pos.set(12.,v[rand()%3],0);//,-3,1.5);
+		 //carro1->SetPosY(v[rand()%3]);
 	}
-}
 	
 	
-if(tronco->getX() <=-16+eps and tronco->getX() >= -16-eps){
-	if(DEBUG)
-	puts("erased");
-	tronco->SetPosX(12.);//,-3,1.5);
-	tronco->SetPosY(2.5);
-}
+		if(tronco->getX() <=-16+eps and tronco->getX() >= -16-eps){
+		if(DEBUG)
+		puts("erased");
+		 tronco->SetPosX(12.);//,-3,1.5);
+		 tronco->SetPosY(2.5);
+	}
 	
 	if(tronco2->getX() <=-16+eps and tronco2->getX() >= -16-eps){
 		if(DEBUG)
@@ -170,11 +169,11 @@ if(tronco->getX() <=-16+eps and tronco->getX() >= -16-eps){
                 glutSwapBuffers();
         }
     void GameManager::reshape( GLsizei w, GLsizei h){
-        //glViewport(0, 0, w, h);
+      //  glViewport(0, 0, w, h);
     glViewport(0, 0, w, h);
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    glOrtho( -w/2.0, w/2.0, -h/2.0, h/2.0, -1, 1);
+    glOrtho( -w/2.0, w/2.0, -h/2.0, h/2.0, -10, 10);
 
     }
     
@@ -188,6 +187,7 @@ if(tronco->getX() <=-16+eps and tronco->getX() >= -16-eps){
             rotate_z -= 5;
         else if (key == GLUT_KEY_DOWN)
             rotate_z += 5;
+             glPopMatrix();
         glutPostRedisplay();
     }
     
