@@ -1,11 +1,9 @@
-/*#include <windows.h>
-#include <gl\GL.h>
-#include <glut.h>*/
-
-#include<vector>
-#include<stdio.h>
+#include <vector>
+#include <stdio.h>
 #include <iostream>
 #include <cstdlib>
+
+#include <GL/glut.h>
 
 #include "GameManager.h"
 #include "Entity.h"
@@ -19,129 +17,188 @@
 #include "Frog.h"
 #include "TimberLog.h"
 #include "Vector3.h"
-#include"Car.h"
+#include "Car.h"
 
-#include <GL/glut.h>
+
 #define DEBUG 0
+#define eps 1e-12
 
 using namespace std;
-#define eps 1e-12
+
 static vector<int> v(3);
 
-bool Collided(Car* carro, Frog* ra)
+static const int WALL_LEFT = -13;
+static const int WALL_RIGHT = 13;
+
+bool CarCollided(Car* carro, Frog* ra)
 {
     //NOTE: USES HARD-CODED FROG RADIUS AND SCALE3F PARAMETERS. NOT REUSABLE IF ANY
     //PARAMETER IS CHANGED. 
-	double cxmin, cxmax, cymin, cymax, fxmin, fymin, fxmax, fymax;
-	cxmin=carro->getPosX()-2.0;
-	cxmax=carro->getPosX()+2.0;
-	cymin=carro->getPosY()-1.0;
-	cymax=carro->getPosY()+1.0;
-	fxmin=ra->getPosX()-1.4;
-	fxmax=ra->getPosX()+1.4;
-	fymin=ra->getPosY()-0.7;
-	fymax=ra->getPosY()+0.7;
-	if(cxmax > fxmin && cxmin < fxmax && cymax > fymin && cymin < fymax)
-	return true;
-	else
-	return false;
-}
- 
-    GameManager::GameManager(int largura, int altura){
-		v[0]=-3;
-		v[1]=-5;
-		v[2]=-7;
-    	_largura = largura;
-	    _altura = altura;
-		
-    }
-      
-    void GameManager::init(){
-        glEnable(GL_DEPTH_TEST);
-        glEnable(GL_LIGHTING);
-        glEnable(GL_LIGHT0);
-        glEnable(GL_COLOR_MATERIAL);
-        froggy = new Frog(2.0);
-        carro1 = new Car(12,-3,1.5);
-        tronco = new TimberLog(12,2.5,1);
-        tronco2 = new TimberLog(8,7.5,1);
-        _entidades[0] = (GameObject*) new Riverside();
-        _entidades[1] = (GameObject*) new Roadside();
-        _entidades[2] = (GameObject*) new Road();
-        _entidades[3] = (GameObject*) new River();
-        _entidades[4] = (DynamicObject*) new Frog(0);
-        _entidades[5] =(DynamicObject*) new Frog(0);
-       
-    }
-    double rotate_z = 0; 
-double rotate_x = 0;
-    void GameManager::display(void){
-       /* glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
-        glMatrixMode(GL_PROJECTION);
-        glOrtho(-100.0, 100.0, -100.0, 100.0, 1.0, -1.0);
-        glLoadIdentity();
-        GLint viewport[4];
-        glGetIntegerv(GL_VIEWPORT, viewport);
-        double aspect = (double)viewport[2] / (double)viewport[3];
-        gluPerspective(60, aspect, 1, 100);
-
-        glMatrixMode(GL_MODELVIEW);
-        glLoadIdentity();
-
-        // move back a bit
-        glTranslatef( 0, 0, -35 );
-      
-        for(int k = 0; k < 5; k++)
-		    _entidades[k]->draw();*/
-        glClearColor( 0, 0, 0, 1 );
-        glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
-        
-        //glMatrixMode( GL_PROJECTION );
-       // glLoadIdentity();
-        int w = glutGet( GLUT_WINDOW_WIDTH );
-        int h = glutGet( GLUT_WINDOW_HEIGHT );
-       
-       // gluPerspective( 45,( w / h), 0.1f, 100.0f );
-       // glMatrixMode( GL_MODELVIEW );
-        //glLoadIdentity();
-         glMatrixMode(GL_MODELVIEW);
-    glLoadIdentity();
-     
-       /* gluLookAt
-            ( 
-            0,0, 20, 
-            0, 0, 0,
-            0, 1, 1
-            );
-
-        glRotatef( rotate_z, 1.0, 0.0, 0.0 );
-        glRotatef( rotate_x, 0.0, 0.0, 1.0); */
-		glScalef(20.0f, 20.f, 1.f);
-		 glPushMatrix();
-		froggy->draw();
-		carro1->draw();
-		tronco->draw();
-		tronco2->draw();
-        for(int k = 0; k < 5; k++){
-		            _entidades[k]->draw();
-		            }
-	if(DEBUG){
-	puts("DRAWED ALL");
-	cout << tronco->getX() << " AND AFTER: " << endl;}
-    tronco->updateX(+0.05); 
-    tronco2->updateX(+0.05);
-	carro1->updateX(+0.10);
-if(DEBUG){
-cout << tronco->getX() << endl;
-	puts("CRASHES??");}
 	
-		if(carro1->getX() <=-12.6+eps and carro1->getX() >= -12.6-eps){
+	double cxmin, cxmax, cymin, cymax, fxmin, fymin, fxmax, fymax;
+	
+	cxmin = carro->getPosX() - 2.0;
+	cxmax = carro->getPosX() + 2.0;
+	cymin = carro->getPosY() - 1.0;
+	cymax = carro->getPosY() + 1.0;
+	
+	fxmin = ra->getPosX() - 1.4;
+	fxmax = ra->getPosX() + 1.4;
+	fymin = ra->getPosY() - 0.7;
+	fymax = ra->getPosY() + 0.7;
+	
+	if(cxmax > fxmin && cxmin < fxmax && cymax > fymin && cymin < fymax)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+bool TimberLogCollided(TimberLog* t, Frog* f)
+{
+	double txmin, txmax, tymin, tymax, fxmin, fymin, fxmax, fymax;
+	
+	txmin = t->getPosX() - 2.0;
+	txmax = t->getPosX() + 2.0;
+	tymin = t->getPosY() - 1.0;
+	tymax = t->getPosY() + 1.0;
+	
+	fxmin = f->getPosX() - 1.4;
+	fxmax = f->getPosX() + 1.4;
+	fymin = f->getPosY() - 0.7;
+	fymax = f->getPosY() + 0.7;
+	
+	if(txmax > fxmin && txmin < fxmax && tymax > fymin && tymin < fymax)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+ 
+GameManager::GameManager(int largura, int altura)
+{
+	v[0]=-3;
+	v[1]=-5;
+	v[2]=-7;
+	
+	_largura = largura;
+	_altura = altura;
+	
+}
+      
+void GameManager::init()
+{
+	glEnable(GL_DEPTH_TEST);
+	glEnable(GL_LIGHTING);
+	glEnable(GL_LIGHT0);
+	glEnable(GL_COLOR_MATERIAL);
+	
+	froggy = new Frog(2.0);
+	carro1 = new Car(12,-3,1.5);
+	tronco = new TimberLog(12,2.5,1);
+	tronco2 = new TimberLog(8,7.5,1);
+	
+	_entidades[0] = (GameObject*) new Riverside();
+	_entidades[1] = (GameObject*) new Roadside();
+	_entidades[2] = (GameObject*) new Road();
+	_entidades[3] = (GameObject*) new River();
+	_entidades[4] = (DynamicObject*) new Frog(0);
+	_entidades[5] = (DynamicObject*) new Frog(0);
+   
+}
+
+double rotate_z = 0; 
+double rotate_x = 0;
+void GameManager::display(void)
+{
+	/* glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+	glMatrixMode(GL_PROJECTION);
+	glOrtho(-100.0, 100.0, -100.0, 100.0, 1.0, -1.0);
+	glLoadIdentity();
+	GLint viewport[4];
+	glGetIntegerv(GL_VIEWPORT, viewport);
+	double aspect = (double)viewport[2] / (double)viewport[3];
+	gluPerspective(60, aspect, 1, 100);
+
+	glMatrixMode(GL_MODELVIEW);
+	glLoadIdentity();
+
+	// move back a bit
+	glTranslatef( 0, 0, -35 );
+
+	for(int k = 0; k < 5; k++)
+	_entidades[k]->draw();*/
+	
+	glClearColor( 0, 0, 0, 1 );
+	glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
+
+	//glMatrixMode( GL_PROJECTION );
+	// glLoadIdentity();
+	
+	int w = glutGet( GLUT_WINDOW_WIDTH );
+	int h = glutGet( GLUT_WINDOW_HEIGHT );
+
+	// gluPerspective( 45,( w / h), 0.1f, 100.0f );
+	// glMatrixMode( GL_MODELVIEW );
+	//glLoadIdentity();
+	
+	glMatrixMode(GL_MODELVIEW);
+	glLoadIdentity();
+
+	/* gluLookAt
+		( 
+		0,0, 20, 
+		0, 0, 0,
+		0, 1, 1
+		);
+
+	glRotatef( rotate_z, 1.0, 0.0, 0.0 );
+	glRotatef( rotate_x, 0.0, 0.0, 1.0); */
+	
+	glScalef(20.0f, 20.f, 1.f);
+	glPushMatrix();
+	
+	froggy->draw();
+	carro1->draw();
+	tronco->draw();
+	tronco2->draw();
+	
+	for(int k = 0; k < 5; k++)
+	{
+		_entidades[k]->draw();
+	}
+	
+	if(DEBUG)
+	{
+		puts("DRAWED ALL");
+		cout << tronco->getX() << " AND AFTER: " << endl;
+	}
+	
+	tronco->updateX(+0.05); 
+	tronco2->updateX(+0.05);
+	carro1->updateX(+0.10);
+	
+	if(DEBUG)
+	{
+		cout << tronco->getX() << endl;
+		puts("CRASHES??");
+	}
+	
+	if(carro1->getX() <=-12.6+eps and carro1->getX() >= -12.6-eps)
+	{
 		if(DEBUG)
-		puts("erased");
+		{
+			puts("erased");
+		}
 		carro1->ResetPosition(12.,v[rand()%3],1.5);
-		 //carro1->_pos.set(12.,v[rand()%3],0);//,-3,1.5);
-		 //carro1->SetPosY(v[rand()%3]);
 	}
 	
 	
@@ -158,16 +215,31 @@ cout << tronco->getX() << endl;
 		 tronco2->SetPosX(12.);//,-3,1.5);
 		 tronco2->SetPosY(7.5);
 	}
-		//3.5 em x . 3 em y lololol
-		if(DEBUG){
-		cout <<"Frog: ( " << froggy->getPosX() << " , " << froggy->getPosY() << ") " << endl;
-		cout <<"Car: ( " << carro1->getPosX() << " , " << carro1->getPosY() << ") " << endl;}
+	//3.5 em x . 3 em y lololol
+	if(DEBUG){
+	cout <<"Frog: ( " << froggy->getPosX() << " , " << froggy->getPosY() << ") " << endl;
+	cout <<"Car: ( " << carro1->getPosX() << " , " << carro1->getPosY() << ") " << endl;}
 
-		if(Collided(carro1,froggy))
+	if(CarCollided(carro1,froggy))
+	{
 		froggy->ResetPosition(0.0,0.0);
+	}
+	
+	if(TimberLogCollided(tronco, froggy))
+	{
+		froggy->updateX(+0.05);
+	}
+	
+	if(!TimberLogCollided(tronco, froggy) && (froggy->getPosY() >= 1.68 - 10 * eps))
+	{
+		froggy->ResetPosition(0.0, 0.0);
+	}
  
-                glutSwapBuffers();
-        }
+	glutSwapBuffers();
+}
+        
+        
+        
     void GameManager::reshape( GLsizei w, GLsizei h){
       //  glViewport(0, 0, w, h);
     glViewport(0, 0, w, h);

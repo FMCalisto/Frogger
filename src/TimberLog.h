@@ -11,11 +11,13 @@ using namespace std;
 #include"DynamicObject.h"
 
 
-class TimberLog : public DynamicObject {
+class TimberLog : public DynamicObject
+{
 	public:
 		TimberLog();
 		TimberLog(double x, double y, double z);
 		~TimberLog();
+		void ResetPosition(double x, double y, double z);
 		double getX();
 		void draw();
 };

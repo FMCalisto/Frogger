@@ -11,11 +11,11 @@
 #include <gl\GL.h>
 #include <glut.h>*/
 
-#include"Entity.h"
-#include"GameObject.h"
-#include"StaticObject.h"
-#include"Riverside.h"
-#include"Roadside.h"
+#include "Entity.h"
+#include "GameObject.h"
+#include "StaticObject.h"
+#include "Riverside.h"
+#include "Roadside.h"
 #include "Frog.h"
 #include "Car.h"
 #include "TimberLog.h"
@@ -23,7 +23,8 @@
 
 using namespace std;
  
-class GameManager{
+class GameManager
+{
     private:
        //vector<GameObject> _entidades[5];
        /*vector<GameObject> _game_objects;
