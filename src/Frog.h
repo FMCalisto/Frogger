@@ -19,7 +19,8 @@ class Frog : public DynamicObject{
 		Frog(float _raio) ;//{___raio=__raio;}
 		~Frog();
 		void draw();
-		void ResetPosition(double x, double y);
+		void ResetPosition(double x, double y, double z);
+		double getXRaio();
 		/*double getPosX();
 		double getPosY();
 		double getPosZ(); */

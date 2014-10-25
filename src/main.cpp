@@ -42,6 +42,7 @@ void mynormalKeys( unsigned char key, int x, int y ){
 }*/
 
 void timer(int extra){
+    gm->update();
     glutPostRedisplay();
     glutTimerFunc(16, timer, 0);
 }
@@ -71,3 +72,4 @@ int main(int argc, char **argv){
 
 	return 0;
 }
+

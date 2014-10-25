@@ -7,19 +7,10 @@
 
 
 
-class StaticObject : public GameObject
-{
-	protected:
-		Vector3 _pos;
-	
+class StaticObject : public GameObject {
 	public:
 		StaticObject();
 		~StaticObject();
-		
-		double getSpeedY();
-		double getPosX();
-		double getPosY();
-		double getPosZ();
 
 };
 #endif 

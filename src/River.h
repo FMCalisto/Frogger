@@ -14,10 +14,7 @@ using namespace std;
 class River : public StaticObject{
 	public:
 		River();
-		River(double x, double y, double z);
 		~River();
-		void ResetPosition(double x, double y, double z);
-		double getX();
 		void draw();
 };
 #endif 

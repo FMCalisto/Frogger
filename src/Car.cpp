@@ -26,7 +26,7 @@
 		
 		void Car::ResetPosition(double x, double y, double z)
 		{
-			_pos.set(x,y,z);
+			_pos.set(x+rand()%6,y,z);
 		}
 		
 		void Car::draw(){

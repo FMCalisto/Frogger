@@ -1,3 +1,4 @@
+
 /*#include <windows.h>
 #include <gl\GL.h>
 #include <glut.h>*/
@@ -6,6 +7,7 @@
 
 
 #include "DynamicObject.h"
+#include <iostream>
 //#include <GL/glut.h>
 
 using namespace std;
@@ -39,14 +41,21 @@ using namespace std;
 		void DynamicObject::updateX(double delta_t){
 			/*SetSpeedX(_speedX+delta_t);
 			SetPosX(_x-(delta_t)); */
+
 			SetSpeedX(_speed.getX()+delta_t);
-			SetPosX(_pos.getX()-(delta_t));
+
+			SetPosX(_pos.getX()+(delta_t));
+
 		}
 		
 		void DynamicObject::updateY(double delta_t){
 			//SetSpeedY(_speedY+delta_t);
 			//SetPosY(_y-(delta_t));
 			SetSpeedY(_speed.getY()+delta_t);
-			SetPosY(_pos.getY()-(delta_t));
+			SetPosY(_pos.getY()+(delta_t));
 		} 
+		
+		//double DynamicObject::ResetPosition(double x, double y, double z){}
+		
+		//void draw();
 

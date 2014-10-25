@@ -1,5 +1,6 @@
 #include "Frog.h"
 #include <stdio.h>
+#include<iostream>
 
 //#include <GL/glut.h>
 
@@ -11,6 +12,7 @@ Frog::Frog(){
 }*/
 
 Frog::Frog(float raio){
+    this->SetPosY(-10.0);
 	_raio=raio;
 }
 
@@ -25,8 +27,12 @@ Frog::Frog(float raio){
  * 
  */
  
+ double Frog::getXRaio(){
+    return (this->_pos.getX() + (_raio)*0.7);
+ }
+ 
 
-void Frog::ResetPosition(double x, double y)
+void Frog::ResetPosition(double x, double y, double z)
 {
 	_pos.set(x,y,_raio);
 }
@@ -37,7 +43,7 @@ void Frog::draw()
 	/*	========== Frog Body ========== */
 	
 	glPushMatrix();
-	
+	   // cout << _pos.getX() << " - " <<_pos.getY() << " . " <<_raio << endl;
 		glTranslatef(0+/*_speedX*/_pos.getX(),0+/*_speedY*/_pos.getY(),_raio);
 		glColor3ub(0,255,0);
 		glScalef(0.7f, 0.35f, 0.49f); /*reduzi em 30%*/ 

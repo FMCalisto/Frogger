@@ -15,9 +15,20 @@ class GameObject : public Entity {
 		GameObject();
 		~GameObject();
 
-	    virtual void draw() = 0;
+	    virtual void draw();
 
-		void updateX(double delta_t);
-		void updateY(double delta_t);
+		virtual void updateX(double delta_t);
+		virtual void updateY(double delta_t);
+		virtual void SetPosX(double x);
+		virtual void SetPosY(double y);
+		virtual void SetPosZ(double z);
+		virtual double getPosX();
+		virtual double getPosY();
+		virtual double getPosZ();
+		virtual double getX();
+		virtual double getY();
+		virtual double getZ();
+		virtual void ResetPosition(double x, double y, double z);
+
 };
 #endif 
