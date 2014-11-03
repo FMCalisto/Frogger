@@ -9,7 +9,8 @@
 		}
 		
 		TimberLog::TimberLog(double x, double y,double z){
-		_pos.set(x,y,z);
+		    _pos.set(x,y,z);
+		    _speed.set((-(y/2.5)*2), 0.0, 0.0);
 		}
 		
 		/*TimberLog::~TimberLog(){

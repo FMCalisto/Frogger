@@ -28,6 +28,7 @@
 #include "OrthogonalCamera.h"
 #include "PerspectiveCamera.h"
 
+#define eps 1e-12
 
 
 
@@ -43,22 +44,24 @@ class GameManager{
 	   static const double WALL_LEFT = -12;
        static const double WALL_RIGHT = 12;
        static const int WALL_TOP = 10;
-       static const double WALL_BOTTOM = -9.5;
-       GameObject* _entidades[8];
+       static const double WALL_BOTTOM = -10;
+       GameObject* _entidades[9];
        Camera* _camera;
 
        Frog* froggy;// = new Frog();
        Car* carro1;
-       TimberLog* tronco;
-       TimberLog* tronco2;
+      // TimberLog* tronco;
+     //  TimberLog* tronco2;
        
     private:
         double w,h;
 	    float _largura;
 	    float _altura;
+	    int tronco;
 	  
 	    
    public:
+
  
     GameManager(int largura, int altura);
     
@@ -68,7 +71,7 @@ class GameManager{
 
     void display();
     
-    void update();
+    void update(int step);
 
     void reshape( GLsizei w, GLsizei h);
 

@@ -16,9 +16,11 @@ class GameObject : public Entity {
 		~GameObject();
 
 	    virtual void draw();
-
+        //virtual double updateXTRONCO();
 		virtual void updateX(double delta_t);
+		virtual void updateXTRONCO(double delta_t);
 		virtual void updateY(double delta_t);
+		virtual double getSpeedX();
 		virtual void SetPosX(double x);
 		virtual void SetPosY(double y);
 		virtual void SetPosZ(double z);
@@ -29,6 +31,8 @@ class GameObject : public Entity {
 		virtual double getY();
 		virtual double getZ();
 		virtual void ResetPosition(double x, double y, double z);
+		
+		virtual void updateXTECLA(double delta_t);
 
 };
 #endif 

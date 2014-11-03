@@ -15,6 +15,7 @@ using namespace std;
 
 
 
+
 		DynamicObject::DynamicObject(){
 		
 		}
@@ -38,21 +39,61 @@ using namespace std;
 		//hide=true;
 		}
 		
+		void DynamicObject::updateXTRONCO(double delta_t){
+			SetPosX(_pos.getX()+(delta_t));
+			
+		}
+		
+		void DynamicObject::updateXTECLA(double delta_t){
+			if(delta_t >= 0){
+				SetSpeedX(_speed.getX()/*-(delta_t/5)*/);
+				SetPosX(_pos.getX()+(_speed.getX()*delta_t));
+			}
+			if(delta_t < 0){
+					//cout << "lixo" << endl;
+				SetSpeedX(_speed.getX()/*+ (delta_t/5)*/);
+				SetPosX(_pos.getX()+(_speed.getX()*delta_t));
+			}
+		}
+			
+			
+		
 		void DynamicObject::updateX(double delta_t){
 			/*SetSpeedX(_speedX+delta_t);
 			SetPosX(_x-(delta_t)); */
-
-			SetSpeedX(_speed.getX()+delta_t);
-
-			SetPosX(_pos.getX()+(delta_t));
+			if(delta_t >= 0){
+				SetSpeedX(_speed.getX()-(delta_t/5));
+				SetPosX(_pos.getX()+(_speed.getX()*delta_t));
+			}
+			if(delta_t < 0){
+					//cout << "lixo" << endl;
+				SetSpeedX(_speed.getX()+ (delta_t/5));
+				SetPosX(_pos.getX()+(_speed.getX()*delta_t));
+			}
+			
+			//cout << _speed.getX() << endl;
+			
 
 		}
 		
 		void DynamicObject::updateY(double delta_t){
 			//SetSpeedY(_speedY+delta_t);
 			//SetPosY(_y-(delta_t));
-			SetSpeedY(_speed.getY()+delta_t);
-			SetPosY(_pos.getY()+(delta_t));
+			/*SetSpeedY(_speed.getY()+delta_t);
+			SetPosY(_pos.getY()+(delta_t));*/
+			
+			/*SetSpeedY(_speed.getY()-(delta_t/100));
+			SetPosY(_pos.getY()+(_speed.getY()*delta_t));*/
+			//cout << "hey Y" << endl;
+			if(delta_t >= 0){
+				SetSpeedY(_speed.getY()/*-(delta_t/5)*/);
+				SetPosY(_pos.getY()-(_speed.getY()*delta_t));
+			}
+			if(delta_t < 0){
+					//cout << "lixo" << endl;
+				SetSpeedY(_speed.getY()/*+ (delta_t/5)*/);
+				SetPosY(_pos.getY()-(_speed.getY()*delta_t));
+			}
 		} 
 		
 		//double DynamicObject::ResetPosition(double x, double y, double z){}

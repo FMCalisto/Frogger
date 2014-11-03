@@ -9,6 +9,7 @@
 		
 		Car::Car(double x, double y,double z){
 		_pos.set(x,y,z);
+        _speed.set(-4, 0.0, 0.0);
 		}
 		
 		Car::~Car(){

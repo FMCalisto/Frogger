@@ -21,6 +21,8 @@ class Frog : public DynamicObject{
 		void draw();
 		void ResetPosition(double x, double y, double z);
 		double getXRaio();
+		//void updateX(double delta_t);
+		//void updateY(double delta_t);
 		/*double getPosX();
 		double getPosY();
 		double getPosZ(); */

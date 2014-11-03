@@ -42,6 +42,9 @@ using namespace std;
 		double GameObject::getX(){}
 		double GameObject::getY(){}
 		double GameObject::getZ(){}
+		void GameObject::updateXTRONCO(double delta_t){}
+		void GameObject::updateXTECLA(double delta_t){}
+		double GameObject::getSpeedX(){}
 		
 		
 	    void GameObject::SetPosX(double x){}

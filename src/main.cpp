@@ -5,6 +5,7 @@
 #include <GL/glut.h>
 
 #include <vector>
+#include <iostream>
 
 #include"GameManager.h"
 
@@ -42,7 +43,10 @@ void mynormalKeys( unsigned char key, int x, int y ){
 }*/
 
 void timer(int extra){
-    gm->update();
+	/*int tempoAtual = glutGet(GLUT_ELAPSED_TIME); int tempo = tempoAtual - lastUpdate; lastUpdate = tempoAtual;*/
+    extra = glutGet(GLUT_ELAPSED_TIME);
+    //cout << extra << endl;
+    gm->update(extra);
     glutPostRedisplay();
     glutTimerFunc(16, timer, 0);
 }

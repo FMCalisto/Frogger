@@ -28,6 +28,8 @@ class DynamicObject : public GameObject {
 		DynamicObject();
 		~DynamicObject();
 		void updateX(double delta_t);
+		void updateXTRONCO(double delta_t);
+		void updateXTECLA(double delta_t);
 		void updateY(double delta_t);
 		virtual void draw()=0;
 		virtual void ResetPosition(double x, double y, double z)=0;

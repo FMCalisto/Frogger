@@ -14,11 +14,13 @@
 #include <GL/glut.h>
 #define DEBUG 0
 
-using namespace std;
-#define eps 1e-12
-static vector<int> v(3);
 
-bool Collided(Car* carro, Frog* ra)
+using namespace std;
+   	    static vector<int> v(3);
+        int old_step = 0;
+        double deltaT;
+
+bool Collided(GameObject* carro, Frog* ra)
 {
     //NOTE: USES HARD-CODED FROG RADIUS AND SCALE3F PARAMETERS. NOT REUSABLE IF ANY
     //PARAMETER IS CHANGED. 
@@ -37,7 +39,7 @@ bool Collided(Car* carro, Frog* ra)
 	return false;
 }
 
-bool Collided2(Frog* ra, TimberLog* tronco)
+/*bool Collided2(Frog* ra, TimberLog* tronco)
 {
     double txmin, txmax, tymin, tymax, fxmin, fymin, fxmax, fymax;
 	txmin=tronco->getPosX()-2.0;
@@ -52,7 +54,7 @@ bool Collided2(Frog* ra, TimberLog* tronco)
 	return true;
 	else
 	return false;
-}
+}*/
  
     GameManager::GameManager(int largura, int altura){
 		v[0]=-3;
@@ -82,8 +84,10 @@ bool Collided2(Frog* ra, TimberLog* tronco)
         _entidades[3] = (GameObject*) new River();
         _entidades[4] = (DynamicObject*) new Frog(2.0);
         _entidades[5] =(DynamicObject*) new Car(12,-3,1.5);
-        _entidades[6] =(DynamicObject*) new TimberLog(12,2.5,1);
-        _entidades[7] =(DynamicObject*) new TimberLog(8,7.5,1);
+        _entidades[6] =(DynamicObject*) new TimberLog(12+rand()%3,2.5,1);
+        _entidades[7] =(DynamicObject*) new TimberLog(12+rand()%3,5.0,1);
+        _entidades[8] =(DynamicObject*) new TimberLog(12+rand()%3,7.5,1);
+        
        
     }
 double rotate_z = 0; 
@@ -99,21 +103,25 @@ double rotate_x = 0;
 		carro1->draw();
 		tronco->draw();
 		tronco2->draw(); */
-        for(int k = 0; k < 8; k++){
+        for(int k = 0; k < 9; k++){
 		            _entidades[k]->draw();
 		}
 	    glutSwapBuffers();
     }
     
-    void GameManager::update(){
-       
+    void GameManager::update(int step){
+	/*if(DEBUG){
+       cout << "Step is: " << step << endl;
+	 cout << "Step2 is: " << -((step-old_step)/100.0+0.6) << endl;
+ cout << "Step3 is: " << old_step << endl;}*/
  
-       
-       for(int k = 5; k < 8; k++){
-                    _entidades[k]->updateX(-0.10);
-		            _entidades[k]->draw();
-		            if(_entidades[k]->getX() <=-16+eps and _entidades[k]->getX() >= -16-eps)
-		                _entidades[k]->ResetPosition(12,v[rand()%3],1.5);
+        deltaT =( (double) ((step-old_step)));
+	
+       for(int k = 5; k < 9; k++){
+            _entidades[k]->updateX((deltaT/1000.0));
+            //_entidades[k]->draw();
+            if(_entidades[k]->getX() <=-16+eps) // _entidades[k]->getX() >= -16-eps)
+                _entidades[k]->ResetPosition(12,v[rand()%3],1.5);
 		}                                         
         	
 	    if(Collided((Car*)_entidades[5], (Frog*)_entidades[4])){
@@ -123,8 +131,9 @@ double rotate_x = 0;
 	    
 	    bool surf = false;
 	    
-	    for(int k = 6; k < 8; k++){
-	        if(Collided2((Frog*)_entidades[4], (TimberLog*)_entidades[k])){
+	    for(int k = 6; k < 9; k++){
+	        if(Collided( _entidades[k],(Frog*)_entidades[4])){
+	            tronco = k;
 		        surf = true;
 		    }
 		   /* if(!Collided2((Frog*)_entidades[4], (TimberLog*)_entidades[k]) && _entidades[4]->getPosY()>=1.68-10*eps){
@@ -132,13 +141,17 @@ double rotate_x = 0;
 	        }*/
 		}
 		
-		if( surf == false && _entidades[4]->getPosY()>=1.68-10*eps){
-		    _entidades[4]->ResetPosition(0.0,0.0,0.0);
+		if( surf == false && _entidades[4]->getPosY()>=1.68/*-10*eps*/ && _entidades[4]->getPosY()<=10-1.68 ){
+		    _entidades[4]->ResetPosition(0.0,-10.0,0.0);
 		     _camera->update(w,h, _entidades[4]->getPosX(), _entidades[4]->getPosY(), 2);
 		}if( surf == true){
-		    _entidades[4]->updateX(-0.10);
-		     _camera->update(w,h, _entidades[4]->getPosX(), _entidades[4]->getPosY(), 2);   
+	        if(_entidades[4]->getPosX() >= WALL_LEFT){
+		        _entidades[4]->updateXTRONCO(  (deltaT/1000.0) * _entidades[tronco]->getSpeedX());
+		        _camera->update(w,h, _entidades[4]->getPosX(), _entidades[4]->getPosY(), 2);   
+		  }
 		}
+
+	old_step=step;
 
     }
     
@@ -184,7 +197,9 @@ double rotate_x = 0;
 		case 'o':
 		 
 		 if(_entidades[4]->getPosX() >= WALL_LEFT){
-		    _entidades[4]->updateX(-0.76);
+			// cout << "cenas " << deltaT << endl;
+		    //_entidades[4]->updateX(/*(old_step%10)/100.0*/deltaT/100.0);
+		    _entidades[4]->updateXTECLA(/*(1*old_step%10)/100.0*/deltaT/55.0);
 		    _camera->update(w,h, _entidades[4]->getPosX(), _entidades[4]->getPosY(), 2);
 		    }
 
@@ -194,7 +209,8 @@ double rotate_x = 0;
 		case 'p':
 		 
 		if(_entidades[4]->getPosX() <= WALL_RIGHT){
-		    _entidades[4]->updateX(+0.76);
+		   // _entidades[4]->updateX(-/*((1*old_step%10)/100.0+0.6)*/deltaT/100.0);
+		    _entidades[4]->updateXTECLA(/*(1*old_step%10)/100.0*/-deltaT/55.0);
 		    _camera->update(w,h, _entidades[4]->getPosX(), _entidades[4]->getPosY(), 2);
 		    }
 
@@ -202,18 +218,20 @@ double rotate_x = 0;
 		break;
 		case 'Q':
 		case 'q':
-		 
+		 //cout << "tecla q " << endl;
 	    if(_entidades[4]->getPosY() <= WALL_TOP){
-    		 _entidades[4]->updateY(+0.76);
+    		 _entidades[4]->updateY(/*(1*old_step%10)/100.0*/deltaT/55.0);    		 
     		 _camera->update(w,h, _entidades[4]->getPosX(), _entidades[4]->getPosY(), 2);
     		 }
 		 //cout << _entidades[4]->_speedX << endl;
 		break;
+		
 		case 'A':
-		case 'a':
-		 
+		case 'a':	
+		//cout << "tecla  a" << endl;	 
 		if(_entidades[4]->getPosY() >= WALL_BOTTOM){
-		    _entidades[4]->updateY(-0.76);
+			//cout << "tecla  a" << endl;
+		    _entidades[4]->updateY(/*(-1*old_step%10)/100.0-0.6*/-deltaT/55.0);
 		    _camera->update(w,h, _entidades[4]->getPosX(), _entidades[4]->getPosY(), 2);
 		    }
 		 //cout << _entidades[4]->_speedX << endl;
