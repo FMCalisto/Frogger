@@ -2,6 +2,7 @@
 #define GameObject_H
 #include"Entity.h"
 #include "Vector3.h"
+#include "Poligono.h"
 
 
 //using namespace std;

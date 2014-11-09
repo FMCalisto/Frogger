@@ -69,7 +69,7 @@ bool Collided(GameObject* carro, Frog* ra)
     void GameManager::init(){
         glEnable(GL_DEPTH_TEST);
         glEnable(GL_LIGHTING);
-        glEnable(GL_LIGHT0);
+       // glEnable(GL_LIGHT0);
         glEnable(GL_COLOR_MATERIAL);
 
         w = glutGet( GLUT_WINDOW_WIDTH );
@@ -88,10 +88,60 @@ bool Collided(GameObject* carro, Frog* ra)
         _entidades[7] =(DynamicObject*) new TimberLog(12+rand()%3,5.0,1);
         _entidades[8] =(DynamicObject*) new TimberLog(12+rand()%3,7.5,1);
         
+        _luzes[0] =(LuzDirecional*) new LuzDirecional(0.0,0.0,1.0);
+	    _luzes[1] =(LuzSpotLight*) new LuzSpotLight(-14,10,4.0);
+	    _luzes[2] =(LuzSpotLight*) new LuzSpotLight(14,10,4.0);
+	    _luzes[3] =(LuzSpotLight*) new LuzSpotLight(-14,0,4.0);
+	    _luzes[4] =(LuzSpotLight*) new LuzSpotLight(14,0,4.0);
+	    _luzes[5] =(LuzSpotLight*) new LuzSpotLight(-14,-10,4.0);
+	    _luzes[6] =(LuzSpotLight*) new LuzSpotLight(14,-10,4.0);
+	    
+	    _luzes[0]->setStateLight(1);
+
+	    _luz_activa = 0;
+	 /*   _luzes[0]->setStateLight(0);*/
+        
        
     }
 double rotate_z = 0; 
 double rotate_x = 0;
+
+
+void GameManager::changeLights(/*unsigned char value, int larg, int alt*/){
+	float x = _entidades[4]->getPosX();
+	float y = _entidades[4]->getPosY();
+	/*if(value == '5'){*/
+		/*if(_luzes[1]->isActivate() == 1)
+			_luzes[1]->setStateLight(0);
+		_luzes[0]->setStateLight(1);
+		glutPostRedisplay();*/
+	/*}
+	else if(value == '6'){*/
+		if(_luzes[0]->isActivate() == 1)
+			puts("puta");//_luzes[0]->setStateLight(0);
+		/*_luzes[1]->setSStateLight(1);
+		glutPostRedisplay();*/
+	/*}
+	else if(value == '7'){
+		_luzes[0]->setStateLight(0);
+		_luzes[1]->setStateLight(0);
+		GLfloat totalDarkness[] = {0.0, 0.0, 0.0, 1.0};
+		glLightModelfv(GL_LIGHT_MODEL_AMBIENT, totalDarkness);
+		desenhaLuz();
+		desenha();
+		refreshScreen(_largura,_altura);
+		glutPostRedisplay();
+	}*/
+}
+
+void GameManager::desenhaLuz(){
+	int i = 0;
+	for(i; i < 8; i++)
+		if(_luzes[i]->isActivate() == 1){
+			_luzes[i]->refresh();
+		}
+	glutPostRedisplay();
+}
 
 
     void GameManager::display(void){
@@ -103,9 +153,12 @@ double rotate_x = 0;
 		carro1->draw();
 		tronco->draw();
 		tronco2->draw(); */
-        for(int k = 0; k < 9; k++){
+        for(int k = 0; k <9; k++){
 		            _entidades[k]->draw();
 		}
+		//desenhaLuz();
+		
+		
 	    glutSwapBuffers();
     }
     
@@ -136,9 +189,7 @@ double rotate_x = 0;
 	            tronco = k;
 		        surf = true;
 		    }
-		   /* if(!Collided2((Frog*)_entidades[4], (TimberLog*)_entidades[k]) && _entidades[4]->getPosY()>=1.68-10*eps){
-	            _entidades[4]->ResetPosition(0.0,0.0,0.0);
-	        }*/
+		   
 		}
 		
 		if( surf == false && _entidades[4]->getPosY()>=1.68/*-10*eps*/ && _entidades[4]->getPosY()<=10-1.68 ){
@@ -150,7 +201,7 @@ double rotate_x = 0;
 		        _camera->update(w,h, _entidades[4]->getPosX(), _entidades[4]->getPosY(), 2);   
 		  }
 		}
-
+    desenhaLuz();
 	old_step=step;
 
     }
@@ -173,7 +224,7 @@ double rotate_x = 0;
             rotate_z -= 5;
         else if (key == GLUT_KEY_DOWN)
             rotate_z += 5;
-             glPopMatrix();
+
         glutPostRedisplay();
     }
     
@@ -236,6 +287,27 @@ double rotate_x = 0;
 		    }
 		 //cout << _entidades[4]->_speedX << endl;
 		break;
+		
+		case 'N':
+		case 'n':
+		        if(_luzes[_luz_activa]->isActivate() == 1){
+		            _luzes[_luz_activa]->setStateLight(0);
+		        }else{
+		            _luzes[_luz_activa]->setStateLight(1);
+		        }		    
+	        glutPostRedisplay();
+        break;
+        
+        case 'C':
+		case 'c':
+		    for(int kl = 1;kl < 8; kl++){
+		        if(_luzes[kl]->isActivate() == 1)
+		            _luzes[kl]->setStateLight(0);
+		        else
+		            _luzes[kl]->setStateLight(1);
+		    }		    
+	        glutPostRedisplay();
+        break;
 	}
 }
 

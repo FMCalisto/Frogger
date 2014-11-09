@@ -1,4 +1,5 @@
 #include "River.h"
+
 #include <stdio.h>
 
 //#include <GL/glut.h>
@@ -11,16 +12,27 @@
 		}*/
 		
 		void River::draw(){
-            glPushMatrix();
+	
+		   
+	
+	
+	
+           /* glPushMatrix();
             glTranslatef(0,5,0);
             glEnable(GL_BLEND); 
 			//glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
             glColor4ub(0,128,255,0.5);
             glScalef(28.0f, 8.f, 1.f);
             glutSolidCube(1);
-            glPopMatrix();
+            glPopMatrix();*/
             
-             glPushMatrix();
+            Poligono* _pol = new Poligono();
+            glColor4ub(0,128,255,0.5);
+            _pol->setDim(8, 28);
+            _pol->setPos(5);
+            _pol->draw();
+            
+            glPushMatrix();
             glTranslatef(-16,5,0);
             glEnable(GL_BLEND); 
 			//glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
@@ -34,7 +46,7 @@
             glEnable(GL_BLEND); 
 			//glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
             glColor4ub(0,0,0,0.5);
-            glScalef(6.0f, 8.f, 3.f);
+            glScalef(6.0f, 12.f, 3.f);
             glutSolidCube(1);
             glPopMatrix();
           

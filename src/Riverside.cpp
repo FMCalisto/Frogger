@@ -18,19 +18,33 @@
 		}*/
 		void Riverside::draw(){
 		
-            glPushMatrix();
+		    Poligono* _pol = new Poligono();
+            glColor3ub(139,69,19);
+        
+            _pol->setDim(2, 28);
+            _pol->setPos(10);
+            _pol->draw(); 
+		
+           /* glPushMatrix();
                 glTranslatef(0,10,0);
                 glColor3ub(139,69,19);
                 glScalef(28.0f, 2.f, 1.f);
                 glutSolidCube(1);
-            glPopMatrix();
+            glPopMatrix();*/
             
-            glPushMatrix();
+             Poligono* _pol1 = new Poligono();
+            glColor3ub(139,69,19);
+        
+            _pol1->setDim(2, 28);
+            _pol1->setPos(0);
+            _pol1->draw(); 
+            
+          /*  glPushMatrix();
                 glTranslatef(0,0,0);
                 glColor3ub(139,69,19);
                 glScalef(28.0f, 2.f, 1.f);
                 glutSolidCube(1);
-            glPopMatrix();
+            glPopMatrix();*/
             
             /*RIO*/
             /*glPushMatrix();

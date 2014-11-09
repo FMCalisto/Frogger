@@ -28,6 +28,10 @@
 #include "OrthogonalCamera.h"
 #include "PerspectiveCamera.h"
 
+#include "Luz.h"
+#include "LuzDirecional.h"
+#include "LuzSpotLight.h"
+
 #define eps 1e-12
 
 
@@ -45,6 +49,8 @@ class GameManager{
        static const double WALL_RIGHT = 12;
        static const int WALL_TOP = 10;
        static const double WALL_BOTTOM = -10;
+       Luz* _luzes[7];
+       
        GameObject* _entidades[9];
        Camera* _camera;
 
@@ -58,6 +64,7 @@ class GameManager{
 	    float _largura;
 	    float _altura;
 	    int tronco;
+	    int _luz_activa;
 	  
 	    
    public:
@@ -80,6 +87,10 @@ class GameManager{
     void specialKeys( int key, int x, int y );
     
     void normalKeys(unsigned char key, int x, int y);
+    
+    void desenhaLuz();
+    
+    void changeLights(/*unsigned char key, int larg , int alt*/);
      
 };
 #endif 

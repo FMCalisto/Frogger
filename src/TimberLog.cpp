@@ -27,6 +27,9 @@
 		}
 		
 		void TimberLog::draw(){
+		
+		    
+		
             glPushMatrix();
             glTranslatef(_pos.getX()/*-_speedX*/,_pos.getY(),_pos.getZ());
             glColor3ub(139,69,19);
