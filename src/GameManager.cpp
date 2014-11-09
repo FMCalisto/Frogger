@@ -89,16 +89,16 @@ bool Collided(GameObject* carro, Frog* ra)
         _entidades[8] =(DynamicObject*) new TimberLog(12+rand()%3,7.5,1);
         
         _luzes[0] =(LuzDirecional*) new LuzDirecional(0.0,0.0,1.0);
-	    _luzes[1] =(LuzSpotLight*) new LuzSpotLight(-14,10,4.0);
-	    _luzes[2] =(LuzSpotLight*) new LuzSpotLight(14,10,4.0);
-	    _luzes[3] =(LuzSpotLight*) new LuzSpotLight(-14,0,4.0);
-	    _luzes[4] =(LuzSpotLight*) new LuzSpotLight(14,0,4.0);
-	    _luzes[5] =(LuzSpotLight*) new LuzSpotLight(-14,-10,4.0);
-	    _luzes[6] =(LuzSpotLight*) new LuzSpotLight(14,-10,4.0);
+	    _luzes[1] =(LuzSpotLight*) new LuzSpotLight(-14,10,6.0);
+	    _luzes[2] =(LuzSpotLight*) new LuzSpotLight(14,10,6.0);
+	    _luzes[3] =(LuzSpotLight*) new LuzSpotLight(-14,0,6.0);
+	    _luzes[4] =(LuzSpotLight*) new LuzSpotLight(14,0,6.0);
+	    _luzes[5] =(LuzSpotLight*) new LuzSpotLight(-14,-10,6.0);
+	    _luzes[6] =(LuzSpotLight*) new LuzSpotLight(14,-10,6.0);
 	    
 	    _luzes[0]->setStateLight(1);
 
-	    _luz_activa = 0;
+	    _luz_activa = 1;
 	 /*   _luzes[0]->setStateLight(0);*/
         
        
@@ -135,12 +135,16 @@ void GameManager::changeLights(/*unsigned char value, int larg, int alt*/){
 }
 
 void GameManager::desenhaLuz(){
-	int i = 0;
-	for(i; i < 8; i++)
-		if(_luzes[i]->isActivate() == 1){
-			_luzes[i]->refresh();
-		}
-	glutPostRedisplay();
+
+    if( _luz_activa == 1){
+	    for(int i = 0; i < 8; i++)
+		    if(_luzes[i]->isActivate() == 1){
+			    _luzes[i]->refresh();
+		    }
+	    glutPostRedisplay();
+    }else{
+        puts("Escapa desenhaLuz");
+    }
 }
 
 
@@ -149,10 +153,7 @@ void GameManager::desenhaLuz(){
         glClearColor( 0, 0, 0, 1 );
         glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
 
-		/*_entidades[4]->draw();
-		carro1->draw();
-		tronco->draw();
-		tronco2->draw(); */
+
         for(int k = 0; k <9; k++){
 		            _entidades[k]->draw();
 		}
@@ -163,10 +164,6 @@ void GameManager::desenhaLuz(){
     }
     
     void GameManager::update(int step){
-	/*if(DEBUG){
-       cout << "Step is: " << step << endl;
-	 cout << "Step2 is: " << -((step-old_step)/100.0+0.6) << endl;
- cout << "Step3 is: " << old_step << endl;}*/
  
         deltaT =( (double) ((step-old_step)));
 	
@@ -290,10 +287,13 @@ void GameManager::desenhaLuz(){
 		
 		case 'N':
 		case 'n':
-		        if(_luzes[_luz_activa]->isActivate() == 1){
-		            _luzes[_luz_activa]->setStateLight(0);
+		        if(_luzes[0]->isActivate() == 1){
+		            _luzes[0]->setStateLight(0);
+		            /*GLfloat totalDarkness[] = {1.0, 1.0, 1.0, 1.0};
+		            glLightModelfv(GL_LIGHT_MODEL_AMBIENT, totalDarkness);
+		            glutPostRedisplay();*/
 		        }else{
-		            _luzes[_luz_activa]->setStateLight(1);
+		            _luzes[0]->setStateLight(1);
 		        }		    
 	        glutPostRedisplay();
         break;
@@ -307,6 +307,14 @@ void GameManager::desenhaLuz(){
 		            _luzes[kl]->setStateLight(1);
 		    }		    
 	        glutPostRedisplay();
+        break;
+        
+        case 'l':
+		case 'L':
+		    if(_luz_activa == 1)
+		            _luz_activa = 0;
+		        else
+		           _luz_activa = 1;
         break;
 	}
 }
