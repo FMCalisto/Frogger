@@ -2,7 +2,9 @@
 #include <stdio.h>
 
 //#include <GL/glut.h>
-
+ Poligono* _estrado = new Poligono();
+ Poligono* _caixa = new Poligono();
+Poligono* _cabine = new Poligono();
 		Car::Car(){
 		
 		}
@@ -34,26 +36,43 @@
 		    
         	glPushMatrix();
 
-                glTranslatef(_pos.getX()/*-_speedX*/,_pos.getY(),_pos.getZ());  // -7, -5 e -3. Largura da estrada = 28. Assim que translatef.x = 12, destroy :) 
-                glPushMatrix();
+                glTranslatef(_pos.getX(),_pos.getY(),_pos.getZ());  // -7, -5 e -3. Largura da estrada = 28. Assim que translatef.x = 12, destroy :) 
+                /*glPushMatrix();
                 glColor3ub(2,2,2);
                 glScalef(3.0f, 2.f, 0.5f); 
                 glutSolidCube(1);
-                glPopMatrix();
+                glPopMatrix();*/
+                glColor3ub(2,2,2);
+        
+                _estrado->setDim(2, 4);
+                _estrado->setPos(0,0,0);
+                _estrado->draw(0.5); 
                 
-                glPushMatrix();
-                    glTranslatef(-1,0,1.2);
+                /*glPushMatrix();
+                    glTranslatef(-1.5,0,1.2);
                     glColor3ub(153,153,255);
                     glScalef(1.f, 2.f, 2.f); 
                     glutSolidCube(1);
-                glPopMatrix();
+                glPopMatrix();*/
                 
-                glPushMatrix();
+                 glColor3ub(153,153,255);
+        
+                _cabine->setDim(2, 1);
+                _cabine->setPos(-1.5,0,1.2);
+                _cabine->draw(2.0); 
+                
+               /* glPushMatrix();
                     glTranslatef(0.5,0,0.5);
                     glColor3ub(229,204,255);
                     glScalef(2.f, 2.f, 0.5f); 
                     glutSolidCube(1);
-                glPopMatrix();
+                glPopMatrix();*/
+                
+                 glColor3ub(229,204,255);
+        
+                _caixa->setDim(2, 3);
+                _caixa->setPos(0.5,0,0.75);
+                _caixa->draw(); 
                 
                /*roda tras esquerda*/
                 glPushMatrix();

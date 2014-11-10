@@ -23,7 +23,7 @@
             glColor3ub(40,40,40);
         
             _pol->setDim(8, 28);
-            _pol->setPos(-5);
+            _pol->setPos(0,-5,0);
             _pol->draw();       
             
         glPushMatrix();

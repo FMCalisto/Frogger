@@ -93,8 +93,8 @@ bool Collided(GameObject* carro, Frog* ra)
 	    _luzes[2] =(LuzSpotLight*) new LuzSpotLight(14,10,6.0);
 	    _luzes[3] =(LuzSpotLight*) new LuzSpotLight(-14,0,6.0);
 	    _luzes[4] =(LuzSpotLight*) new LuzSpotLight(14,0,6.0);
-	    _luzes[5] =(LuzSpotLight*) new LuzSpotLight(-14,-10,6.0);
-	    _luzes[6] =(LuzSpotLight*) new LuzSpotLight(14,-10,6.0);
+	    _luzes[5] =(LuzSpotLight*) new LuzSpotLight(-14,-10,8.0);
+	    _luzes[6] =(LuzSpotLight*) new LuzSpotLight(14,-10,8.0);
 	    
 	    _luzes[0]->setStateLight(1);
 

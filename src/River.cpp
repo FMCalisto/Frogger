@@ -29,7 +29,7 @@
             Poligono* _pol = new Poligono();
             glColor4ub(0,128,255,0.5);
             _pol->setDim(8, 28);
-            _pol->setPos(5);
+            _pol->setPos(0,5,0);
             _pol->draw();
             
             glPushMatrix();
@@ -37,7 +37,7 @@
             glEnable(GL_BLEND); 
 			//glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
             glColor4ub(0,0,0,0.5);
-            glScalef(4.0f, 8.f, 3.f);
+            glScalef(4.0f, 8.f, 5.f);
             glutSolidCube(1);
             glPopMatrix();
             
@@ -46,7 +46,7 @@
             glEnable(GL_BLEND); 
 			//glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
             glColor4ub(0,0,0,0.5);
-            glScalef(6.0f, 12.f, 3.f);
+            glScalef(6.0f, 12.f, 5.f);
             glutSolidCube(1);
             glPopMatrix();
           

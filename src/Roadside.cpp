@@ -4,7 +4,7 @@
 #include <stdio.h>
 
 //#include <GL/glut.h>
-
+		Poligono* _roads = new Poligono();
 		Roadside::Roadside(){
 		
 		}
@@ -14,12 +14,12 @@
 		
 		void Roadside::draw(){
 		
-		Poligono* _pol = new Poligono();
+
             glColor3ub(0,102,0);
         
-            _pol->setDim(2, 28);
-            _pol->setPos(-10);
-            _pol->draw(); 
+            _roads->setDim(2, 28);
+            _roads->setPos(0,-10,0);
+            _roads->draw(); 
 		
 		   /* glPushMatrix();
                 glTranslatef(0,-10,0);

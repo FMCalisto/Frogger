@@ -12,14 +12,16 @@ using namespace std;
 
 class Poligono{
 	public:
-	    int _comp;
-	    int _larg;
-	    int _posy;
+	    double _comp;
+	    double _larg;
+	    double _posx;
+	    double _posy;
+	    double _posz;
 		Poligono();
 		~Poligono();
-		void draw();
+		void draw(double optional=1);
 		void setDim(int larg, int comp);
-		void setPos(int posy);
+		void setPos(double posx,double posy, double posz);
 		//void setColor(
 };
 #endif 

@@ -3,7 +3,7 @@
 #include <time.h>
 
 //#include <GL/glut.h>
-
+ Poligono* _pol3 = new Poligono();
 		TimberLog::TimberLog(){
 		
 		}
@@ -30,12 +30,19 @@
 		
 		    
 		
-            glPushMatrix();
-            glTranslatef(_pos.getX()/*-_speedX*/,_pos.getY(),_pos.getZ());
+           /* glPushMatrix();
+            glTranslatef(_pos.getX(),_pos.getY(),_pos.getZ());
             glColor3ub(139,69,19);
             glScalef(4.0f, 2.f, 0.5f);
             glutSolidCube(1);
-            glPopMatrix();
+            glPopMatrix();*/
+            
+            
+            glColor3ub(139,69,19);
+        
+            _pol3->setDim(2, 4);
+            _pol3->setPos(_pos.getX(),_pos.getY(),_pos.getZ()-0.5);
+            _pol3->draw(); 
           
 		}
 
