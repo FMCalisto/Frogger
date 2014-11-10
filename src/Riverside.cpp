@@ -19,7 +19,7 @@
 		}*/
 		void Riverside::draw(){
 		
-
+// materials::metal_gold.use(); 
             glColor3ub(139,69,19);
         
             _pol->setDim(2, 28);

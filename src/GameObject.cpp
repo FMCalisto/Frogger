@@ -2,6 +2,7 @@
 #include "Vector3.h"
 #include<stdio.h>
 #include<iostream>
+#include"materials.h"
 
 using namespace std;
 
