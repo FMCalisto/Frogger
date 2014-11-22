@@ -17,6 +17,7 @@ public:
 	virtual void refresh() = 0;
 	virtual int isActivate() = 0;
 	virtual void setStateLight(int value) = 0;
+	virtual void updateDirection(int dirX, int dirY, int dirZ)=0;
 
 
 		

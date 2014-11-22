@@ -19,6 +19,7 @@ class TimberLog : public DynamicObject {
 		void ResetPosition(double x, double y, double z);
 		double getX();
 		void draw();
+		void setRotacao( int ang);
 };
 #endif 
 

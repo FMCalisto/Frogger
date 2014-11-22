@@ -24,9 +24,9 @@ void Poligono::draw(double optional){
      /*   int _comp = 28;
 	    int _larg = 8;*/
 	    double lf, cf;
- /* ESTA MERDA*/
+
 	    glPushMatrix();
-	    // materials::skin_green.use(); /* ESTA MERDA*/
+	    // materials::skin_green.use();
 	    glTranslatef(_posx,_posy,_posz);
 	    
 
@@ -39,23 +39,9 @@ void Poligono::draw(double optional){
                 lf = l+0.5; cf = c+0.5;
                 
                 glTranslatef(lf,cf,0);
-                
-               	/*glBegin(GL_QUADS);			// Face posterior
-		            glNormal3f(0.0, 0.0, 1.0);	// Normal da face
-		            glVertex3f(0.5, 0.5, 0.5);
-		            glVertex3f(-0.5, 0.5, 0.5);
-		            glVertex3f(-0.5, -0.5, 0.5);
-		            glVertex3f(0.5, -0.5, 0.5);
-	            glEnd();*/
+
 	            glBegin(GL_TRIANGLE_FAN);			// Face posterior
 		            glNormal3f(0.0, 0.0, 1.0);	// Normal da face
-		           // glVertex3f(0.0, 0.0, 0.5);
-		           // glVertex3f(0.5, 0.5, 0.5);
-		           // glVertex3f(-0.5, 0.5, 0.5);
-		           // glVertex3f(0.0, 0.0, 0.5);
-		            //glVertex3f(-0.5, -0.5, 0.5);
-		           // glVertex3f(0.5, -0.5, 0.5);
-		            //glVertex3f(0.5, 0.5, 0.5);
 		            glVertex3f(0.0, 0.0, 0.5);
 		            glVertex3f(0.5, 0.5, 0.5);
 		            glVertex3f(0.0, 0.5, 0.5);

@@ -45,4 +45,4 @@
             _pol3->draw(); 
           
 		}
-
+        void TimberLog::setRotacao( int ang){}

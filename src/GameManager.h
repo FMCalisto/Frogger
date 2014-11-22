@@ -49,7 +49,8 @@ class GameManager{
        static const double WALL_RIGHT = 12;
        static const int WALL_TOP = 10;
        static const double WALL_BOTTOM = -10;
-       Luz* _luzes[7];
+       Luz* _luzes[8];
+
        
        GameObject* _entidades[9];
        Camera* _camera;
@@ -65,6 +66,8 @@ class GameManager{
 	    float _altura;
 	    int tronco;
 	    int _luz_activa;
+	    int pausa;
+	    bool HUDon;
 	  
 	    
    public:
@@ -91,6 +94,10 @@ class GameManager{
     void desenhaLuz();
     
     void changeLights(/*unsigned char key, int larg , int alt*/);
+    
+    void DisplayString( const int x, const int y,const std::string & label , const void * font = NULL);
+    
+    void HUD();
      
 };
 #endif 

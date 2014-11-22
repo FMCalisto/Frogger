@@ -15,6 +15,7 @@ Frog::Frog(float raio){
     this->SetPosY(-10.0);
     _speed.set(-1.0, -1.0, 0.0);
 	_raio=raio;
+	_rotate = 0;
 }
 
 //double Frog::getPosX(){return _pos.getX()/*_speedX*/;}
@@ -32,6 +33,10 @@ Frog::Frog(float raio){
     return (this->_pos.getX() + (_raio)*0.7);
  }
  
+ void Frog::setRotacao( int ang){
+    _rotate = ang;
+ }
+ 
 
 void Frog::ResetPosition(double x, double y, double z)
 {
@@ -46,9 +51,11 @@ void Frog::draw()
 	
 	glPushMatrix();
 	   // cout << _pos.getX() << " - " <<_pos.getY() << " . " <<_raio << endl;
+	   
 		glTranslatef(0+/*_speedX*/_pos.getX(),0+/*_speedY*/_pos.getY(),_raio);
 		glColor3ub(0,255,0);
 		glScalef(0.7f, 0.35f, 0.49f); /*reduzi em 30%*/ 
+		glRotatef (_rotate, 0, 0, 1);
 		glutSolidSphere(_raio, 20, 20);
 	
 	

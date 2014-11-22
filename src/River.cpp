@@ -16,7 +16,7 @@
 		   
 	
 	
-	// materials::metal_gold.use(); 
+	// materials::cyan_plastic.use(); 
            /* glPushMatrix();
             glTranslatef(0,5,0);
             glEnable(GL_BLEND); 

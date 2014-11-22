@@ -17,6 +17,7 @@ public:
 	void refresh();
 	void setStateLight(int value);
 	int isActivate();
+	void updateDirection(int dirX, int dirY, int dirZ);
 
 
 		

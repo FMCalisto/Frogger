@@ -52,4 +52,6 @@ using namespace std;
 		void GameObject::SetPosY(double y){}
 		void GameObject::SetPosZ(double z){}
 		void GameObject::ResetPosition(double x, double y, double z){}
+		void GameObject::setRotacao( int ang){}
+		
 

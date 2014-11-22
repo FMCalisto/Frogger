@@ -120,5 +120,7 @@ Poligono* _cabine = new Poligono();
         	
         	
 		}
+		
+		void Car::setRotacao( int ang){}
 
  

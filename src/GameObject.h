@@ -32,7 +32,7 @@ class GameObject : public Entity {
 		virtual double getY();
 		virtual double getZ();
 		virtual void ResetPosition(double x, double y, double z);
-		
+		virtual void setRotacao( int ang);
 		virtual void updateXTECLA(double delta_t);
 
 };

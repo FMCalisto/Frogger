@@ -15,6 +15,7 @@
 #define DEBUG 0
 
 
+       
 using namespace std;
    	    static vector<int> v(3);
         int old_step = 0;
@@ -70,7 +71,8 @@ bool Collided(GameObject* carro, Frog* ra)
         glEnable(GL_DEPTH_TEST);
         glEnable(GL_LIGHTING);
        // glEnable(GL_LIGHT0);
-        glEnable(GL_COLOR_MATERIAL);
+      glEnable(GL_COLOR_MATERIAL);
+        //glEnable(GL_COLOR);
 
         w = glutGet( GLUT_WINDOW_WIDTH );
         h = glutGet( GLUT_WINDOW_HEIGHT );
@@ -95,16 +97,44 @@ bool Collided(GameObject* carro, Frog* ra)
 	    _luzes[4] =(LuzSpotLight*) new LuzSpotLight(14,0,6.0);
 	    _luzes[5] =(LuzSpotLight*) new LuzSpotLight(-14,-10,8.0);
 	    _luzes[6] =(LuzSpotLight*) new LuzSpotLight(14,-10,8.0);
+	    _luzes[7] =(LuzSpotLight*) new LuzSpotLight(0,-10,3, 0, 1, -1);
 	    
 	    _luzes[0]->setStateLight(1);
 
 	    _luz_activa = 1;
+	    pausa = 0;
+	    HUDon = false;
+	    
+	    if ( HUDon == true )
+		    HUD();  
 	 /*   _luzes[0]->setStateLight(0);*/
         
        
     }
 double rotate_z = 0; 
 double rotate_x = 0;
+
+void GameManager::HUD(){
+
+	glDisable( GL_LIGHTING);
+
+	glMatrixMode( GL_PROJECTION);
+	glPushMatrix();
+	glLoadIdentity();
+	gluOrtho2D( 0, glutGet( GLUT_WINDOW_WIDTH), 0, glutGet( GLUT_WINDOW_HEIGHT));
+	glMatrixMode( GL_MODELVIEW);
+	glLoadIdentity();
+
+	//mostrar os comandos
+	glColor3ub(0,102,0);
+	DisplayString( 1024/2, 720/2, "lala");
+	DisplayString( 1024/2, 720/2, "lala");
+
+   	glMatrixMode( GL_PROJECTION);
+	glPopMatrix();
+	glEnable( GL_LIGHTING);
+
+}
 
 
 void GameManager::changeLights(/*unsigned char value, int larg, int alt*/){
@@ -155,7 +185,7 @@ void GameManager::desenhaLuz(){
 
 
         for(int k = 0; k <9; k++){
-		            _entidades[k]->draw();
+		          //  _entidades[k]->draw();
 		}
 		//desenhaLuz();
 		
@@ -164,6 +194,9 @@ void GameManager::desenhaLuz(){
     }
     
     void GameManager::update(int step){
+ 
+ 
+if( pausa == 0){
  
         deltaT =( (double) ((step-old_step)));
 	
@@ -192,10 +225,12 @@ void GameManager::desenhaLuz(){
 		if( surf == false && _entidades[4]->getPosY()>=1.68/*-10*eps*/ && _entidades[4]->getPosY()<=10-1.68 ){
 		    _entidades[4]->ResetPosition(0.0,-10.0,0.0);
 		     _camera->update(w,h, _entidades[4]->getPosX(), _entidades[4]->getPosY(), 2);
+		    
 		}if( surf == true){
 	        if(_entidades[4]->getPosX() >= WALL_LEFT){
 		        _entidades[4]->updateXTRONCO(  (deltaT/1000.0) * _entidades[tronco]->getSpeedX());
-		        _camera->update(w,h, _entidades[4]->getPosX(), _entidades[4]->getPosY(), 2);   
+		        _camera->update(w,h, _entidades[4]->getPosX(), _entidades[4]->getPosY(), 2);
+		        _luzes[7]->updateCenter(_entidades[4]->getPosX(), _entidades[4]->getPosY(), 3);
 		  }
 		}
     desenhaLuz();
@@ -203,7 +238,10 @@ void GameManager::desenhaLuz(){
 
     }
     
+    if ( HUDon == true )
+		HUD();  
     
+   } 
     
     void GameManager::reshape( GLsizei w, GLsizei h){
         _camera->update(w,h, _entidades[4]->getPosX(), _entidades[4]->getPosY(), 2);
@@ -225,6 +263,16 @@ void GameManager::desenhaLuz(){
         glutPostRedisplay();
     }
     
+    
+void GameManager::DisplayString( const int x, const int y, const std::string & label, const void * font){
+    void * fontToUse = (font != NULL) ? (void*) font : GLUT_BITMAP_HELVETICA_12;
+    glRasterPos2i(x, y);
+    for ( int i=0; i<label.size(); i++)
+        glutBitmapCharacter( fontToUse, label[i]);
+}
+
+
+    
     void GameManager::normalKeys(unsigned char key, int x, int y)
     {
 		//escape key
@@ -245,44 +293,51 @@ void GameManager::desenhaLuz(){
 		case 'o':
 		 
 		 if(_entidades[4]->getPosX() >= WALL_LEFT){
-			// cout << "cenas " << deltaT << endl;
-		    //_entidades[4]->updateX(/*(old_step%10)/100.0*/deltaT/100.0);
-		    _entidades[4]->updateXTECLA(/*(1*old_step%10)/100.0*/deltaT/55.0);
+		    _entidades[4]->updateXTECLA(deltaT/55.0);
+		    _entidades[4]->setRotacao(90);
 		    _camera->update(w,h, _entidades[4]->getPosX(), _entidades[4]->getPosY(), 2);
+		    _luzes[7]->updateDirection(-1,0,-1);
+		    _luzes[7]->updateCenter(_entidades[4]->getPosX(), _entidades[4]->getPosY(), 3);
 		    }
 
-		 //cout << _entidades[4]->_speedX << endl;
+
 		break;
 		case 'P':
 		case 'p':
 		 
 		if(_entidades[4]->getPosX() <= WALL_RIGHT){
-		   // _entidades[4]->updateX(-/*((1*old_step%10)/100.0+0.6)*/deltaT/100.0);
 		    _entidades[4]->updateXTECLA(/*(1*old_step%10)/100.0*/-deltaT/55.0);
+		    _entidades[4]->setRotacao(-90);
 		    _camera->update(w,h, _entidades[4]->getPosX(), _entidades[4]->getPosY(), 2);
+		    _luzes[7]->updateDirection(1, 0, -1);
+		    _luzes[7]->updateCenter(_entidades[4]->getPosX(), _entidades[4]->getPosY(), 3);
 		    }
 
-		 //cout << _entidades[4]->_speedX << endl;
 		break;
 		case 'Q':
 		case 'q':
-		 //cout << "tecla q " << endl;
 	    if(_entidades[4]->getPosY() <= WALL_TOP){
-    		 _entidades[4]->updateY(/*(1*old_step%10)/100.0*/deltaT/55.0);    		 
+    		 _entidades[4]->updateY(deltaT/55.0);    		 
+    		 _entidades[4]->setRotacao(0);
     		 _camera->update(w,h, _entidades[4]->getPosX(), _entidades[4]->getPosY(), 2);
+    		 _luzes[7]->updateDirection(0, 1, -1);
+    		 _luzes[7]->updateCenter(_entidades[4]->getPosX(), _entidades[4]->getPosY(), 3);
     		 }
-		 //cout << _entidades[4]->_speedX << endl;
+
 		break;
 		
 		case 'A':
 		case 'a':	
-		//cout << "tecla  a" << endl;	 
+
 		if(_entidades[4]->getPosY() >= WALL_BOTTOM){
-			//cout << "tecla  a" << endl;
+
 		    _entidades[4]->updateY(/*(-1*old_step%10)/100.0-0.6*/-deltaT/55.0);
+		    _entidades[4]->setRotacao(-180);
 		    _camera->update(w,h, _entidades[4]->getPosX(), _entidades[4]->getPosY(), 2);
+		    _luzes[7]->updateDirection(0, -1, -1);
+		    _luzes[7]->updateCenter(_entidades[4]->getPosX(), _entidades[4]->getPosY(), 3);
 		    }
-		 //cout << _entidades[4]->_speedX << endl;
+
 		break;
 		
 		case 'N':
@@ -316,8 +371,30 @@ void GameManager::desenhaLuz(){
 		        else
 		           _luz_activa = 1;
         break;
+        
+        case 's':
+		case 'S':
+		
+		glColor3ub(153,153,255);
+        DisplayString( 1024/2, 720/2, "IR_AS_PUTAS");
+		    if(pausa == 0)
+		            pausa = 1;
+		        else
+		           pausa = 0;
+        break;
+        
+        case 'H':
+		case 'h':
+	        if(_luzes[7]->isActivate() == 1)
+	            _luzes[7]->setStateLight(0);
+	        else
+	            _luzes[7]->setStateLight(1);    
+	        glutPostRedisplay();
+        break;
 	}
 }
+
+
 
   
       

@@ -51,5 +51,5 @@ void LuzDirecional::setStateLight(int value){
 	 }
 }
 
-
+void LuzDirecional::updateDirection(int dirX, int dirY, int dirZ){}
 

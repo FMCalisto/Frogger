@@ -33,6 +33,7 @@ class DynamicObject : public GameObject {
 		void updateY(double delta_t);
 		virtual void draw()=0;
 		virtual void ResetPosition(double x, double y, double z)=0;
+		virtual void setRotacao(int ang)=0;
 
 };
 #endif 

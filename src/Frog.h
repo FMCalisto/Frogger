@@ -14,6 +14,7 @@ using namespace std;
 
 class Frog : public DynamicObject{
 	float _raio;
+	int _rotate;
 	public:
 		Frog();
 		Frog(float _raio) ;//{___raio=__raio;}
@@ -21,6 +22,7 @@ class Frog : public DynamicObject{
 		void draw();
 		void ResetPosition(double x, double y, double z);
 		double getXRaio();
+		void setRotacao( int ang);
 		//void updateX(double delta_t);
 		//void updateY(double delta_t);
 		/*double getPosX();

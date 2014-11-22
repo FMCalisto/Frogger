@@ -14,7 +14,7 @@
 		
 		void Roadside::draw(){
 		
- //materials::rubber_black.use(); 
+ //materials::skin_green.use(); 
             glColor3ub(0,102,0);
         
             _roads->setDim(2, 28);

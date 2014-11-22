@@ -11,7 +11,7 @@
 		}*/
 		
 		void Road::draw(){
-//           materials::road_black.use(); 
+           //materials::road_black.use(); 
             /*glPushMatrix();
             glTranslatef(0,-5,0);
             glColor3ub(40,40,40);
@@ -40,8 +40,7 @@
             glTranslatef(17,-6,0);
             glEnable(GL_BLEND); 
 			//glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-            glEnable(GL_COLOR_MATERIAL);
-            glColor4ub(0,0,0,0.5);
+             glColor4ub(0,0,0,0.5);
           
             glScalef(6.0f, 12.f, 8.f);
             glutSolidCube(1);
