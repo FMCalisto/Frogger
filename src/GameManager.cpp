@@ -185,7 +185,7 @@ void GameManager::desenhaLuz(){
 
 
         for(int k = 0; k <9; k++){
-		          //  _entidades[k]->draw();
+		            _entidades[k]->draw();
 		}
 		//desenhaLuz();
 		
