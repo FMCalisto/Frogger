@@ -40,6 +40,7 @@ using namespace std;
             glMatrixMode(GL_PROJECTION);
             glLoadIdentity();
             glOrtho( -w/40.0, w/40.0, -h/40.0, h/40.0, -10, 10);   
+           //glOrtho( -w, w, -h, h, -10, 10);  
                     glMatrixMode(GL_MODELVIEW);    
 		}
 		

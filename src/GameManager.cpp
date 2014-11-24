@@ -12,6 +12,7 @@
 
 
 #include <GL/glut.h>
+#include <GL/freeglut.h>
 #define DEBUG 0
 
 
@@ -77,7 +78,7 @@ bool Collided(GameObject* carro, Frog* ra)
         w = glutGet( GLUT_WINDOW_WIDTH );
         h = glutGet( GLUT_WINDOW_HEIGHT );
 
-        
+        _vidas = 5;
         _camera = new OrthogonalCamera(-w/2.0, w/2.0, -h/2.0, h/2.0, -10, 10);
 
         _entidades[0] = (GameObject*) new Riverside();
@@ -89,6 +90,8 @@ bool Collided(GameObject* carro, Frog* ra)
         _entidades[6] =(DynamicObject*) new TimberLog(12+rand()%3,2.5,1);
         _entidades[7] =(DynamicObject*) new TimberLog(12+rand()%3,5.0,1);
         _entidades[8] =(DynamicObject*) new TimberLog(12+rand()%3,7.5,1);
+         _entidades[9] = (DynamicObject*) new Frog(1.0);
+         _entidades[9]->ResetPosition(-7.3,14.2,0.0);
         
         _luzes[0] =(LuzDirecional*) new LuzDirecional(0.0,0.0,1.0);
 	    _luzes[1] =(LuzSpotLight*) new LuzSpotLight(-14,10,6.0);
@@ -105,8 +108,8 @@ bool Collided(GameObject* carro, Frog* ra)
 	    pausa = 0;
 	    HUDon = false;
 	    
-	    if ( HUDon == true )
-		    HUD();  
+	    printf( "Nº de vidas: %d\n", _vidas);
+	     
 	 /*   _luzes[0]->setStateLight(0);*/
         
        
@@ -117,7 +120,6 @@ double rotate_x = 0;
 void GameManager::HUD(){
 
 	glDisable( GL_LIGHTING);
-
 	glMatrixMode( GL_PROJECTION);
 	glPushMatrix();
 	glLoadIdentity();
@@ -126,8 +128,8 @@ void GameManager::HUD(){
 	glLoadIdentity();
 
 	//mostrar os comandos
-	glColor3ub(0,102,0);
-	DisplayString( 1024/2, 720/2, "lala");
+	glColor3ub(255,0,0);
+	DisplayString( -10, 12, "lala");
 	DisplayString( 1024/2, 720/2, "lala");
 
    	glMatrixMode( GL_PROJECTION);
@@ -140,28 +142,7 @@ void GameManager::HUD(){
 void GameManager::changeLights(/*unsigned char value, int larg, int alt*/){
 	float x = _entidades[4]->getPosX();
 	float y = _entidades[4]->getPosY();
-	/*if(value == '5'){*/
-		/*if(_luzes[1]->isActivate() == 1)
-			_luzes[1]->setStateLight(0);
-		_luzes[0]->setStateLight(1);
-		glutPostRedisplay();*/
-	/*}
-	else if(value == '6'){*/
-		if(_luzes[0]->isActivate() == 1)
-			puts("puta");//_luzes[0]->setStateLight(0);
-		/*_luzes[1]->setSStateLight(1);
-		glutPostRedisplay();*/
-	/*}
-	else if(value == '7'){
-		_luzes[0]->setStateLight(0);
-		_luzes[1]->setStateLight(0);
-		GLfloat totalDarkness[] = {0.0, 0.0, 0.0, 1.0};
-		glLightModelfv(GL_LIGHT_MODEL_AMBIENT, totalDarkness);
-		desenhaLuz();
-		desenha();
-		refreshScreen(_largura,_altura);
-		glutPostRedisplay();
-	}*/
+	
 }
 
 void GameManager::desenhaLuz(){
@@ -184,20 +165,31 @@ void GameManager::desenhaLuz(){
         glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
 
 
-        for(int k = 0; k <9; k++){
+        for(int k = 0; k <10; k++){
 		            _entidades[k]->draw();
+		           /*  glRasterPos2i(-10, 12);
+                glColor3ub(255,255,255);
+                glutBitmapString(GLUT_BITMAP_HELVETICA_12, reinterpret_cast<const unsigned char*>("Numero de vidas"));*/
+                //glFlush ();
 		}
-		//desenhaLuz();
-		
-		
+
+            if( pausa == 1){
+		        glColor3ub(255,0,0);
+                DisplayString( -2, 14, "JOGO EM PAUSA");
+            }
+            
+                glColor3ub(255,255,255);
+                char linha[1024];
+                sprintf(linha, "Vidas Restantes: %d x", _vidas);
+                DisplayString( -14, 14, linha);
 	    glutSwapBuffers();
     }
     
     void GameManager::update(int step){
  
- 
+
 if( pausa == 0){
- 
+
         deltaT =( (double) ((step-old_step)));
 	
        for(int k = 5; k < 9; k++){
@@ -208,8 +200,11 @@ if( pausa == 0){
 		}                                         
         	
 	    if(Collided((Car*)_entidades[5], (Frog*)_entidades[4])){
-	        _entidades[4]->ResetPosition(0.0,-10.0, 0.0);
+	        _entidades[4]->ResetPosition(0.0,-10.0, 2.0);
+	        _vidas--;
+		    printf( "Nº de vidas: %d\n", _vidas);
 	        _camera->update(w,h, _entidades[4]->getPosX(), _entidades[4]->getPosY(), 2);
+	        _luzes[7]->updateCenter(_entidades[4]->getPosX(), _entidades[4]->getPosY(), 3);
 	    }
 	    
 	    bool surf = false;
@@ -223,8 +218,11 @@ if( pausa == 0){
 		}
 		
 		if( surf == false && _entidades[4]->getPosY()>=1.68/*-10*eps*/ && _entidades[4]->getPosY()<=10-1.68 ){
-		    _entidades[4]->ResetPosition(0.0,-10.0,0.0);
+		    _entidades[4]->ResetPosition(0.0,-10.0,2.0);
+		    _vidas--;
+		    printf( "Nº de vidas: %d\n", _vidas);
 		     _camera->update(w,h, _entidades[4]->getPosX(), _entidades[4]->getPosY(), 2);
+		     _luzes[7]->updateCenter(_entidades[4]->getPosX(), _entidades[4]->getPosY(), 3);
 		    
 		}if( surf == true){
 	        if(_entidades[4]->getPosX() >= WALL_LEFT){
@@ -235,6 +233,11 @@ if( pausa == 0){
 		}
     desenhaLuz();
 	old_step=step;
+
+    if( _vidas == 0){
+        printf("Fim de Jogo\n");
+        pausa = 1;   
+    }
 
     }
     
@@ -267,8 +270,11 @@ if( pausa == 0){
 void GameManager::DisplayString( const int x, const int y, const std::string & label, const void * font){
     void * fontToUse = (font != NULL) ? (void*) font : GLUT_BITMAP_HELVETICA_12;
     glRasterPos2i(x, y);
+    
     for ( int i=0; i<label.size(); i++)
         glutBitmapCharacter( fontToUse, label[i]);
+        
+        		
 }
 
 
@@ -284,7 +290,7 @@ void GameManager::DisplayString( const int x, const int y, const std::string & l
         break;
         case '2':
       
-            _camera = new PerspectiveCamera(0, 0, 10, 0, 1, 1,0.0,20.0,3.0,4.0);
+            _camera = new PerspectiveCamera(0, 0, 10, 0, 1, 1,0.0,21.0,3.0,4.0);
         break;
         case '3' :
             _camera = new PerspectiveCamera(_entidades[4]->getPosX(), _entidades[4]->getPosY(), 2, 0, 1, 0,-15.0,5.0,3.0,4.0);
@@ -292,7 +298,7 @@ void GameManager::DisplayString( const int x, const int y, const std::string & l
 	    case 'O':
 		case 'o':
 		 
-		 if(_entidades[4]->getPosX() >= WALL_LEFT){
+		 if(_entidades[4]->getPosX() >= WALL_LEFT && pausa == 0){
 		    _entidades[4]->updateXTECLA(deltaT/55.0);
 		    _entidades[4]->setRotacao(90);
 		    _camera->update(w,h, _entidades[4]->getPosX(), _entidades[4]->getPosY(), 2);
@@ -305,7 +311,7 @@ void GameManager::DisplayString( const int x, const int y, const std::string & l
 		case 'P':
 		case 'p':
 		 
-		if(_entidades[4]->getPosX() <= WALL_RIGHT){
+		if(_entidades[4]->getPosX() <= WALL_RIGHT && pausa == 0){
 		    _entidades[4]->updateXTECLA(/*(1*old_step%10)/100.0*/-deltaT/55.0);
 		    _entidades[4]->setRotacao(-90);
 		    _camera->update(w,h, _entidades[4]->getPosX(), _entidades[4]->getPosY(), 2);
@@ -316,7 +322,7 @@ void GameManager::DisplayString( const int x, const int y, const std::string & l
 		break;
 		case 'Q':
 		case 'q':
-	    if(_entidades[4]->getPosY() <= WALL_TOP){
+	    if(_entidades[4]->getPosY() <= WALL_TOP && pausa == 0){
     		 _entidades[4]->updateY(deltaT/55.0);    		 
     		 _entidades[4]->setRotacao(0);
     		 _camera->update(w,h, _entidades[4]->getPosX(), _entidades[4]->getPosY(), 2);
@@ -329,7 +335,7 @@ void GameManager::DisplayString( const int x, const int y, const std::string & l
 		case 'A':
 		case 'a':	
 
-		if(_entidades[4]->getPosY() >= WALL_BOTTOM){
+		if(_entidades[4]->getPosY() >= WALL_BOTTOM && pausa == 0){
 
 		    _entidades[4]->updateY(/*(-1*old_step%10)/100.0-0.6*/-deltaT/55.0);
 		    _entidades[4]->setRotacao(-180);
@@ -374,7 +380,7 @@ void GameManager::DisplayString( const int x, const int y, const std::string & l
         
         case 's':
 		case 'S':
-		
+
 		glColor3ub(153,153,255);
         DisplayString( 1024/2, 720/2, "IR_AS_PUTAS");
 		    if(pausa == 0)
@@ -391,6 +397,13 @@ void GameManager::DisplayString( const int x, const int y, const std::string & l
 	            _luzes[7]->setStateLight(1);    
 	        glutPostRedisplay();
         break;
+        
+        case 'R':
+        case 'r':
+            pausa = 0;
+            _vidas = 5;
+            printf( "Nº de vidas: %d\n", _vidas);
+            
 	}
 }
 

@@ -52,7 +52,7 @@ class GameManager{
        Luz* _luzes[8];
 
        
-       GameObject* _entidades[9];
+       GameObject* _entidades[10];
        Camera* _camera;
 
        Frog* froggy;// = new Frog();
@@ -68,6 +68,7 @@ class GameManager{
 	    int _luz_activa;
 	    int pausa;
 	    bool HUDon;
+	    int _vidas;
 	  
 	    
    public:

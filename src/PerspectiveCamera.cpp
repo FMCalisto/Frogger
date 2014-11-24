@@ -12,9 +12,11 @@ using namespace std;
 
             _at.set(atX, atY, atZ);
             _up.set(upX, upY, upZ);
-            if( upY == 1 && upZ == 1)
+            if( upY == 1 && upZ == 1){
                 segue = false;
-            
+            }else{
+                segue = true;
+                }
             int w = glutGet( GLUT_WINDOW_WIDTH );
             int h = glutGet( GLUT_WINDOW_HEIGHT );
             glViewport(0, 0, w, h);
