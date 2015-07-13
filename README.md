@@ -85,7 +85,7 @@ sketch on paper to an object (not using this outline).
 * Windows
 * Go to Nate Robins page at
 [user.xmission.com/~nate/glut.html](user.xmission.com/~nate/glut.html)
-* Download glut-3.7.6-bin.zip
+* Download [glut-3.7.6-bin.zip](https://rawvideoplayer.googlecode.com/files/glut-3.7.6-bin.zip)
 * Unpack the ZIP file
 * Create a neat GLUT folder structure (see next slide)
 * OSX
