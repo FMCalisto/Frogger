@@ -166,3 +166,20 @@ Congratulations, you are now ready to build your application
     * An application runs using its project’s root directory as current directory
   * By double clicking on the executable
     * Application runs in the Debug (or Release) directory of your solution’s root directory
+
+
+#### How to Compile
+
+If you want you can always Compile on a **Linux Terminal** or using [MinGW](http://www.mingw.org/wiki/HOWTO_Compile_the_OpenGL_Utility_Toolkit_GLUT_for_Win32_with_MinGW) for **Windows**.
+
+1) To compile:
+
+```
+make all
+```
+
+2) To run:
+
+```
+./a.out
+```
