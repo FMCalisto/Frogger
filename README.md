@@ -102,7 +102,7 @@ sketch on paper to an object (not using this outline).
 
 ##### Recommended file structure
 
-![alt tag](https://github.com/FMCalisto/Frogger/img/glut.png)
+![alt tag](https://github.com/FMCalisto/Frogger/blob/master/img/glut.png)
 
 #### 1) Visual Studio - Creating a New Solution
 
