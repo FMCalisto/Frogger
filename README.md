@@ -94,12 +94,75 @@ sketch on paper to an object (not using this outline).
 
 #### GLUT (for Windows)
 * Files in ZIP file
- * glut.def
- * glut.h
- * glut32.dll
- * glut32.lib
- * README-win32.txt
+  * glut.def
+  * glut.h
+  * glut32.dll
+  * glut32.lib
+  * README-win32.txt
 
 ##### Recommended file structure
 
-![alt tag](https://github.com/FMCalisto/Frogger/img/glut.png
+![alt tag](https://github.com/FMCalisto/Frogger/img/glut.png)
+
+#### 1) Visual Studio - Creating a New Solution
+
+##### 1.1)
+
+* Open Visual Studio
+* A new solution is automatically created when you create the first Project
+
+#### 2) Visual Studio - Creating a New OpenGL Project
+
+##### 2.1)
+
+* Open Visual Studio
+* Select File > New > Project
+* Select Visual C++ from Installed Templates
+* Select Win32 Console Application
+* On the bottom dialogue
+* Enter project name
+* Move to the root of your work (e.g., myWork)
+* Check Create directory for solution (if first project)
+* Enter solution name (if first project)
+* Press OK
+
+##### 2.2)
+
+* Click Next when Win32 Application Wizard shows
+* Unselect Precompiled headers
+* Select Empty project
+* Click Finish
+
+##### 2.3)
+
+* On Solution Explorer
+  * Add implementation files to Source files
+    * Right click Source files
+    * Select Add
+    * Select New Item or Existing Item (if files already exist)
+    * Follow instructions
+  * Do the same for Header files
+
+##### 2.4)
+
+* On Solution Explorer
+  * Right click on project name, select Properties
+    * Select C/C++ > Additional Include Directories
+    * Browse to the parent of the glut/include directory, select it, press OK
+    * Select Linker > Additional Library Directories
+    * Browse to the glut/lib directory, select it, press OK
+    * Press Apply and OK
+
+Note: use relative paths to directories to ensure you can compile and run on different computers
+
+Congratulations, you are now ready to build your application
+
+#### Visual Studio & Directories
+* Very Important Requirement
+  * Executables are written to the Debug (or Release) directory under the your solution’s directory (not project’s)
+  * glut32.dll must be in that directory or in the system directory
+* Running OpenGL Applications
+  * From within VS
+    * An application runs using its project’s root directory as current directory
+  * By double clicking on the executable
+    * Application runs in the Debug (or Release) directory of your solution’s root directory
