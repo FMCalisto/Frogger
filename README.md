@@ -62,3 +62,44 @@ sketch on paper to an object (not using this outline).
 - glutTimerFunc 
 - GlutGet (GLUT_ELAPSED_TIME)
 ```
+
+
+# Creating OpenGL applications that use GLUT
+
+### Short guide to creating OpenGL applications in Windows and Mac OSX
+
+#### Contents
+
+* Obtaining GLUT (not in OSX)
+* A file structure to ease portability
+* Source code portability between OSX and all other
+* Synonyms
+* Project, Target, Solution …
+* Visual Studio
+* How to create a new Solution, then a new Project
+* Xcode
+* How to create a new Project, then a new Target
+
+#### Getting GLUT
+
+* Windows
+* Go to Nate Robins page at
+[user.xmission.com/~nate/glut.html](user.xmission.com/~nate/glut.html)
+* Download glut-3.7.6-bin.zip
+* Unpack the ZIP file
+* Create a neat GLUT folder structure (see next slide)
+* OSX
+* Comes with the OS, no need to do anything
+* Be aware: no freeglut please, it is not endorsed by the OpenGL ARB
+
+#### GLUT (for Windows)
+* Files in ZIP file
+ * glut.def
+ * glut.h
+ * glut32.dll
+ * glut32.lib
+ * README-win32.txt
+
+##### Recommended file structure
+
+![alt tag](https://github.com/FMCalisto/Frogger/img/glut.png
